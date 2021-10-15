@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Motorola Solutions: Technical Writer",
+        "description": "Create technical documents such as manuals for systems.",
+  	    "rating": "5",
+        "location": "Columbia, SC",
+        "online": false,
+        "remote": false
+    },
+    {
+        "id": 2,
+        "title": "IBM: Data Analyst",
+        "description": "Gather, organize, and keep data for business use.",
+        "rating": "3",
+        "location": "Columbia, SC",
+        "online": true,
+        "remote": true
+    }
+]

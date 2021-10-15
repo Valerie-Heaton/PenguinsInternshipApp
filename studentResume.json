@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "major": "Computer Information Systems",
+        "courses": "CSCE 205, CSCE 247, ECON 224, MGSC 290, MATH 374",
+        "experience": "Previous internship as a Tehnical Writer at AvTech in Lexington, SC from April 2017 to September 2017. Created documentation for different programs while supervised by a professional.",
+        "skills": "Document creation, data entry, and system upkeep."
+    },
+    {
+        "id": 2,
+        "major": "Computer Science",
+        "courses": "CSCE 146, CSCE 212, CSCE 215, MATH 241, CHEM 112",
+        "experience": "Previous position at McDonald's as a fry cook from June 2014 to December 2018.",
+        "skills": "Java, HTML, CSS, time management."
+    }
+]

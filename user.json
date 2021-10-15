@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "User":"Employer",
+        "firstName": "Daniel",
+        "lastName": "Stevens",
+        "company": "IBM",
+        "internshipsOffered": "IBM: Technical Writer",
+        "email": "danny@ibm.sc.co",
+        "username":"DannyStevens"
+    },
+    {
+        "id": 2,
+        "User": "Student",
+        "firstName": "Amy",
+        "lastName": "Walker",
+        "school": "University of South Carolina",
+        "internshipsApplied": "Revature LLC: Computer Programmer",
+        "email": "awalker@email.sc.edu",
+        "username": "walkeramy"
+    }
+]
