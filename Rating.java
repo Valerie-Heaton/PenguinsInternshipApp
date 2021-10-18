@@ -7,7 +7,7 @@ public class Rating {
     int rating;
     String comment;
 
-    public void User rater() {
+    public user rater() {
       return;
     }
     /**
@@ -19,7 +19,7 @@ public Rating(User rater, int rating, String comment) {
 /**
 *this method will get the rater
 */
-public void User getRater() {
+public User getRater() {
    return;
 }
 /**this method will get the rating 

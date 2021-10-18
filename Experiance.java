@@ -4,8 +4,9 @@
  * 
  * @author Siri, Maddie, Valerie, Ali
  */
+import java.util.ArrayList;
 public class Experiance {
-    ArrayList<String>volunteerExperience;
+  ArrayList<String>volunteerExperience;
     ArrayList<String>workExperience;
     ArrayList<String>pastEmployers;
     ArrayList<String>pastPositions;
@@ -16,7 +17,7 @@ public class Experiance {
 *@workExperiance will initialize work Experiance
 *@pastEmployers will initialize past employers
 */
-public Experience (ArrayList<String> volunteerExperience, ArrayList<String> workExperience, ArrayList<String> pastEmployers) {
+public Experiance(ArrayList<String> volunteerExperience, ArrayList<String> workExperience, ArrayList<String> pastEmployers) {
 
 volunteerExperience = volunteerExperience;
 workExperience = workExperience;
@@ -25,26 +26,26 @@ pastEmployers = pastEmployers;
 /**
 *thhis method will get the the volunteer experiance
 */
-public String getVolunteerExperiance() {
-    return "";
+public ArrayList<String> getVolunteerExperiance() {
+    return volunteerExperience;
 }
 /**
 *this method will get the work experiance 
 */
-  public String getWorkExperiance() {
-    return "";
+  public ArrayList<String> getWorkExperiance() {
+    return workExperience;
 }
    /**
 *this method will get the pastEmployers 
 */
-  public String getpastEmployers() {
-    return "";
+  public ArrayList<String> getpastEmployers() {
+    return pastEmployers;
 }
      /**
 *this method will get the past positions 
 */
-  public String getpastPositions() {
-    return "";
+  public ArrayList<String> getpastPositions() {
+    return pastPositions;
 }
      /**
 *this method will get the experience description
