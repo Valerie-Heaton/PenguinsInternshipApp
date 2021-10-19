@@ -26,21 +26,23 @@ public class Student {
     }
    /**
    * this method will show all the internships offfered
+ * @return 
    */
-   public internshipsOffered(Internships internships) {
+   public Internships internshipsOffered(Internships internships) {
      return internships;  
    }
    /**
    *this method will add the students rating on the internship program
+ * @return 
    */
-   public addInternshipRating(User rater, int rating, String comment) {
+   public User addInternshipRating(User rater, int rating, String comment) {
        return rater;
    }
    /**
    *this method will allow the user to insert their Resume
    */
    public Resume insertResume() {
-    return;
+    return null;
    }
    }
     

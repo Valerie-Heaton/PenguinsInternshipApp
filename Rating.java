@@ -7,8 +7,8 @@ public class Rating {
     int rating;
     String comment;
 
-    public user rater() {
-      return;
+    public User rater() {
+      return null;
     }
     /**
     * this method will return the rating of the user 
@@ -20,7 +20,7 @@ public Rating(User rater, int rating, String comment) {
 *this method will get the rater
 */
 public User getRater() {
-   return;
+   return null;
 }
 /**this method will get the rating 
 */
