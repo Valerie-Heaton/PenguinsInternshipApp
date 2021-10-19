@@ -12,7 +12,7 @@ public class User {
     /**
      * Runs the array list containing internships that soon returns back an internship entry to the user
      */
-    public ArrayList<Internships> getInternships(Internship internship) {
+    public Internships getInternships(Internships internship) {
         return internship;
     }
     public String getFirstName() {
