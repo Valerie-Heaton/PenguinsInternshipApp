@@ -1,0 +1,16 @@
+[
+    {
+        "StudentInfo":[{"firstName":"Amy", "lastName":"Walker","username":"walkeramy", "email":"awalker@email.sc.edu"}],
+        "major": "Computer Science",
+        "courses": ["CSCE 146", "CSCE 212","CSCE 215","MATH 241","CHEM 112"],
+        "experience": [{"title": "Data Analyst","company": "AvTech"}],
+        "education": [{"title": "High School Diploma"}]
+    },
+    {
+        "StudentInfo":[{"firstName":"Nathan", "lastName":"Drake","username":"natedrake", "email":"ndrake@email.sc.edu"}],
+        "major": "Computer Information Systems",
+        "courses": ["CSCE 146", "CSCE 212","CSCE 215","MATH 241","CHEM 112"],
+        "experience": [{"title": "Data Analyst","company": "AvTech"}],
+        "education": [{"title": "High School Diploma"}]
+    }
+]

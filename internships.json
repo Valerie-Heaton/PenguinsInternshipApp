@@ -1,26 +1,20 @@
 [
     {
-        "id": 1,
-        "title": "Motorola Solutions: Technical Writer",
+        "title": "Technical Writer",
+        "company":"Motorola Solutions",
         "description": "Create technical documents such as manuals for systems.",
   	    "rating": "5",
         "location": "Columbia, SC",
-        "skills":[
-            "Python",
-            "Java",
-            "COBOL"],
+        "skills":["Python","Java","COBOL"],
         "inPerson": true
     },
     {
-        "id": 2,
-        "title": "IBM: Data Analyst",
+        "title": "Data Analyst",
+        "company":"IBM",
         "description": "Gather, organize, and keep data for business use.",
         "rating": "3",
         "location": "Columbia, SC",
-        "skills": [
-            "C++",
-            "Java"
-        ],
+        "skills": ["C++","Java"],
         "inPerson": true
     }
 ]

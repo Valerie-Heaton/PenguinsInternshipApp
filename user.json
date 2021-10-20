@@ -1,25 +1,25 @@
 [
     {
-        "id": 1,
         "User":"Employer",
         "firstName": "Daniel",
         "lastName": "Stevens",
         "company": "IBM",
-        "internshipsOffered": "IBM: Technical Writer",
+        "internships": [1,2],
         "email": "danny@ibm.sc.co",
         "username":"DannyStevens",
-        "ratings":[{"userID":"RANDOM","rating":"3", "comment":"Kinda fun I guess"}]
+        "password":"dannyrox67",
+        "rating":[{"userID":"RANDOM","rating":"3", "comment":"Kinda fun I guess"}]
     },
     {
-        "id": 2,
         "User": "Student",
         "firstName": "Amy",
         "lastName": "Walker",
         "school": "University of South Carolina",
-        "internshipsApplied": "Revature LLC: Computer Programmer",
+        "internships": [1],
         "email": "awalker@email.sc.edu",
         "username": "walkeramy",
-        "ratings":[{"userID": "RANDOM","rating": "5", "comment": "Excellent worker"}
+        "password":"theCakeisaLie",
+        "rating":[{"userID": "RANDOM","rating": "5", "comment": "Excellent worker"}
         ]
     }
 ]
