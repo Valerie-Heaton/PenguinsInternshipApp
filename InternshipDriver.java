@@ -17,11 +17,12 @@ public class InternshipDriver {
         UUID uuid = UUID.randomUUID();
         String uuidString = uuid.toString();
 
-        System.out.print(uuidString);
+        System.out.print(uuidString); //this will be removed later
         /**
          * End UUID generator section
          */
 
+        //test loading in Admins
         DataLoader.loadAdmins();
 
     }

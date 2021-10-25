@@ -30,6 +30,11 @@ public class Admin {
         this.location = location;
 
     }
+
+    //added toString methdod
+    public String toString() {
+        return description;
+    }
     /**
     * Returns nothing, though utilizes the UserID to 'edit' a user's first name
     */
