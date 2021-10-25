@@ -17,7 +17,10 @@ public class Admin {
     private String description;
     private String location;
 
-    public Admin() {}
+    public Admin(String firstName, String lastName, String userName, String email) {
+        //empty
+    }
+    
     /**
     * The void that identifies the new variables and adds the title, desc. and location of the job
     */

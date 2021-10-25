@@ -7,7 +7,7 @@ public class InternshipUI {
     
     InternshipUI() {
         scanner = new Scanner(System.in);
-        internship = new Internships();
+        internship = new Internships(null, null, null);
     }
     public void run() {
         System.out.println(WELCOME_MESSAGE);
@@ -19,13 +19,13 @@ public class InternshipUI {
             System.out.println("not a valid command");
         }
     }*/
-    private void displayMainMenu() {
-		System.out.println("\n************ Main Menu *************");
-		for(int i=0; i< mainMenuOptions.length; i++) {
-			System.out.println((i+1) + ". " + mainMenuOptions[i]);
-		}
-		System.out.println("\n");
-	}
+    //private void displayMainMenu() {
+		//System.out.println("\n************ Main Menu *************");
+		//for(int i=0; i< mainMenuOptions.length; i++) {
+		//	System.out.println((i+1) + ". " + mainMenuOptions[i]);
+		//}
+		//System.out.println("\n");
+	//}
 	
     
 

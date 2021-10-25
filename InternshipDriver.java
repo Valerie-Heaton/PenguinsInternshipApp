@@ -22,6 +22,8 @@ public class InternshipDriver {
          * End UUID generator section
          */
 
+        DataLoader.loadAdmins();
+
     }
 
 }
