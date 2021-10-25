@@ -1,0 +1,24 @@
+[
+    {
+        "firstName": "Nathan",
+        "lastName": "Drake",
+        "email": "ndrake@email.sc.edu",
+        "insertResume": [1],
+        "internshipsApplied":[1,3],
+        "major": "Computer Information Systems",
+        "courses": ["CSCE 205", "CSCE 247", "ECON 224", "MGSC 290", "MATH 374"],
+        "experience":[{"title":"Technical Writer","company":"Motorola Solutions"}],
+        "education": [{"title":"High School Diploma"}]
+    },
+    {
+        "firstName": "Amy",
+        "lastName": "Walker",
+        "email": "awalker@email.sc.edu",
+        "internshipsApplied":[1,2],
+        "insertResume": [2],
+        "major": "Computer Science",
+        "courses": ["CSCE 146","CSCE 212","CSCE 215", "MATH 241", "CHEM 112"],
+        "experience": [{"title": "Data Analyst","company": "AvTech"}],
+        "education":[{"title":"High School Diploma"}]
+    }
+]

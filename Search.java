@@ -9,8 +9,8 @@ public class Search {
     /**
      * These are all instance variables used to initialize the ArrayLists of the students, employers, and internships.
      */
-    private ArrayList<Students> listOfStudents;
-    private ArrayList<Employers> listOfEmployers;
+    private ArrayList<Student> listOfStudents;
+    private ArrayList<Employer> listOfEmployers;
     private ArrayList<Internships> listOfInternships;
     private Filter filter;
 
@@ -20,7 +20,7 @@ public class Search {
      * @param listOfEmployers is the list of employers
      * @param listOfInternships is the list of internships
      */
-    public Search(ArrayList<Students> listOfStudents, ArrayList<Employers> listOfEmployers, ArrayList<Internships> listOfInternships) {
+    public Search(ArrayList<Student> listOfStudents, ArrayList<Employer> listOfEmployers, ArrayList<Internships> listOfInternships) {
         this.listOfEmployers = listOfEmployers;
         this.listOfInternships = listOfInternships;
         this.listOfStudents = listOfStudents;
@@ -30,15 +30,15 @@ public class Search {
      * This method is the accessor for the list of students.
      * @return the list of students
      */
-    public ArrayList<String> getListOfStudents {
-        return this.listOfStudents
+    public ArrayList<Student> getListOfStudents() {
+        return this.listOfStudents;
     }
 
     /**
      * This method is the accessor for the list of employers.
      * @return the list of employers
      */
-    public ArrayList<Employers> getListOfEmployers {
+    public ArrayList<Employer> getListOfEmployers() {
         return this.listOfEmployers;
     }
 
@@ -46,7 +46,7 @@ public class Search {
      * This method is the accessor for the list of internships.
      * @return the list of internships
      */
-    public ArrayList<Internships> getListOfInternships {
+    public ArrayList<Internships> getListOfInternships() {
         return this.listOfInternships;
     }
     

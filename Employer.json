@@ -1,0 +1,16 @@
+[
+    {
+        "firstName": "Daniel",
+        "lastName": "Stevens",
+        "username":"DannyStevens",
+        "email": "danny@ibm.sc.co",
+        "internshipsOffered":[1,2]
+    },
+    {
+        "firstName": "Stephanie",
+        "lastName": "Carter",
+        "username":"scart",
+        "email": "steph@apple.co",
+        "internshipsOffered":[1,2]
+    }
+]

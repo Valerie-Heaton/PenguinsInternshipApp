@@ -15,7 +15,7 @@ public class Internships {
     private String location;
     private boolean online;
     private boolean remote; 
-    private Search search = new Search();
+    private Search search = new Search(null, null, null); //temporary null
     private String skillsRequired;
 
 
