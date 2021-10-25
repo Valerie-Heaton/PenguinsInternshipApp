@@ -1,5 +1,4 @@
 import java.util.*;
-
 /**
  * This is the Search class we will use to search for internships, students, and employers.
  * 
