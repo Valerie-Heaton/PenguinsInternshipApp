@@ -24,6 +24,7 @@ public class InternshipDriver {
 
         //test loading in Admins
         DataLoader.loadAdmins();
+        DataLoader.loadStudents();
 
     }
 
