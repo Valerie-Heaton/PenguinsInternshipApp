@@ -4,8 +4,11 @@
 * @author Siri, Maddie, Valerie, Ali
 */
 import java.util.ArrayList;
+
 public class User {
+
     public User() {}
+    
     public ArrayList<Internships> getInternships() {
         return null;
     }

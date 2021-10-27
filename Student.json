@@ -1,9 +1,10 @@
 [
     {
+        "id":"704dd76b-8419-46d0-8542-7656deedfee6",
         "firstName": "Nathan",
         "lastName": "Drake",
+        "userName":"ndrake",
         "email": "ndrake@email.sc.edu",
-        "insertResume": [1],
         "internshipsApplied":[1,3],
         "major": "Computer Information Systems",
         "courses": ["CSCE 205", "CSCE 247", "ECON 224", "MGSC 290", "MATH 374"],
@@ -11,11 +12,12 @@
         "education": [{"title":"High School Diploma"}]
     },
     {
+        "id":"4662ac09-9116-445f-aef3-fbd10ed12382",
         "firstName": "Amy",
         "lastName": "Walker",
+        "userName":"awalker",
         "email": "awalker@email.sc.edu",
         "internshipsApplied":[1,2],
-        "insertResume": [2],
         "major": "Computer Science",
         "courses": ["CSCE 146","CSCE 212","CSCE 215", "MATH 241", "CHEM 112"],
         "experience": [{"title": "Data Analyst","company": "AvTech"}],

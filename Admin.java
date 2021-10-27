@@ -17,7 +17,7 @@ public class Admin {
     private String location;
 
     public Admin(String firstName, String lastName, String userName, String email) {
-        //empty
+        //leave empty
     }
     
     /**
