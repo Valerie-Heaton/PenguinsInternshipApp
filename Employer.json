@@ -2,14 +2,14 @@
     {
         "firstName": "Daniel",
         "lastName": "Stevens",
-        "username":"DannyStevens",
+        "userName":"DannyStevens",
         "email": "danny@ibm.sc.co",
         "internshipsOffered":[1,2]
     },
     {
         "firstName": "Stephanie",
         "lastName": "Carter",
-        "username":"scart",
+        "userName":"scart",
         "email": "steph@apple.co",
         "internshipsOffered":[1,2]
     }
