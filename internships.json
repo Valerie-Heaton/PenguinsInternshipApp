@@ -13,7 +13,7 @@
         "description": "Gather, organize, and keep data for business use.",
         "rating": "3",
         "location": "Columbia, SC",
-        "skillsRequired": ["C++","Java"],
+        "skillsRequired": ["JavaScript"],
         "online": true,
         "remote": true
     }

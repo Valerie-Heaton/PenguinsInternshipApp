@@ -16,7 +16,7 @@ public class Internships {
     private boolean online;
     private boolean remote; 
     private Search search = new Search(null, null, null); //temporary null
-    private String skillsRequired;
+    private ArrayList<String> skillsRequired;
 
 
     /**
@@ -25,7 +25,7 @@ public class Internships {
      * @param description the description of the internship
      * @param location the loaction of the internship
      */
-    public Internships(String title, String description, String location) { // possibly need to add more parameters
+    public Internships(String title, String description, String location, boolean online, boolean remote, ArrayList<String> skillsRequired) { // possibly need to add more parameters
         this.title = title;
         this.employerRating = new ArrayList<Rating>();
         this.description = description;
@@ -88,7 +88,7 @@ public class Internships {
      * This method is the accessor for the skills required for the internship.
      * @return skills required for the internship
      */
-    public String getSkillsRequired() {
+    public ArrayList<String> getSkillsRequired() {
         return this.skillsRequired;
     }
 
