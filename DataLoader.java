@@ -1,7 +1,5 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.io.FileReader;
-import java.util.ArrayList;
 import java.util.UUID;
 
 import org.json.simple.JSONArray;
@@ -21,7 +19,6 @@ public class DataLoader extends DataConstants {
 
         try {
             FileReader reader = new FileReader("admin.json");
-            JSONParser parser = new JSONParser();
             JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
 
             for (int i = 0; i < peopleJSON.size(); i++) {
@@ -50,7 +47,6 @@ public class DataLoader extends DataConstants {
 
         try {
             FileReader reader = new FileReader(USER_FILE_NAME);
-            JSONParser parser = new JSONParser();
             JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
 
             for (int i = 0; i < peopleJSON.size(); i++) {
@@ -85,7 +81,6 @@ public class DataLoader extends DataConstants {
 
         try {
             FileReader reader = new FileReader("resume.json");
-            JSONParser parser = new JSONParser();
             JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
 
             for (int i = 0; i < peopleJSON.size(); i++) {
@@ -111,7 +106,6 @@ public class DataLoader extends DataConstants {
 
         try {
             FileReader reader = new FileReader("Internships.json");
-            JSONParser parser = new JSONParser();
             JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
 
             for (int i = 0; i < peopleJSON.size(); i++) {
@@ -121,11 +115,6 @@ public class DataLoader extends DataConstants {
                 String location = (String) personJSON.get("user.json");
                 boolean online = (boolean) personJSON.get("user.json");
                 boolean remote = (boolean) personJSON.get("user.json");
-
-                //arrays need work
-                
-
-                // arrays will be here
 
                 internships.add(new Internships(title, description, location, online, remote));
             }
@@ -144,7 +133,6 @@ public class DataLoader extends DataConstants {
 
         try {
             FileReader reader = new FileReader("Employer.json");
-            JSONParser parser = new JSONParser();
             JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
 
             for (int i = 0; i < peopleJSON.size(); i++) {
