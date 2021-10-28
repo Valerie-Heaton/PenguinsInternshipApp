@@ -23,15 +23,17 @@
      private ArrayList<String> courses;
      private String experience;
      private ArrayList<String> skills;
+     private ArrayList<String> education;
 
      //create instances
 
-     public Resume(Student studentInfo, String major, ArrayList<String> courses, String experience, ArrayList<String> skills) {
+     public Resume(Student studentInfo, String major, ArrayList<String> courses, String experience, ArrayList<String> skills, ArrayList<String> education) {
          studentInfo = this.studentInfo;
          major = this.major;
          courses = this.courses;
          experience = this.experience;
          skills = this.skills;
+         education = this.education;
      }
 
      //returns for each 'this'
@@ -51,4 +53,7 @@
      public ArrayList<String> getSkills() {
         return this.skills;
      }
+     public ArrayList<String> getEducation() {
+      return this.education;
+   }
  }
