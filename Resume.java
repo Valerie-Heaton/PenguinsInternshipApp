@@ -27,7 +27,7 @@
 
      //create instances
 
-     public Resume(Student studentInfo, String major, ArrayList<String> courses, String experience, ArrayList<String> skills, ArrayList<String> education) {
+     public Resume(String major, String experience) {
          studentInfo = this.studentInfo;
          major = this.major;
          courses = this.courses;

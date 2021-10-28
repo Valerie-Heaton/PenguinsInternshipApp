@@ -28,8 +28,8 @@ public class InternshipDriver {
         DataLoader.getStudents();
         DataLoader.getResumes();
         DataLoader.getInternships();
-        //DataLoader.loadEmployers();
-        //DataLoader.loadUsers();
+        DataLoader.getEmployers();
+        DataLoader.getUsers();
 
 
     }

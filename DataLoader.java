@@ -68,7 +68,7 @@ public class DataLoader extends DataConstants {
                 
                 
                 //work without throwing an error
-                students.add(new Student(id, firstName, lastName, userName, email, major, courses, experience, education, internshipsApplied));
+                students.add(new Student(id, firstName, lastName, userName, email, major));
             }
             System.out.print(students); // make sure it's working
             return students;
@@ -91,10 +91,10 @@ public class DataLoader extends DataConstants {
             for (int i = 0; i < peopleJSON.size(); i++) {
                 JSONObject personJSON = (JSONObject) peopleJSON.get(i);
                 String major = (String) personJSON.get("resume.json");
-                
+                String experience = (String) personJSON.get("resume.json");
                 //arrays need work
 
-                resume.add(new Admin(major, studentInfo, courses, experience));
+                resume.add(new Resume(major, experience));
             }
             System.out.print(resume); // make sure it's working, comment out later
             return resume;
@@ -118,8 +118,7 @@ public class DataLoader extends DataConstants {
                 JSONObject personJSON = (JSONObject) peopleJSON.get(i);
                 String title = (String) personJSON.get("user.json");
                 String description = (String) personJSON.get("user.json");
-                String rating = (String) personJSON.get("user.json");
-                String company = (String) personJSON.get("user.json");
+                String location = (String) personJSON.get("user.json");
                 boolean online = (boolean) personJSON.get("user.json");
                 boolean remote = (boolean) personJSON.get("user.json");
 
@@ -128,7 +127,7 @@ public class DataLoader extends DataConstants {
 
                 // arrays will be here
 
-                internships.add(new Internships(title, description, rating, company, skillsRequired, online, remote));
+                internships.add(new Internships(title, description, location, online, remote));
             }
             System.out.print(internships); // make sure it's working, comment out later
             return internships;
@@ -154,11 +153,6 @@ public class DataLoader extends DataConstants {
                 String lastName = (String) personJSON.get("Employer.json");
                 String userName = (String) personJSON.get("Employer.json");
                 String email = (String) personJSON.get("Employer.json");
-                
-
-                // arrays need work
-
-                // arrays will be here
 
                 employers.add(new Employer(firstName, lastName, userName, email));
             }
@@ -171,31 +165,4 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
-        public static ArrayList<Internships> getUsers() {
-
-        ArrayList<Internships> internships = new ArrayList<Internships>();
-
-        try {
-            FileReader reader = new FileReader("Internships.json");
-            JSONParser parser = new JSONParser();
-            JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
-
-            for (int i = 0; i < peopleJSON.size(); i++) {
-                
-
-                //arrays need work
-                
-
-                // arrays will be here
-
-                internships.add(new Internships(title, description, rating, company, skillsRequired, online, remote));
-            }
-            System.out.print(internships); // make sure it's working, comment out later
-            return internships;
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 }

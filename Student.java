@@ -45,7 +45,7 @@ public class Student {
 
     //instance of Student WITH the random ID
 
-    public Student(UUID id, String firstName, String lastName, String userName, String email, ArrayList<Internships> internshipsApplied, String major, ArrayList<String> courses, ArrayList<String> experience, ArrayList<String> education) {
+    public Student(UUID id, String firstName, String lastName, String userName, String email, String major) {
       this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;

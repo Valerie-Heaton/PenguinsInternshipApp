@@ -25,7 +25,7 @@ public class Internships {
      * @param description the description of the internship
      * @param location the loaction of the internship
      */
-    public Internships(String title, String description, String location, boolean online, boolean remote, ArrayList<String> skillsRequired) { // possibly need to add more parameters
+    public Internships(String title, String description, String location, boolean online, boolean remote) { // possibly need to add more parameters
         this.title = title;
         this.employerRating = new ArrayList<Rating>();
         this.description = description;
