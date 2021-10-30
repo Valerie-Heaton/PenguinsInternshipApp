@@ -37,6 +37,7 @@
      //set Student, Employer, and Internship filters
 
      public void setEmployerFilters(EmployerFilters employerFilters) {
+         
         // empty, for now
      }
 
