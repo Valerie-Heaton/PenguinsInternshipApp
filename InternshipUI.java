@@ -11,8 +11,6 @@ public class InternshipUI {
     }
     public void run() {
         System.out.println(WELCOME_MESSAGE);
-<<<<<<< HEAD
-=======
 	
 		
 		//Loop as long as we want to keep interacting with the library
@@ -30,18 +28,18 @@ public class InternshipUI {
 		
 			switch(userCommand) {
 				case(0):
-					login(userName, password);
+					StudentApplication.login(userName, password);
 					insertResume();
-					getSkills();
-					getEducation();
-					getExperience();
+					Resume.getSkills();
+					Resume.getEducation();
+					Resume.getExperience();
 					break;
 				case(1):
 				printsOutResume();//TODO find prints out resume method
 					break;
 				case(2):
-					getSkillsRequired();
-					Internships(internship);
+					Internships.getSkillsRequired();
+					Internships.Internships(internship);
 					//how do i find jobs that require java knowledge
 					//TODO go back to internship class and find the internships 
 					//TODO we have to make a method for picking and selecting a job
@@ -67,7 +65,6 @@ public class InternshipUI {
 
 private int getUserCommand(int numCommands) {
 	System.out.print("What would you like to do?: ");
->>>>>>> 5ad3041 (commit UI)
 	
     //
     /**while(true) {
