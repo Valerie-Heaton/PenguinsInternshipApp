@@ -65,8 +65,9 @@ public class Admin {
     /**
     * Returns nothing, though utilizes the UserID to delete an internship entry
     */
+    
     public void deleteInternship(int UserID) {
-        this.
+       
         // empty, for now
     }
     
