@@ -4,38 +4,42 @@
  * @author Siri, Maddie, Valerie, Ali
  */
 import java.util.ArrayList;
+import java.util.UUID;
 public class Employer  {
 
     String firstName;
     String lastName;
     String userName;
     String email;
-    ArrayList<Internships> internshipsApplied;
+    ArrayList<Internships> internshipsOffered;
    /**
    *this is an constructor that will initialize all of our variables 
    @firstName will construct the users fist first name
    @lastName will construct the users last name
    @username will construct the users username
    @email will construct the users email
+   @internshipsOffered will construct the internships being offered
    */
     public Employer(String firstName, String lastName, String userName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.email = email;
+        this.internshipsOffered = internshipsOffered;
     }
    /**
    * this method will enable the employer to add an internship
    */
-   public void addInternshipsOffered(Internships internships) {
-     return;  
+   public Internships addInternshipsOffered(Internships internships) {
+     return internships;  
    }
+   public User addInternshipRating(User rater, int rating, String comment) {
+    return rater;
+}
    /**
    *this method will add the employers rating on the internship program
    */
-   public void addInternshipRating(User rater, int rating, String comment) {
-       return;
-   }
+
    
    }
     
