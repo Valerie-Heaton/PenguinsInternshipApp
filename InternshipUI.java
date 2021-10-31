@@ -28,18 +28,26 @@ public class InternshipUI {
 		
 			switch(userCommand) {
 				case(0):
+<<<<<<< HEAD
 					login(userName, password);
 					Student.insertResume();
 					Internships.getSkillsRequired();
 					getEducation();
 					getExperience();
+=======
+					StudentApplication.login(userName, password);
+					insertResume();
+					Resume.getSkills();
+					Resume.getEducation();
+					Resume.getExperience();
+>>>>>>> 8b25ff872438843d556ec2d9a10d2bd55e17ba93
 					break;
 				case(1):
 				printsOutResume();//TODO find prints out resume method
 					break;
 				case(2):
-					getSkillsRequired();
-					Internships(internship);
+					Internships.getSkillsRequired();
+					Internships.Internships(internship);
 					//how do i find jobs that require java knowledge
 					//TODO go back to internship class and find the internships 
 					//TODO we have to make a method for picking and selecting a job
