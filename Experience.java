@@ -1,11 +1,13 @@
 
 /**
+ * EXPERIENCE LIST 
+ * make another object with experience (title, etc)
  * This is the experience stub we will use to run the internship program.
  * 
  * @author Siri, Maddie, Valerie, Ali
  */
 import java.util.ArrayList;
-public class Experiance {
+public class Experience {
   ArrayList<String>volunteerExperience;
     ArrayList<String>workExperience;
     ArrayList<String>pastEmployers;
@@ -17,7 +19,7 @@ public class Experiance {
 *@workExperiance will initialize work Experiance
 *@pastEmployers will initialize past employers
 */
-public Experiance(ArrayList<String> volunteerExperience, ArrayList<String> workExperience, ArrayList<String> pastEmployers) {
+public Experience(ArrayList<String> volunteerExperience, ArrayList<String> workExperience, ArrayList<String> pastEmployers) {
 
 volunteerExperience = volunteerExperience;
 workExperience = workExperience;
@@ -32,7 +34,7 @@ public ArrayList<String> getVolunteerExperiance() {
 /**
 *this method will get the work experiance 
 */
-  public ArrayList<String> getWorkExperiance() {
+  public ArrayList<String> getWorkExperience() {
     return workExperience;
 }
    /**

@@ -21,22 +21,25 @@
 
      private String major;
      private ArrayList<String> courses;
-     private String experience;
+     private ArrayList<Experience> experience;
      private ArrayList<String> skills;
-     private ArrayList<String> education;
+     private ArrayList<Education> education;
 
      //create instances
 
      public Resume(String major, String experience) {
-         studentInfo = this.studentInfo;
-         major = this.major;
-         courses = this.courses;
-         experience = this.experience;
-         skills = this.skills;
-         education = this.education;
+         this.studentInfo = new Student();
+         this.major = major;
+         this.courses = new ArrayList<String>();
+         this.experience = new ArrayList<Experience>();
+         this.skills = new ArrayList<String>();
+         this.education = new ArrayList<Education>();
      }
 
      //returns for each 'this'
+     public String getStudentInfo() {
+      return this.studentInfo;
+   }
 
    public String getMajor() {
         return this.major;
@@ -46,14 +49,18 @@
         return this.courses;
      }
 
-     public String getExperience() {
+     public Experience getExperience() {
         return this.experience;
      }
 
      public static ArrayList<String> getSkills() {
         return this.skills;
      }
-     public ArrayList<String> getEducation() {
+     public ArrayList<Education> getEducation() {
       return this.education;
    }
+
+    public static Student getInstance() {
+        return null;
+    }
  }

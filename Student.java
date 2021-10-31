@@ -10,16 +10,16 @@ public class Student {
     //adding UUID
     private UUID id;
     //add UUID
-    String firstName;
-    String lastName;
-    String userName;
-    String email;
+    private String firstName;
+    private String lastName;
+    private String userName;
+    private String email;
     //added
-    ArrayList<Internships> internshipsApplied;
-    String major;
-    ArrayList<String> courses;
-    ArrayList<String> experience;
-    ArrayList<String> education;
+    private ArrayList<Internships> internshipsApplied;
+    private String major;
+    private ArrayList<String> courses;
+    private ArrayList<Experience> experience;
+    private ArrayList<String> education;
    /**
    *this is an constructor that will initialize all of our variables 
    *
@@ -39,13 +39,13 @@ public class Student {
         this.internshipsApplied = internshipsApplied;
         this.major = major;
         this.courses = courses;
-        this.experience = experience;
+        this.experience = new ArrayList<Experience>(); // check 
         this.education = education;
     }
 
     //instance of Student WITH the random ID
 
-    public Student(UUID id, String firstName, String lastName, String userName, String email, String major) {
+    public Student(UUID id, String firstName, String lastName, String userName, String email, ArrayList<Internships> internshipsApplied, String major, ArrayList<String> courses, ArrayList<Experience> experience, ArrayList<String> education) {
       this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;
@@ -62,9 +62,10 @@ public class Student {
     public UUID getId() {
       return id;
     }
-/**
+
+  /**
    * this method will show all the internships offfered
- * @return 
+   * @return 
    */
    public Internships internshipsOffered(Internships internships) {
      return internships;  
@@ -79,9 +80,42 @@ public class Student {
    /**
    *this method will allow the user to insert their Resume
    */
+<<<<<<< HEAD
    public void insertResume() {
       Resume insertResume = new Resume(major, );
+=======
+   public Resume insertResume() {
+    return null;
+>>>>>>> 2a2dc27272f0fda66c5c193fa22a2470bccf45cf
    }
 
+   // ADDED IN THIS METHOD BC OF DATA WRITER
+  public static Student getInstance() {
+      return null;
+  }
+
+  public Object getFirstName() {
+    return null;
+  }
+
+public Object getEmail() {
+    return null;
+}
+
+public ArrayList<Student> getStudentUsers() {
+    return null;
+}
+
+public ArrayList<String> getCourses() {
+  return null;
+}
+
+public ArrayList<Experience> getExperiences() {
+  return null;
+}
+
+public Object getLastName() {
+    return null;
+}
    }
     

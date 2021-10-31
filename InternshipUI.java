@@ -33,6 +33,15 @@ public class InternshipUI {
 					Internships.getSkillsRequired();
 					getEducation();
 					getExperience();
+<<<<<<< HEAD
+=======
+					
+					// StudentApplication.login(userName, password);
+					// insertResume();
+					// Resume.getSkills();
+					// Resume.getEducation();
+					// Resume.getExperience();
+>>>>>>> 2a2dc27272f0fda66c5c193fa22a2470bccf45cf
 					break;
 				case(1):
 				printsOutResume();//TODO find prints out resume method
