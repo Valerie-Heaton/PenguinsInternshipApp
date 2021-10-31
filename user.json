@@ -4,7 +4,7 @@
         "firstName": "Daniel",
         "lastName": "Stevens",
         "company": "IBM",
-        "internships": [1,2],
+        "internships": ["0a6dbc1b-8c03-4095-aaee-75af0753196e"],
         "email": "danny@ibm.sc.co",
         "username":"DannyStevens",
         "password":"dannyrox67",

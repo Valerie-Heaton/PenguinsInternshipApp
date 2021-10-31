@@ -117,7 +117,7 @@ public class DataLoader extends DataConstants {
                 boolean online = (boolean) personJSON.get("user.json");
                 boolean remote = (boolean) personJSON.get("user.json");
 
-                internships.add(new Internships(title, description, location, online, remote));
+                internships.add(new Internships(id, title, description, location, online, remote));
             }
             System.out.print(internships); // make sure it's working, comment out later
             return internships;
