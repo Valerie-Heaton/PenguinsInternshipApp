@@ -8,4 +8,5 @@ public class DataConstants {
     protected static final String USER_MAJOR = "major";
     protected static final String USER_COURSES = "courses";
     protected static final String USER_EXPERIENCE = "experience";
+    protected static final String USER_STUDENT_INFO = "student info";
 }

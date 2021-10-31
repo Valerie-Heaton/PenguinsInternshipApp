@@ -34,7 +34,7 @@ public ArrayList<String> getVolunteerExperiance() {
 /**
 *this method will get the work experiance 
 */
-  public ArrayList<String> getWorkExperiance() {
+  public ArrayList<String> getWorkExperience() {
     return workExperience;
 }
    /**

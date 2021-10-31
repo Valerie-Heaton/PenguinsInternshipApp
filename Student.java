@@ -10,16 +10,16 @@ public class Student {
     //adding UUID
     private UUID id;
     //add UUID
-    String firstName;
-    String lastName;
-    String userName;
-    String email;
+    private String firstName;
+    private String lastName;
+    private String userName;
+    private String email;
     //added
-    ArrayList<Internships> internshipsApplied;
-    String major;
-    ArrayList<String> courses;
-    ArrayList<Experience> experience;
-    ArrayList<String> education;
+    private ArrayList<Internships> internshipsApplied;
+    private String major;
+    private ArrayList<String> courses;
+    private ArrayList<Experience> experience;
+    private ArrayList<String> education;
    /**
    *this is an constructor that will initialize all of our variables 
    *
@@ -62,9 +62,10 @@ public class Student {
     public UUID getId() {
       return id;
     }
-/**
+
+  /**
    * this method will show all the internships offfered
- * @return 
+   * @return 
    */
    public Internships internshipsOffered(Internships internships) {
      return internships;  

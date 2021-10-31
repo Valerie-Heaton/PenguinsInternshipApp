@@ -28,11 +28,17 @@ public class InternshipUI {
 		
 			switch(userCommand) {
 				case(0):
-					StudentApplication.login(userName, password);
-					insertResume();
-					Resume.getSkills();
-					Resume.getEducation();
-					Resume.getExperience();
+					login(userName, password);
+					Student.insertResume();
+					Internships.getSkillsRequired();
+					getEducation();
+					getExperience();
+					
+					// StudentApplication.login(userName, password);
+					// insertResume();
+					// Resume.getSkills();
+					// Resume.getEducation();
+					// Resume.getExperience();
 					break;
 				case(1):
 				printsOutResume();//TODO find prints out resume method
