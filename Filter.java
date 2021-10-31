@@ -36,15 +36,29 @@
 
      //set Student, Employer, and Internship filters
 
+<<<<<<< HEAD
      public void setEmployerFilters(EmployerFilters employerFilters) { //USE ENUMS
         // empty, for now
+=======
+     public void setEmployerFilters() {
+        for (EmployerFilters employerFilter : EmployerFilters.values()) {
+            employerFilter = employerFilters;
+            System.out.println(employerFilter);
+        }
+>>>>>>> bfa08382ae5c9efe942aeb5e908395ac79c98de3
      }
 
      public void setStudentFilters(StudentFilters studentFilters) {
-         // empty, for now
+         for (StudentFilters studentFilter : StudentFilters.values()) {
+             studentFilter = studentFilters;
+             System.out.println(studentFilter);
+         }
      }
 
      public void setInternshipFilters(InternshipFilters internshipFilters) {
-         // empty, for now
+         for (InternshipFilters internshipFilter : InternshipFilters.values()) {
+             internshipFilter = internshipFilters;
+             System.out.println(internshipFilter);
+         }
      }
  }

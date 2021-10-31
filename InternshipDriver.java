@@ -21,16 +21,6 @@ public class InternshipDriver {
         /**
          * End UUID generator section
          */
-
-        //test loading in Admins
-
-        DataLoader.getAdmins();
-        DataLoader.getStudents();
-        DataLoader.getResumes();
-        DataLoader.getInternships();
-        DataLoader.getEmployers();
-
-
     }
 
 }

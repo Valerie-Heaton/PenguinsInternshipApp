@@ -30,7 +30,7 @@ public class Student {
    */
 
     //instance setting up random ID
-    public Student(String firstName, String lastName, String userName, String email, ArrayList<Internships> internshipsApplied, String major, ArrayList<String> courses, ArrayList<String> experience, ArrayList<String> education) {
+    public Student(UUID id, String firstName, String lastName, String userName, String email, ArrayList<Internships> internshipsApplied, String major, ArrayList<String> courses, ArrayList<String> experience, ArrayList<String> education) {
         this.id = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -45,7 +45,7 @@ public class Student {
 
     //instance of Student WITH the random ID
 
-    public Student(UUID id, String firstName, String lastName, String userName, String email, ArrayList<Internships> internshipsApplied, String major, ArrayList<String> courses, ArrayList<Experience> experience, ArrayList<String> education) {
+    public Student(UUID id, String firstName, String lastName, String userName, String email, String major) {
       this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;
@@ -80,8 +80,8 @@ public class Student {
    /**
    *this method will allow the user to insert their Resume
    */
-   public Resume insertResume() {
-    return null;
+   public void insertResume() {
+      Resume insertResume = new Resume(major,);
    }
 
    // ADDED IN THIS METHOD BC OF DATA WRITER

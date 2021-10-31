@@ -7,7 +7,9 @@ public class UserList {
     private UserList userList;
     private ArrayList<User> users;
 
-    private UserList() {}
+    private UserList() {
+        
+    }
     /**
      * The public getInstance method fetches the instance of 'User'
      */

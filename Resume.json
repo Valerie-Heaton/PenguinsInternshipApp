@@ -3,14 +3,48 @@
         "StudentInfo":[{"firstName":"Amy", "lastName":"Walker","username":"walkeramy", "email":"awalker@email.sc.edu"}],
         "major": "Computer Science",
         "courses": ["CSCE 146", "CSCE 212","CSCE 215","MATH 241","CHEM 112"],
-        "experience": [{"title": "Data Analyst","company": "AvTech"}],
-        "education": [{"title": "High School Diploma"}]
+        "skills": ["Python", "Java", "JavaScript", "HTML", "CSS"],
+        
+        "experience": 
+        [{
+            "job":
+            [{
+            "title": "Software Developer",
+            "company": "JP Morgan",
+            "type":"Internship",
+            "datesWorked":"May 2019 - Aug 2019",
+            "achievements":"Created a Python program to predict clients needs.",
+            "jobDescription":"Managed incoming customers and future predictions."
+            }],
+        "education": 
+            [{
+            "degree":"Bachelor's Degree in Computer Information Systems",
+            "university":"UofSC",
+            "yearGraduated":"2023"
+            }]
+        }],
+        
+        "job": 
+        [{
+        "title": "Test Engineer",
+        "company": "Bank of America",
+        "type": "Internship",
+        "datesWorked": "May 2020 - Aug 2020",
+        "achievements": "Created JUnit tests cases to test new features of the back end of the banks website.",
+        "jobDescription": "Executed test cases and reported issues to engineering."
+        }],
+        "education": 
+        [{
+        "degree": "Bachelor's Degree in Computer Information Systems",
+        "university": "UofSC",
+        "yearGraduated": "2023"
+        }]
     },
     {
         "StudentInfo":[{"firstName":"Nathan", "lastName":"Drake","username":"natedrake", "email":"ndrake@email.sc.edu"}],
         "major": "Computer Information Systems",
         "courses": ["CSCE 146", "CSCE 212","CSCE 215","MATH 241","CHEM 112"],
         "experience": [{"title": "Data Analyst","company": "AvTech"}],
-        "education": [{"title": "High School Diploma"}]
+        "education": [{"title": "Bachelor's Degree in Computer Information Systems", "university":"UofSC","graduation":"2023"}]
     }
 ]

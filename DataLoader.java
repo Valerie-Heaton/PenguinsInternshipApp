@@ -23,12 +23,13 @@ public class DataLoader extends DataConstants {
 
             for (int i = 0; i < peopleJSON.size(); i++) {
                 JSONObject personJSON = (JSONObject) peopleJSON.get(i);
+                UUID id = UUID.fromString((String) personJSON.get("Admin.json"));
                 String firstName = (String) personJSON.get("Admin.json");
                 String lastName = (String) personJSON.get("Admin.json");
                 String userName = (String) personJSON.get("Admin.json");
                 String email = (String) personJSON.get("Admin.json");
 
-                admins.add(new Admin(firstName, lastName, userName, email));
+                admins.add(new Admin(id, firstName, lastName, userName, email));
             }
             System.out.print(admins); //make sure it's working, comment out later
             return admins;
@@ -110,13 +111,14 @@ public class DataLoader extends DataConstants {
 
             for (int i = 0; i < peopleJSON.size(); i++) {
                 JSONObject personJSON = (JSONObject) peopleJSON.get(i);
+                UUID id = UUID.fromString((String) personJSON.get("user.json"));
                 String title = (String) personJSON.get("user.json");
                 String description = (String) personJSON.get("user.json");
                 String location = (String) personJSON.get("user.json");
                 boolean online = (boolean) personJSON.get("user.json");
                 boolean remote = (boolean) personJSON.get("user.json");
 
-                internships.add(new Internships(title, description, location, online, remote));
+                internships.add(new Internships(id, title, description, location, online, remote));
             }
             System.out.print(internships); // make sure it's working, comment out later
             return internships;
@@ -146,6 +148,29 @@ public class DataLoader extends DataConstants {
             }
             System.out.print(employers); // make sure it's working, comment out later
             return employers;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static ArrayList<User> getUsers() {
+
+        ArrayList<User> users = new ArrayList<User>();
+
+        try {
+            FileReader reader = new FileReader("User.json");
+            JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
+
+            for (int i = 0; i < peopleJSON.size(); i++) {
+                JSONObject personJSON = (JSONObject) peopleJSON.get(i); 
+                //throw yellow for now, may not return anything based on User.java
+
+                users.add(new User());
+            }
+            System.out.print(users); // make sure it's working, comment out later
+            return users;
 
         } catch (Exception e) {
             e.printStackTrace();

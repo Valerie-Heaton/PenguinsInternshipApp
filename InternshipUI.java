@@ -38,8 +38,8 @@ public class InternshipUI {
 				printsOutResume();//TODO find prints out resume method
 					break;
 				case(2):
-					Internships.getSkillsRequired();
-					Internships.Internships(internship);
+					getSkillsRequired();
+					Internships(internship);
 					//how do i find jobs that require java knowledge
 					//TODO go back to internship class and find the internships 
 					//TODO we have to make a method for picking and selecting a job
