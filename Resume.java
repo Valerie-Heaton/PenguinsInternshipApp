@@ -38,7 +38,7 @@
 
      //returns for each 'this'
 
-     public String getMajor() {
+   public String getMajor() {
         return this.major;
      }
 

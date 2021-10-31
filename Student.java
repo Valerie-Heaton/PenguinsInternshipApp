@@ -80,7 +80,7 @@ public class Student {
    *this method will allow the user to insert their Resume
    */
    public void insertResume() {
-      Resume insertResume = new Resume(major, email);
+      Resume insertResume = new Resume(major, );
    }
 
    }
