@@ -8,7 +8,7 @@ import org.json.simple.JSONObject;
 public class DataWriter extends DataConstants {
     
     public static void saveStudent() {
-		Student student = student.getInstance();
+		Student student = Student.getInstance();
 		ArrayList<Student> students = student.getStudentUsers();
 		JSONArray jsonStudents = new JSONArray();
 		

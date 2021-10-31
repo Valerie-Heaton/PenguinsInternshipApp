@@ -23,8 +23,13 @@ public class InternshipDriver {
          */
 
         //test loading in Admins
-        DataLoader.loadAdmins();
-        DataLoader.loadStudents();
+
+        DataLoader.getAdmins();
+        DataLoader.getStudents();
+        DataLoader.getResumes();
+        DataLoader.getInternships();
+        DataLoader.getEmployers();
+
 
     }
 

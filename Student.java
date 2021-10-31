@@ -18,7 +18,7 @@ public class Student {
     ArrayList<Internships> internshipsApplied;
     String major;
     ArrayList<String> courses;
-    ArrayList<String> experience;
+    ArrayList<Experience> experience;
     ArrayList<String> education;
    /**
    *this is an constructor that will initialize all of our variables 
@@ -39,13 +39,13 @@ public class Student {
         this.internshipsApplied = internshipsApplied;
         this.major = major;
         this.courses = courses;
-        this.experience = experience;
+        this.experience = new ArrayList<Experience>(); // check 
         this.education = education;
     }
 
     //instance of Student WITH the random ID
 
-    public Student(UUID id, String firstName, String lastName, String userName, String email, ArrayList<Internships> internshipsApplied, String major, ArrayList<String> courses, ArrayList<String> experience, ArrayList<String> education) {
+    public Student(UUID id, String firstName, String lastName, String userName, String email, ArrayList<Internships> internshipsApplied, String major, ArrayList<String> courses, ArrayList<Experience> experience, ArrayList<String> education) {
       this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;
@@ -84,7 +84,7 @@ public class Student {
    }
 
    // ADDED IN THIS METHOD BC OF DATA WRITER
-  public Student getInstance() {
+  public static Student getInstance() {
       return null;
   }
 
@@ -97,6 +97,18 @@ public Object getEmail() {
 }
 
 public ArrayList<Student> getStudentUsers() {
+    return null;
+}
+
+public ArrayList<String> getCourses() {
+  return null;
+}
+
+public ArrayList<Experience> getExperiences() {
+  return null;
+}
+
+public Object getLastName() {
     return null;
 }
    }

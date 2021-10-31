@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.io.FileReader;
-import java.util.ArrayList;
 import java.util.UUID;
 
 import org.json.simple.JSONArray;
@@ -13,14 +12,13 @@ public class DataLoader extends DataConstants {
 
     //the class should be static
 
-    public static ArrayList<Admin> loadAdmins() {
+    public static ArrayList<Admin> getAdmins() {
 
         //loading in admin.json
         ArrayList<Admin> admins = new ArrayList<Admin>();
 
         try {
             FileReader reader = new FileReader("admin.json");
-            JSONParser parser = new JSONParser();
             JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
 
             for (int i = 0; i < peopleJSON.size(); i++) {
@@ -42,14 +40,13 @@ public class DataLoader extends DataConstants {
      return null;
     }
 
-    public static ArrayList<Student> loadStudents() {
+    public static ArrayList<Student> getStudents() {
 
         // loading in student.json
         ArrayList<Student> students = new ArrayList<Student>();
 
         try {
             FileReader reader = new FileReader(USER_FILE_NAME);
-            JSONParser parser = new JSONParser();
             JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
 
             for (int i = 0; i < peopleJSON.size(); i++) {
@@ -64,13 +61,10 @@ public class DataLoader extends DataConstants {
                 String major = (String) personJSON.get(USER_MAJOR);
 
                 //ArrayLists - get these to work?
-                JSONObject courses = (JSONObject) peopleJSON.get(i);
-                JSONObject experience = (JSONObject) peopleJSON.get(i);
-                JSONObject education = (JSONObject) peopleJSON.get(i);
-                JSONObject internshipsApplied = (JSONObject) peopleJSON.get(i);
-
+                
+                
                 //work without throwing an error
-                students.add(new Student(id, firstName, lastName, userName, email, major, courses, experience, education, internshipsApplied));
+                students.add(new Student(id, firstName, lastName, userName, email, major));
             }
             System.out.print(students); // make sure it's working
             return students;
@@ -81,35 +75,82 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
-    /**
-     * 
-     * /** Creates the array list that will fetch the list of ALL users and load it
-     * as metadata
-     */
-    public ArrayList<User> getUsers() {
-        return null;
+    public static ArrayList<Resume> getResumes() {
 
-    }
-    /**
-     * Creates the array list that will fetch the list of STUDENT users and load it as metadata
-     */
-    public ArrayList<Student> getStudentUsers() {
-        return null;
+        ArrayList<Resume> resume = new ArrayList<Resume>();
 
-    }
-    /**
-     * Creates the array list that will fetch the list of EMPLOYER users and load it as metadata
-     */
-    public ArrayList<Employer> getEmployerUsers() {
-        return null;
+        try {
+            FileReader reader = new FileReader("resume.json");
+            JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
 
-    }
-    /**
-     * Creates the array list that will fetch the list of internship entries
-     */
-    public ArrayList<Internships> getInternships() {
+            for (int i = 0; i < peopleJSON.size(); i++) {
+                JSONObject personJSON = (JSONObject) peopleJSON.get(i);
+                String major = (String) personJSON.get("resume.json");
+                String experience = (String) personJSON.get("resume.json");
+                //arrays need work
+
+                resume.add(new Resume(major, experience));
+            }
+            System.out.print(resume); // make sure it's working, comment out later
+            return resume;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return null;
-        
     }
-    
+
+    public static ArrayList<Internships> getInternships() {
+
+        ArrayList<Internships> internships = new ArrayList<Internships>();
+
+        try {
+            FileReader reader = new FileReader("Internships.json");
+            JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
+
+            for (int i = 0; i < peopleJSON.size(); i++) {
+                JSONObject personJSON = (JSONObject) peopleJSON.get(i);
+                String title = (String) personJSON.get("user.json");
+                String description = (String) personJSON.get("user.json");
+                String location = (String) personJSON.get("user.json");
+                boolean online = (boolean) personJSON.get("user.json");
+                boolean remote = (boolean) personJSON.get("user.json");
+
+                internships.add(new Internships(title, description, location, online, remote));
+            }
+            System.out.print(internships); // make sure it's working, comment out later
+            return internships;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static ArrayList<Employer> getEmployers() {
+
+        ArrayList<Employer> employers = new ArrayList<Employer>();
+
+        try {
+            FileReader reader = new FileReader("Employer.json");
+            JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
+
+            for (int i = 0; i < peopleJSON.size(); i++) {
+                JSONObject personJSON = (JSONObject) peopleJSON.get(i);
+                String firstName = (String) personJSON.get("Employer.json");
+                String lastName = (String) personJSON.get("Employer.json");
+                String userName = (String) personJSON.get("Employer.json");
+                String email = (String) personJSON.get("Employer.json");
+
+                employers.add(new Employer(firstName, lastName, userName, email));
+            }
+            System.out.print(employers); // make sure it's working, comment out later
+            return employers;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }
