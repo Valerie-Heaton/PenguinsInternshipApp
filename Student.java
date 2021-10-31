@@ -82,5 +82,22 @@ public class Student {
    public Resume insertResume() {
     return null;
    }
+
+   // ADDED IN THIS METHOD BC OF DATA WRITER
+  public Student getInstance() {
+      return null;
+  }
+
+  public Object getFirstName() {
+    return null;
+  }
+
+public Object getEmail() {
+    return null;
+}
+
+public ArrayList<Student> getStudentUsers() {
+    return null;
+}
    }
     

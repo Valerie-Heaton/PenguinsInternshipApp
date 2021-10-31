@@ -9,12 +9,12 @@ public class DataWriter extends DataConstants {
     
     public static void saveStudent() {
 		Student student = student.getInstance();
-		ArrayList<Student> students = student.getPeople();
+		ArrayList<Student> students = student.getStudentUsers();
 		JSONArray jsonStudents = new JSONArray();
 		
 		//creating all the json objects
 		for(int i=0; i< students.size(); i++) {
-			jsonFriends.add(getPersonJSON(students.get(i)));
+			jsonStudents.add(getStudentJSON(students.get(i)));
 		}
 		
 		//Write JSON file
@@ -28,12 +28,26 @@ public class DataWriter extends DataConstants {
         }
 	}
 	
-	public static JSONObject getPersonJSON(Student student) {
+	public static JSONObject getStudentJSON(Student student) {
 		JSONObject studentDetails = new JSONObject();
 		studentDetails.put(USER_FIRST_NAME, student.getFirstName());
 		studentDetails.put(USER_LAST_NAME, student.getFirstName());
 		studentDetails.put(USER_EMAIL, student.getEmail());
+        ArrayList<String> courses = student.getCourses();
+        JSONArray jsonCourses = new JSONArray();
+        for (int i = 0; i < courses.size(); i++) {
+            jsonCourses.add(courses.get(i));
+        }
+        studentDetails.put(USER_COURSES, jsonCourses);
         
+        ArrayList<Experience> experiences = student.getExperiences();
+        JSONArray jsonExperiences = new JSONArray();
+        for (int i = 0; i < experiences.size(); i++) {
+            JSONObject jsonExperience = new JSONObject();
+            jsonExperience.put();
+            jsonExperiences.add(jsonExperience);
+        }
+        studentDetails.put(USER_EXPERIENCE, jsonExperiences);
         return studentDetails;
 	}
     
