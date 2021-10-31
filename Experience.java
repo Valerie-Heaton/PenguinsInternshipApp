@@ -1,4 +1,3 @@
-
 /**
  * EXPERIENCE LIST 
  * make another object with experience (title, etc)
@@ -6,56 +5,43 @@
  * 
  * @author Siri, Maddie, Valerie, Ali
  */
-import java.util.ArrayList;
+
+import java.util.*;
+
 public class Experience {
-  ArrayList<String>volunteerExperience;
-    ArrayList<String>workExperience;
-    ArrayList<String>pastEmployers;
-    ArrayList<String>pastPositions;
-    String experienceDescription;
-/**
-*this method will initialize each of the variables we
-*@volunteerExperiance will initialize volunteer Experiance
-*@workExperiance will initialize work Experiance
-*@pastEmployers will initialize past employers
-*/
-public Experience(ArrayList<String> volunteerExperience, ArrayList<String> workExperience, ArrayList<String> pastEmployers) {
 
-volunteerExperience = volunteerExperience;
-workExperience = workExperience;
-pastEmployers = pastEmployers;
-}
-/**
-*thhis method will get the the volunteer experiance
-*/
-public ArrayList<String> getVolunteerExperiance() {
-    return volunteerExperience;
-}
-/**
-*this method will get the work experiance 
-*/
-  public ArrayList<String> getWorkExperience() {
-    return workExperience;
-}
-   /**
-*this method will get the pastEmployers 
-*/
-  public ArrayList<String> getpastEmployers() {
-    return pastEmployers;
-}
-     /**
-*this method will get the past positions 
-*/
-  public ArrayList<String> getpastPositions() {
-    return pastPositions;
-}
-     /**
-*this method will get the experience description
-*/
-  public String getExperianceDescription() {
-    return "";
-}
+    private ArrayList<String> volunteerExperience;
+    private ArrayList<String> workExperience;
+    private ArrayList<String> pastPositions;
+    private String experienceDescription;
 
+    /**
+     * This method initializes each of the ArrayLists that are necessary for Experience and intializes the String description for experience.
+     * @param volunteerExperience is an ArrayList of Volunteer Experience
+     * @param workExperience is an ArrayList of Work Experience
+     * @param pastEmployers is an ArrayList of the Past Employers
+     */
+    public Experience(ArrayList<String> volunteerExperience, ArrayList<String> workExperience, ArrayList<String> pastEmployers) {
+        this.volunteerExperience = new ArrayList<String>();
+        this.workExperience = new ArrayList<String>();
+        this.pastPositions = new ArrayList<String>();
+        this.experienceDescription = experienceDescription;
+    }
 
+    public ArrayList<String> getVolunteerExperience() {
+        return this.volunteerExperience;
+    }
+    
+    public ArrayList<String> getWorkExperience() {
+        return this.workExperience;
+    }
+
+    public ArrayList<String> getPastPositions() {
+        return this.pastPositions;
+    }
+
+    public String getExperienceDescription() {
+        return this.experienceDescription;
+    }
 
 }

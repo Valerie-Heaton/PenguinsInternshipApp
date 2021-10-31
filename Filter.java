@@ -36,8 +36,7 @@
 
      //set Student, Employer, and Internship filters
 
-     public void setEmployerFilters(EmployerFilters employerFilters) {
-         
+     public void setEmployerFilters(EmployerFilters employerFilters) { //USE ENUMS
         // empty, for now
      }
 

@@ -15,6 +15,7 @@
 
      //private variables
 
+     public static Resume resume;
     private Student studentInfo; 
 
     //Student and studentInfo will throw an error until the Student class is made
@@ -27,8 +28,8 @@
 
      //create instances
 
-     public Resume(String major, String experience) {
-         this.studentInfo = new Student();
+     public Resume() {
+         this.studentInfo = studentInfo;
          this.major = major;
          this.courses = new ArrayList<String>();
          this.experience = new ArrayList<Experience>();
@@ -36,10 +37,9 @@
          this.education = new ArrayList<Education>();
      }
 
-     //returns for each 'this'
-     public String getStudentInfo() {
+     public Student getStudentInfo() {
       return this.studentInfo;
-   }
+     }
 
      public String getMajor() {
         return this.major;
@@ -49,18 +49,22 @@
         return this.courses;
      }
 
-     public Experience getExperience() {
+     public ArrayList<Experience> getExperience() {
         return this.experience;
      }
 
-     public static ArrayList<String> getSkills() {
+     public ArrayList<String> getSkills() {
         return this.skills;
      }
+
      public ArrayList<Education> getEducation() {
       return this.education;
-   }
+     }
 
-    public static Student getInstance() {
-        return null;
-    }
+   public static Resume getInstance() {
+      if (resume == null) {
+         resume = new Resume();
+      }
+      return resume;
+   }
  }
