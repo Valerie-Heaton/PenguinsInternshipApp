@@ -38,24 +38,28 @@ public class Admin {
     * Returns nothing, though utilizes the UserID to 'edit' a user's first name
     */
     public void editFirstName(int UserID, String firstName) {
+        this.firstName.replace(this.firstName, firstName);
         // empty, for now
     }
     /**
     * Returns nothing, though utilizes the UserID to 'edit' a user's last name
     */
     public void editLastName(int UserID, String lastName) {
+        this.lastName.replace(this.lastName, lastName);
         // empty, for now
     }
     /**
     * Returns nothing, though utilizes the UserID to 'edit' a user's username
     */
     public void editUserName(int UserID, String userName) {
+        this.userName.replace(this.userName, userName);
         // empty, for now
     }
     /**
     * Returns nothing, though utilizes the UserID to 'edit' a user's email
     */
     public void editEmail(int UserID, String email) {
+        this.email.replace(this.email, email);
         // empty, for now
     }
     /**
