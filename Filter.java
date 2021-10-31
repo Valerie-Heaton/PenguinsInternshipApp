@@ -38,22 +38,22 @@
 
      public void setEmployerFilters() {
         for (EmployerFilters employerFilter : EmployerFilters.values()) {
-            System.out.println(employerFilter);
             employerFilter = employerFilters;
+            System.out.println(employerFilter);
         }
      }
 
      public void setStudentFilters(StudentFilters studentFilters) {
          for (StudentFilters studentFilter : StudentFilters.values()) {
-             System.out.println(studentFilter);
              studentFilter = studentFilters;
+             System.out.println(studentFilter);
          }
      }
 
      public void setInternshipFilters(InternshipFilters internshipFilters) {
          for (InternshipFilters internshipFilter : InternshipFilters.values()) {
-             System.out.println(internshipFilter);
              internshipFilter = internshipFilters;
+             System.out.println(internshipFilter);
          }
      }
  }
