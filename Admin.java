@@ -3,6 +3,7 @@
 * 
 * @author Siri, Maddie, Valerie, Ali
 */
+import java.util.UUID;
 
 public class Admin {
 /**
@@ -16,8 +17,8 @@ public class Admin {
     private String description;
     private String location;
 
-    public Admin(String firstName, String lastName, String userName, String email) {
-        //leave empty
+    public Admin(UUID id, String firstName, String lastName, String userName, String email) {
+        id = UUID.randomUUID();
     }
     
     /**

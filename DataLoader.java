@@ -23,12 +23,13 @@ public class DataLoader extends DataConstants {
 
             for (int i = 0; i < peopleJSON.size(); i++) {
                 JSONObject personJSON = (JSONObject) peopleJSON.get(i);
+                UUID id = UUID.fromString((String) personJSON.get("Admin.json"));
                 String firstName = (String) personJSON.get("Admin.json");
                 String lastName = (String) personJSON.get("Admin.json");
                 String userName = (String) personJSON.get("Admin.json");
                 String email = (String) personJSON.get("Admin.json");
 
-                admins.add(new Admin(firstName, lastName, userName, email));
+                admins.add(new Admin(id, firstName, lastName, userName, email));
             }
             System.out.print(admins); //make sure it's working, comment out later
             return admins;
@@ -163,7 +164,8 @@ public class DataLoader extends DataConstants {
             JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
 
             for (int i = 0; i < peopleJSON.size(); i++) {
-                JSONObject personJSON = (JSONObject) peopleJSON.get(i);
+                JSONObject personJSON = (JSONObject) peopleJSON.get(i); 
+                //throw yellow for now, may not return anything based on User.java
 
                 users.add(new User());
             }
