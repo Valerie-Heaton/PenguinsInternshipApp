@@ -45,7 +45,7 @@ public class Student {
 
     //instance of Student WITH the random ID
 
-    public Student(UUID id, String firstName, String lastName, String userName, String email, ArrayList<Internships> internshipsApplied, String major, ArrayList<String> courses, ArrayList<Experience> experience, ArrayList<String> education) {
+    public Student(UUID id, String firstName, String lastName, String userName, String email, String major) {
       this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;
@@ -80,13 +80,8 @@ public class Student {
    /**
    *this method will allow the user to insert their Resume
    */
-<<<<<<< HEAD
    public void insertResume() {
-      Resume insertResume = new Resume(major, );
-=======
-   public Resume insertResume() {
-    return null;
->>>>>>> 2a2dc27272f0fda66c5c193fa22a2470bccf45cf
+      Resume insertResume = new Resume(major,);
    }
 
    // ADDED IN THIS METHOD BC OF DATA WRITER

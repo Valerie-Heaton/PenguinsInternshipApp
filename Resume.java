@@ -4,63 +4,63 @@
  * experience, and courses. Works with the Application interface.
  */
 
+//need ArrayList for skills and courses
+import java.util.ArrayList;
 
- //need ArrayList for skills and courses
- import java.util.ArrayList;
+public class Resume {
 
- public class Resume {
+   // 'implements Application' will be added later
+   // Application will throw an error until the Application interface is made
 
-    // 'implements Application' will be added later
-    //Application will throw an error until the Application interface is made
+   // private variables
 
-     //private variables
+   private Student studentInfo;
 
-    private Student studentInfo; 
+   // Student and studentInfo will throw an error until the Student class is made
 
-    //Student and studentInfo will throw an error until the Student class is made
+   private String major;
+   private ArrayList<String> courses;
+   private ArrayList<Experience> experience;
+   private ArrayList<String> skills;
+   private ArrayList<Education> education;
 
-     private String major;
-     private ArrayList<String> courses;
-     private ArrayList<Experience> experience;
-     private ArrayList<String> skills;
-     private ArrayList<Education> education;
+   // create instances
 
-     //create instances
+   public Resume(String major, String experience) {
+      this.studentInfo = new Student();
+      this.major = major;
+      this.courses = new ArrayList<String>();
+      this.experience = new ArrayList<Experience>();
+      this.skills = new ArrayList<String>();
+      this.education = new ArrayList<Education>();
+   }
 
-     public Resume(String major, String experience) {
-         this.studentInfo = new Student();
-         this.major = major;
-         this.courses = new ArrayList<String>();
-         this.experience = new ArrayList<Experience>();
-         this.skills = new ArrayList<String>();
-         this.education = new ArrayList<Education>();
-     }
-
-     //returns for each 'this'
-     public String getStudentInfo() {
+   // returns for each 'this'
+   public String getStudentInfo() {
       return this.studentInfo;
    }
 
    public String getMajor() {
-        return this.major;
-     }
+      return this.major;
+   }
 
-     public ArrayList<String> getCourses() {
-        return this.courses;
-     }
+   public ArrayList<String> getCourses() {
+      return this.courses;
+   }
 
-     public Experience getExperience() {
-        return this.experience;
-     }
+   public Experience getExperience() {
+      return this.experience;
+   }
 
-     public static ArrayList<String> getSkills() {
-        return this.skills;
-     }
-     public ArrayList<Education> getEducation() {
+   public static ArrayList<String> getSkills() {
+      return this.skills;
+   }
+
+   public ArrayList<Education> getEducation() {
       return this.education;
    }
 
-    public static Student getInstance() {
-        return null;
-    }
- }
+   public static Student getInstance() {
+      return null;
+   }
+}
