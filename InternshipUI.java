@@ -11,8 +11,6 @@ public class InternshipUI {
     }
     public void run() {
         System.out.println(WELCOME_MESSAGE);
-<<<<<<< HEAD
-=======
 	
 		
 		//Loop as long as we want to keep interacting with the library
@@ -31,8 +29,8 @@ public class InternshipUI {
 			switch(userCommand) {
 				case(0):
 					login(userName, password);
-					insertResume();
-					getSkills();
+					Student.insertResume();
+					Internships.getSkillsRequired();
 					getEducation();
 					getExperience();
 					break;
@@ -67,7 +65,6 @@ public class InternshipUI {
 
 private int getUserCommand(int numCommands) {
 	System.out.print("What would you like to do?: ");
->>>>>>> 5ad3041 (commit UI)
 	
     //
     /**while(true) {

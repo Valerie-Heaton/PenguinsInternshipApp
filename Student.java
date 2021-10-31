@@ -79,8 +79,9 @@ public class Student {
    /**
    *this method will allow the user to insert their Resume
    */
-   public Resume insertResume() {
-    return null;
+   public void insertResume() {
+      Resume insertResume = new Resume(major, email);
    }
+
    }
     

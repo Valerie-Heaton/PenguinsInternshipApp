@@ -50,7 +50,7 @@
         return this.experience;
      }
 
-     public ArrayList<String> getSkills() {
+     public static ArrayList<String> getSkills() {
         return this.skills;
      }
      public ArrayList<String> getEducation() {
