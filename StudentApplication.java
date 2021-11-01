@@ -35,5 +35,9 @@ public class StudentApplication {
         return internshipList;
     }
 
-    // add review internship
+    public reviewInternship(User rater, int rating, String comment) {
+        return user;
+        return rating;
+        return comment;
+    }
 }
