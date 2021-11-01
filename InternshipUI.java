@@ -77,8 +77,6 @@ public class InternshipUI {
 
 private int getUserCommand(int numCommands) {
 	System.out.print("What would you like to do?: ");
-	return numCommands;
-	
 
     while(true) {
         displayMainMenu();
@@ -91,14 +89,7 @@ private int getUserCommand(int numCommands) {
 				break;
 			}
     }
-
-    private void displayMainMenu() {
-		System.out.println("\n************ Main Menu *************");
-		for(int i=0; i< mainMenuOptions.length; i++) {
-			System.out.println((i+1) + ". " + mainMenuOptions[i]);
-		}
-		System.out.println("\n");
-			}
+	return numCommands;
 		}
 	}
 
