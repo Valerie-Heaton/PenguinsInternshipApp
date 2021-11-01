@@ -108,12 +108,12 @@ public class DataLoader extends DataConstants {
 
             for (int i = 0; i < peopleJSON.size(); i++) {
                 JSONObject personJSON = (JSONObject) peopleJSON.get(i);
-                UUID id = UUID.fromString((String) personJSON.get("user.json"));
-                String title = (String) personJSON.get("user.json");
-                String description = (String) personJSON.get("user.json");
-                String location = (String) personJSON.get("user.json");
-                boolean online = (boolean) personJSON.get("user.json");
-                boolean remote = (boolean) personJSON.get("user.json");
+                UUID id = UUID.fromString((String) personJSON.get("Internships.json"));
+                String title = (String) personJSON.get("Internships.json");
+                String description = (String) personJSON.get("Internships.json");
+                String location = (String) personJSON.get("Internships.json");
+                boolean online = (boolean) personJSON.get("Internships.json");
+                boolean remote = (boolean) personJSON.get("Internships.json");
 
                 internships.add(new Internships(id, title, description, location, online, remote));
             }
