@@ -80,41 +80,39 @@ public class Student {
    /**
    *this method will allow the user to insert their Resume
    */
-<<<<<<< HEAD
-   public void insertResume() {
-=======
    public static void insertResume() {
->>>>>>> b99d3726a0c37dd2f4d8c74afffb1d241d844250
       Resume insertResume = new Resume();
    }
 
    // ADDED IN THIS METHOD BC OF DATA WRITER
   public static Student getInstance() {
+      //Siri
       return null;
   }
 
-  public Object getFirstName() {
-    return null;
+  public String getFirstName() {
+    return this.firstName;
   }
 
-public Object getEmail() {
-    return null;
+public String getEmail() {
+    return this.email;
 }
 
-public ArrayList<Student> getStudentUsers() {
-    return null;
-}
+//Out for now. What does this connect to?
+//public ArrayList<Student> getStudentUsers() {
+    //return null;
+//}
 
 public ArrayList<String> getCourses() {
-  return null;
+  return this.courses;
 }
 
 public ArrayList<Experience> getExperiences() {
-  return null;
+  return this.experience;
 }
 
-public Object getLastName() {
-    return null;
+public String getLastName() {
+    return this.lastName;
 }
    }
     

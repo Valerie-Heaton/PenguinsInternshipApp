@@ -10,12 +10,8 @@ public class InternshipUI {
     
     InternshipUI() {
         scanner = new Scanner(System.in);
-<<<<<<< HEAD
-        //internship = new Internships(null, null, null, false, false);
-=======
 		//Internships internship = new Internships(title);
 		
->>>>>>> b99d3726a0c37dd2f4d8c74afffb1d241d844250
     }
     public void run() {
         System.out.println(WELCOME_MESSAGE);
