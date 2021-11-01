@@ -1,5 +1,6 @@
 [
     {
+        "id":"1df8038f-db95-4cdf-a340-55d6a210d0b7",
         "firstName": "Daniel",
         "lastName": "Stevens",
         "userName":"DannyStevens",
@@ -7,6 +8,7 @@
         "internshipsOffered":["0a6dbc1b-8c03-4095-aaee-75af0753196e"]
     },
     {
+        "id":"56508f16-1f40-42cd-8bf2-cd4bc1bce98f",
         "firstName": "Stephanie",
         "lastName": "Carter",
         "userName":"scart",
