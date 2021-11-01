@@ -81,7 +81,7 @@ public class Student {
    *this method will allow the user to insert their Resume
    */
    public void insertResume() {
-      Resume insertResume = new Resume(major,);
+      Resume insertResume = new Resume();
    }
 
    // ADDED IN THIS METHOD BC OF DATA WRITER
