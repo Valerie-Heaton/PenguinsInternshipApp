@@ -7,7 +7,7 @@ public class InternshipUI {
     
     InternshipUI() {
         scanner = new Scanner(System.in);
-        internship = new Internships(null, null, null, false, false);
+        //internship = new Internships(null, null, null, false, false);
     }
     public void run() {
         System.out.println(WELCOME_MESSAGE);
