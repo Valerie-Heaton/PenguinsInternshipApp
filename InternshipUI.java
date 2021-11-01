@@ -3,7 +3,7 @@ public class InternshipUI {
 
     private final String WELCOME_MESSAGE = "Welcome to the inernship app";
     private String[] mainMenuOptions = {"Login,", "Prints out resume to a text file", "filter", "Login with a job listing"};
-    private Scanner scanner; 
+    private Scanner scanner;
 
    	private static Internships internship;
    	private static Resume resume;
