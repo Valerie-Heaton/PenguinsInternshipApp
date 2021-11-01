@@ -11,13 +11,7 @@ public class InternshipUI {
     
     InternshipUI() {
         scanner = new Scanner(System.in);
-<<<<<<< HEAD
-		//Internships internship = new Internships(title);
-		
-    }
-=======
 	}
->>>>>>> 0e012f733eabb5677e845e356ff57c0d5ccd4e1d
     public void run() {
         System.out.println(WELCOME_MESSAGE);
 
