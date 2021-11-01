@@ -7,9 +7,9 @@ public class StudentApplication {
     private User user;
 
     public StudentApplication() {
- this.internshipList = internshipList;
- this.userList = userList;
- this.user = user;
+        this.internshipList = internshipList;
+        this.userList = userList;
+        this.user = user;
     }
 
     public ArrayList<Internships> findInternships() {

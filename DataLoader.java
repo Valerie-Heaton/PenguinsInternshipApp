@@ -152,26 +152,4 @@ public class DataLoader extends DataConstants {
         return null;
     }
 
-    public static ArrayList<User> getUsers() {
-
-        ArrayList<User> users = new ArrayList<User>();
-
-        try {
-            FileReader reader = new FileReader("User.json");
-            JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
-
-            for (int i = 0; i < peopleJSON.size(); i++) {
-                
-
-                users.add(new User());
-            }
-            System.out.print(users); // make sure it's working, comment out later
-            return users;
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
 }
