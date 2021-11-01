@@ -36,15 +36,24 @@
 
      //set Student, Employer, and Internship filters
 
-     public void setEmployerFilters(EmployerFilters employerFilters) {
-        // empty, for now
+     public void setEmployerFilters() {
+        for (EmployerFilters employerFilter : EmployerFilters.values()) {
+            employerFilter = employerFilters;
+            System.out.println(employerFilter);
+        }
      }
 
      public void setStudentFilters(StudentFilters studentFilters) {
-         // empty, for now
+         for (StudentFilters studentFilter : StudentFilters.values()) {
+             studentFilter = studentFilters;
+             System.out.println(studentFilter);
+         }
      }
 
      public void setInternshipFilters(InternshipFilters internshipFilters) {
-         // empty, for now
+         for (InternshipFilters internshipFilter : InternshipFilters.values()) {
+             internshipFilter = internshipFilters;
+             System.out.println(internshipFilter);
+         }
      }
  }

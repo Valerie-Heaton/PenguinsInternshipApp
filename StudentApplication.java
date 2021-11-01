@@ -6,14 +6,19 @@ public class StudentApplication {
     private UserList userList;
     private User user;
 
-    public StudentApplication() {}
+    public StudentApplication() {
+        this.internshipList = internshipList;
+        this.userList = userList;
+        this.user = user;
+    }
 
     public ArrayList<Internships> findInternships() {
-        return null;
+        return internshipList;
     }
 
     public ArrayList<Internships> findInternships(String keyword) {
-        return null;
+        if(internshipList.contains(keyword))
+        return internshipList;
     }
 
     public User createAccount(String firstName, String lastName, String userName) { 
@@ -22,11 +27,12 @@ public class StudentApplication {
     }
 
     public User login(String userName, String password) {
+        if(userName.equals(this.user) && password.equals(this.user))
         return user;
     }
 
     public ArrayList<Internships> getMyInternships() {
-        return null;
+        return internshipList;
     }
 
     // add review internship

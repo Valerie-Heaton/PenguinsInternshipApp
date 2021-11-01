@@ -3,35 +3,37 @@
  * 
  * @author Siri, Maddie, Valerie, Ali
  */
-public class Rating {
-    int rating;
-    String comment;
 
-    public User rater() {
-      return null;
-    }
-    /**
+public class Rating {
+   private User rater;
+   private int rating;
+   private String comment;
+   
+   /**
     * this method will return the rating of the user 
     */
-public Rating(User rater, int rating, String comment) {
-   return;
-}
-/**
-*this method will get the rater
-*/
-public User getRater() {
-   return null;
-}
-/**this method will get the rating 
-*/
-public int getRating() {
-   return 0;
-}
-/**
-*this method will get the comment of the user
-*/
-public String getComment() {
-   return "";
-}
+   public Rating(User rater, int rating, String comment) {
+      this.rater = rater;
+      this.rating = rating;
+      this.comment = comment;
+   }
+
+   /**
+   *this method will get the rater
+   */
+   public User rater() {
+      return this.rater;
+   }
+   
+   public int getRating() {
+      return this.rating;
+   }
+
+   /**
+   * this method will get the comment of the user
+   */
+   public String getComment() {
+      return this.comment;
+   }
 
 }

@@ -4,56 +4,72 @@
  * experience, and courses. Works with the Application interface.
  */
 
+//need ArrayList for skills and courses
+import java.util.ArrayList;
 
- //need ArrayList for skills and courses
- import java.util.ArrayList;
+public class Resume {
 
- public class Resume {
+   // 'implements Application' will be added later
+   // Application will throw an error until the Application interface is made
 
-    // 'implements Application' will be added later
-    //Application will throw an error until the Application interface is made
+   // private variables
 
-     //private variables
+   private Student studentInfo;
+   public static Resume resume;
+   // Student and studentInfo will throw an error until the Student class is made
 
-    private Student studentInfo; 
+   private String major;
+   private ArrayList<String> courses;
+   private ArrayList<Experience> experience;
+   private ArrayList<String> skills;
+   private ArrayList<Education> education;
 
-    //Student and studentInfo will throw an error until the Student class is made
-
-     private String major;
-     private ArrayList<String> courses;
-     private String experience;
-     private ArrayList<String> skills;
-     private ArrayList<String> education;
+   // create instances
 
      //create instances
 
-     public Resume(String major, String experience) {
-         studentInfo = this.studentInfo;
-         major = this.major;
-         courses = this.courses;
-         experience = this.experience;
-         skills = this.skills;
-         education = this.education;
-     }
+     public Resume() {
+        this.studentInfo = studentInfo;
+        this.major = major;
+        this.courses = new ArrayList<String>();
+        this.experience = new ArrayList<Experience>();
+        this.skills = new ArrayList<String>();
+        this.education = new ArrayList<Education>();
+      }
 
-     //returns for each 'this'
+      public Student getStudentInfo() {
+         return this.studentInfo;
+      }
 
-     public String getMajor() {
-        return this.major;
-     }
+      public String getMajor() {
+         return this.major;
+      }
 
-     public ArrayList<String> getCourses() {
-        return this.courses;
-     }
+      public ArrayList<String> getCourses() {
+         return this.courses;
+      }
 
-     public String getExperience() {
-        return this.experience;
-     }
 
-     public ArrayList<String> getSkills() {
-        return this.skills;
-     }
-     public ArrayList<String> getEducation() {
-      return this.education;
-   }
- }
+      public ArrayList<Experience> getExperience() {
+         return this.experience;
+      }
+
+      public ArrayList<String> getSkills() {
+         return this.skills;
+      }
+
+      public ArrayList<Education> getEducation() {
+         return this.education;
+      }
+
+      public static Resume getInstance() {
+         if (resume == null) {
+            resume = new Resume();
+         }
+         return resume;
+      }
+
+      public ArrayList<Resume> getResume() {
+         return null;
+      }
+}

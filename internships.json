@@ -1,20 +1,22 @@
 [
     {
+        "id":"33eb049f-56e1-4c73-b611-054c364ab0db",
         "title": "Technical Writer",
         "description": "Create technical documents such as manuals for systems.",
   	    "rating": "5",
         "location": "Columbia, SC",
         "skillsRequired":["Python","Java","COBOL"],
-        "online": true,
+        "inPerson": true,
         "remote": false
     },
     {
+        "id":"0a6dbc1b-8c03-4095-aaee-75af0753196e",
         "title": "Data Analyst",
         "description": "Gather, organize, and keep data for business use.",
         "rating": "3",
         "location": "Columbia, SC",
         "skillsRequired": ["JavaScript"],
-        "online": true,
+        "inPerson": true,
         "remote": true
     }
 ]

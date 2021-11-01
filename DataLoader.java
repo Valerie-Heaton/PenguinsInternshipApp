@@ -23,12 +23,13 @@ public class DataLoader extends DataConstants {
 
             for (int i = 0; i < peopleJSON.size(); i++) {
                 JSONObject personJSON = (JSONObject) peopleJSON.get(i);
+                UUID id = UUID.fromString((String) personJSON.get("Admin.json"));
                 String firstName = (String) personJSON.get("Admin.json");
                 String lastName = (String) personJSON.get("Admin.json");
                 String userName = (String) personJSON.get("Admin.json");
                 String email = (String) personJSON.get("Admin.json");
 
-                admins.add(new Admin(firstName, lastName, userName, email));
+                admins.add(new Admin(id, firstName, lastName, userName, email));
             }
             System.out.print(admins); //make sure it's working, comment out later
             return admins;
@@ -84,12 +85,9 @@ public class DataLoader extends DataConstants {
             JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
 
             for (int i = 0; i < peopleJSON.size(); i++) {
-                JSONObject personJSON = (JSONObject) peopleJSON.get(i);
-                String major = (String) personJSON.get("resume.json");
-                String experience = (String) personJSON.get("resume.json");
-                //arrays need work
+                
 
-                resume.add(new Resume(major, experience));
+                resume.add(new Resume());
             }
             System.out.print(resume); // make sure it's working, comment out later
             return resume;
@@ -110,13 +108,14 @@ public class DataLoader extends DataConstants {
 
             for (int i = 0; i < peopleJSON.size(); i++) {
                 JSONObject personJSON = (JSONObject) peopleJSON.get(i);
+                UUID id = UUID.fromString((String) personJSON.get("user.json"));
                 String title = (String) personJSON.get("user.json");
                 String description = (String) personJSON.get("user.json");
                 String location = (String) personJSON.get("user.json");
                 boolean online = (boolean) personJSON.get("user.json");
                 boolean remote = (boolean) personJSON.get("user.json");
 
-                internships.add(new Internships(title, description, location, online, remote));
+                internships.add(new Internships(id, title, description, location, online, remote));
             }
             System.out.print(internships); // make sure it's working, comment out later
             return internships;
