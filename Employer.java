@@ -5,13 +5,14 @@
  */
 import java.util.ArrayList;
 import java.util.UUID;
+
 public class Employer extends User  {
 
-    String firstName;
-    String lastName;
-    String userName;
-    String email;
-    ArrayList<Internships> internshipsOffered;
+    private String firstName;
+    private String lastName;
+    private String userName;
+    private String email;
+    private ArrayList<Internships> internshipsOffered;
    /**
    *this is an constructor that will initialize all of our variables 
    @firstName will construct the users fist first name
@@ -21,12 +22,15 @@ public class Employer extends User  {
    @internshipsOffered will construct the internships being offered
    */
     public Employer(String firstName, String lastName, String userName, String email) {
+        super(id, firstName, lastName, userName, email);
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.email = email;
         this.internshipsOffered = internshipsOffered;
     }
+
+  
    /**
    * this method will enable the employer to add an internship
    */
