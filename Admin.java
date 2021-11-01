@@ -5,7 +5,7 @@
 */
 import java.util.UUID;
 
-public class Admin {
+public class Admin extends User {
 /**
 * The admin class private variable(s) for the 'admin' stub
 */

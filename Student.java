@@ -6,7 +6,7 @@
 import java.util.ArrayList;
 import java.util.UUID;
 
-public class Student {
+public class Student extends User {
     //adding UUID
     private UUID id;
     //add UUID
@@ -89,11 +89,11 @@ public class Student {
       return null;
   }
 
-  public Object getFirstName() {
+  public String getFirstName() {
     return null;
   }
 
-public Object getEmail() {
+public String getEmail() {
     return null;
 }
 
@@ -106,10 +106,10 @@ public ArrayList<String> getCourses() {
 }
 
 public ArrayList<Experience> getExperiences() {
-  return null;
+    return null;
 }
 
-public Object getLastName() {
+public String getLastName() {
     return null;
 }
    }
