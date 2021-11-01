@@ -5,7 +5,7 @@
  */
 import java.util.ArrayList;
 import java.util.UUID;
-public class Employer  {
+public class Employer extends User  {
 
     String firstName;
     String lastName;

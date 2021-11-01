@@ -6,7 +6,7 @@
 import java.util.ArrayList;
 import java.util.UUID;
 
-public class Student {
+public class Student extends User {
     //adding UUID
     private UUID id;
     //add UUID
@@ -91,11 +91,19 @@ public class Student {
   }
 
   public String getFirstName() {
+<<<<<<< HEAD
     return this.firstName;
   }
 
 public String getEmail() {
     return this.email;
+=======
+    return null;
+  }
+
+public String getEmail() {
+    return null;
+>>>>>>> 0e012f733eabb5677e845e356ff57c0d5ccd4e1d
 }
 
 //Out for now. What does this connect to?
@@ -108,11 +116,19 @@ public ArrayList<String> getCourses() {
 }
 
 public ArrayList<Experience> getExperiences() {
+<<<<<<< HEAD
   return this.experience;
 }
 
 public String getLastName() {
     return this.lastName;
+=======
+    return null;
+}
+
+public String getLastName() {
+    return null;
+>>>>>>> 0e012f733eabb5677e845e356ff57c0d5ccd4e1d
 }
    }
     
