@@ -6,7 +6,7 @@
   	    "rating": "5",
         "location": "Columbia, SC",
         "skillsRequired":["Python","Java","COBOL"],
-        "online": true,
+        "inPerson": true,
         "remote": false
     },
     {
@@ -16,7 +16,7 @@
         "rating": "3",
         "location": "Columbia, SC",
         "skillsRequired": ["JavaScript"],
-        "online": true,
+        "inPerson": true,
         "remote": true
     }
 ]

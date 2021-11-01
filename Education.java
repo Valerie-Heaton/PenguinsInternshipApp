@@ -6,7 +6,7 @@ public class Education {
     private int yearGraduated;
     private String major;
 
-    public Education() {
+    public Education(String schoolEducationReserved, String major, int yearGraduated) {
         this.schoolEducationReceived = schoolEducationReceived;
         this.yearGraduated = yearGraduated;
         this.major = major;
