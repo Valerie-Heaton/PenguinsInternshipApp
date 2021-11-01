@@ -29,23 +29,10 @@ public class Student extends User {
    @email will construct the users email
    */
 
-    //instance setting up random ID
-    public Student(UUID id, String firstName, String lastName, String userName, String email, ArrayList<Internships> internshipsApplied, String major, ArrayList<String> courses, ArrayList<String> experience, ArrayList<String> education) {
-        this.id = UUID.randomUUID();
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.userName = userName;
-        this.email = email;
-        this.internshipsApplied = internshipsApplied;
-        this.major = major;
-        this.courses = courses;
-        this.experience = new ArrayList<Experience>(); // check 
-        this.education = education;
-    }
 
     //instance of Student WITH the random ID
-
-    public Student(UUID id, String firstName, String lastName, String userName, String email, String major) {
+    public Student(UUID id, String firstName, String lastName, String userName, String email) {
+      super(id, firstName, lastName, userName, email);
       this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;
