@@ -36,7 +36,7 @@ public class InternshipUI {
 		
 			switch(userCommand) {
 				case(0):
-					login();
+					login(userName, password);
 					student.insertResume();
 					internship.getSkillsRequired();
 					resume.getEducation();//not a method yet

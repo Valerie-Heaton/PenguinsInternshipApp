@@ -9,7 +9,7 @@ public class Education {
     private String major;
 
     public Education(String schoolEducationReserved, String major, int yearGraduated) {
-        this.schoolEducationReceived = schoolEducationReceived; //what does this do?
+        this.schoolEducationReceived = schoolEducationReceived;
         this.yearGraduated = yearGraduated;
         this.major = major;
     }
