@@ -18,13 +18,22 @@ public class InternshipList {
     public Internships getInstance() {
         return null;
     }
+
+    public ArrayList<Internships> getInternships() {
+        return internships;
+    }
     /**
      * The public array list method containing the 'internship' instance that fetches internship entries
      * named 'jobs.'
      */
     public ArrayList<Internships> getInternships(String job) {
-        this.job = job;
-        return internships;
+        ArrayList<Internships> foundInternships = new ArrayList<>();
+        for (int i = 0; i < internships.size(); i++) {
+            if (internships.get(i).contains(job)) {
+                foundInternships.add(internships.get(i));
+            }
+        }
+        return foundInternships;
     }
     
 }

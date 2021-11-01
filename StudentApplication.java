@@ -17,8 +17,7 @@ public class StudentApplication {
     }
 
     public ArrayList<Internships> findInternships(String keyword) {
-        if(internshipList.contains(keyword))
-        return internshipList;
+        return internshipList.getInternships(keyword);
     }
 
     public User createAccount(String firstName, String lastName, String userName) { 
