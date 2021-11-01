@@ -36,14 +36,14 @@ public class InternshipUI {
 		
 			switch(userCommand) {
 				case(0):
-					login(userName, password);
+					login();
 					student.insertResume();
 					internship.getSkillsRequired();
 					resume.getEducation();//not a method yet
 					resume.getExperience();
 					break;
 				case(1):
-				printsOutResume();//TODO find prints out resume method
+					printsOutResume();//TODO find prints out resume method
 					break;
 				case(2):
 					internship.getSkillsRequired();

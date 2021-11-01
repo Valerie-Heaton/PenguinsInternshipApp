@@ -20,7 +20,8 @@ public class Employer extends User  {
    @email will construct the users email
    @internshipsOffered will construct the internships being offered
    */
-    public Employer(String firstName, String lastName, String userName, String email) {
+    public Employer(UUID id, String firstName, String lastName, String userName, String email) {
+        id = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
@@ -35,7 +36,7 @@ public class Employer extends User  {
    }
    public User addInternshipRating(User rater, int rating, String comment) {
     return rater;
-}
+  }
    /**
    *this method will add the employers rating on the internship program
    */

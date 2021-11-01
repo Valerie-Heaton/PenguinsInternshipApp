@@ -136,12 +136,13 @@ public class DataLoader extends DataConstants {
 
             for (int i = 0; i < peopleJSON.size(); i++) {
                 JSONObject personJSON = (JSONObject) peopleJSON.get(i);
+                UUID id = UUID.fromString((String) personJSON.get("Employer.json"));
                 String firstName = (String) personJSON.get("Employer.json");
                 String lastName = (String) personJSON.get("Employer.json");
                 String userName = (String) personJSON.get("Employer.json");
                 String email = (String) personJSON.get("Employer.json");
 
-                employers.add(new Employer(firstName, lastName, userName, email));
+                employers.add(new Employer(id, firstName, lastName, userName, email));
             }
             System.out.print(employers); // make sure it's working, comment out later
             return employers;
