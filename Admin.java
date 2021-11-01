@@ -12,7 +12,6 @@ public class Admin {
     private String lastName;
     private String userName;
     private String email;
-
     private String title;
     private String description;
     private String location;

@@ -1,20 +1,33 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class StudentApplication {
-    /**
-     * Variables for the StudentApplication class
-     */
+    
     private InternshipList internshipList;
     private UserList userList;
     private User user;
 
     public StudentApplication() {}
-    public ArrayList<Internships> findInternships() {}
-    public ArrayList<Internships> findInternships(String keyword) {}
-    public User createAccount(String firstName, String lastName, String userName, ...) {}
-    public User login(String userName, String password) {}
-    public ArrayList<Internships> getMyInternships() {}
-    public reviewInternship(User rater, int rating, String comment) {}
 
+    public ArrayList<Internships> findInternships() {
+        return null;
+    }
 
+    public ArrayList<Internships> findInternships(String keyword) {
+        return null;
+    }
+
+    public User createAccount(String firstName, String lastName, String userName) { 
+        return user;// will maybe need to add more to parameters
+
+    }
+
+    public User login(String userName, String password) {
+        return user;
+    }
+
+    public ArrayList<Internships> getMyInternships() {
+        return null;
+    }
+
+    // add review internship
 }

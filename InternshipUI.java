@@ -1,16 +1,17 @@
 import java.util.Scanner;
 public class InternshipUI {
     private static final String WELCOME_MESSAGE = "Welcome to the inernship app";
-    private String[] mainMenuOptions = {"Filter,", "Search"};
+    private String[] mainMenuOptions = {"Login,", "Prints out resume to a text file", "filter", "Login with a job listing"};
     private Scanner scanner; 
-    private Internships internship;
+   private Internships internship;
     
     InternshipUI() {
         scanner = new Scanner(System.in);
-        internship = new Internships(null, null, null);
+        internship = new Internships(null, null, null, false, false);
     }
     public void run() {
         System.out.println(WELCOME_MESSAGE);
+	
     //
     /**while(true) {
         displayMainMenu();
@@ -29,5 +30,4 @@ public class InternshipUI {
 	
     
 
-    }
-}
+
