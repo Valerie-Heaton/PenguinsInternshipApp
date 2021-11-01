@@ -85,12 +85,9 @@ public class DataLoader extends DataConstants {
             JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
 
             for (int i = 0; i < peopleJSON.size(); i++) {
-                JSONObject personJSON = (JSONObject) peopleJSON.get(i);
-                String major = (String) personJSON.get("resume.json");
-                String experience = (String) personJSON.get("resume.json");
-                //arrays need work
+                
 
-                resume.add(new Resume(major, experience));
+                resume.add(new Resume());
             }
             System.out.print(resume); // make sure it's working, comment out later
             return resume;
@@ -164,8 +161,7 @@ public class DataLoader extends DataConstants {
             JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
 
             for (int i = 0; i < peopleJSON.size(); i++) {
-                JSONObject personJSON = (JSONObject) peopleJSON.get(i); 
-                //throw yellow for now, may not return anything based on User.java
+                
 
                 users.add(new User());
             }
