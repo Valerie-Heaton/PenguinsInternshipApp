@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+//should this be deleted? We don't have anything linking it to the loader, the loader is empty
+
 public class UserList {
     /**
      * Variables for the UserList class

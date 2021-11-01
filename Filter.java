@@ -34,7 +34,8 @@
          return this.internshipFilters;
      }
 
-     //set Student, Employer, and Internship filters
+     //set Student, Employer, and Internship filters (shows the user a list).
+     //Each loop prints out the respective enums
 
      public void setEmployerFilters() {
         for (EmployerFilters employerFilter : EmployerFilters.values()) {

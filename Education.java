@@ -1,5 +1,7 @@
 import javax.net.ssl.TrustManager;
 
+//needs json?
+
 public class Education {
 
     private String schoolEducationReceived;
@@ -7,7 +9,7 @@ public class Education {
     private String major;
 
     public Education(String schoolEducationReserved, String major, int yearGraduated) {
-        this.schoolEducationReceived = schoolEducationReceived;
+        this.schoolEducationReceived = schoolEducationReceived; //what does this do?
         this.yearGraduated = yearGraduated;
         this.major = major;
     }
