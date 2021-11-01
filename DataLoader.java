@@ -59,13 +59,11 @@ public class DataLoader extends DataConstants {
                 String firstName = (String) personJSON.get(USER_FIRST_NAME);
                 String lastName = (String) personJSON.get(USER_LAST_NAME);
                 String email = (String) personJSON.get(USER_EMAIL);
-                String major = (String) personJSON.get(USER_MAJOR);
-
                 //ArrayLists - get these to work?
                 
                 
                 //work without throwing an error
-                students.add(new Student(id, firstName, lastName, userName, email, major));
+                students.add(new Student(id, firstName, lastName, userName, email));
             }
             System.out.print(students); // make sure it's working
             return students;
