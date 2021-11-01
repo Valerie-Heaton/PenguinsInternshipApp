@@ -112,10 +112,10 @@ public class DataLoader extends DataConstants {
                 String title = (String) personJSON.get("Internships.json");
                 String description = (String) personJSON.get("Internships.json");
                 String location = (String) personJSON.get("Internships.json");
-                boolean online = (boolean) personJSON.get("Internships.json");
+                boolean inPerson = (boolean) personJSON.get("Internships.json");
                 boolean remote = (boolean) personJSON.get("Internships.json");
 
-                internships.add(new Internships(id, title, description, location, online, remote));
+                internships.add(new Internships(id, title, description, location, inPerson, remote));
             }
             System.out.print(internships); // make sure it's working, comment out later
             return internships;
@@ -136,12 +136,13 @@ public class DataLoader extends DataConstants {
 
             for (int i = 0; i < peopleJSON.size(); i++) {
                 JSONObject personJSON = (JSONObject) peopleJSON.get(i);
+                UUID id = UUID.fromString((String) personJSON.get("Employer.json"));
                 String firstName = (String) personJSON.get("Employer.json");
                 String lastName = (String) personJSON.get("Employer.json");
                 String userName = (String) personJSON.get("Employer.json");
                 String email = (String) personJSON.get("Employer.json");
 
-                employers.add(new Employer(firstName, lastName, userName, email));
+                employers.add(new Employer(id, firstName, lastName, userName, email));
             }
             System.out.print(employers); // make sure it's working, comment out later
             return employers;
