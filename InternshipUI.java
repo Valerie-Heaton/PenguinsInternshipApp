@@ -30,26 +30,29 @@ public class InternshipUI {
 		
 			switch(userCommand) {
 				case(0):
-					login(userName, password);
+					//login(userName, password);
 					student.insertResume();
 					internship.getSkillsRequired();
 					resume.getEducation();//not a method yet
 					resume.getExperience();
 					break;
 				case(1):
-					printsOutResume();//TODO find prints out resume method
+					//printsOutResume();
+					//TODO find prints out resume method - CALL FROM RESUME
 					break;
 				case(2):
 					internship.getSkillsRequired();
-					studentApplication.findInternships(keyword);
+					studentApplication.findInternships();
+
 					//how do i find jobs that require java knowledge
 					//TODO go back to internship class and find the internships 
 					//TODO we have to make a method for picking and selecting a job
 					break;
 				case(3):
-					login(userName, password);//login as an employer
-					studentApplication.reviewInternships(rater, rating, comment);
-					student.getStudentUsers();
+					//login(userName, password);//login as an employer
+					//studentApplication.reviewInternships();
+					//student.getStudentUsers();
+
 					//TODO find method with existing job
 					//TODO once we make the method for selecting and applying to a job we allow the listing to be views
 					break;
@@ -69,6 +72,7 @@ public class InternshipUI {
 
 private int getUserCommand(int numCommands) {
 	System.out.print("What would you like to do?: ");
+	return numCommands;
 	
     //
     /**while(true) {
