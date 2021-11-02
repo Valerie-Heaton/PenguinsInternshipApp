@@ -1,3 +1,4 @@
+import java.net.PasswordAuthentication;
 import java.util.Scanner;
 public class InternshipUI {
 
@@ -57,7 +58,7 @@ public class InternshipUI {
 					//login(userName, password);//login as an employer
 					//studentApplication.reviewInternships();
 					//student.getStudentUsers();
-
+					
 					//TODO find method with existing job
 					//TODO once we make the method for selecting and applying to a job we allow the listing to be views
 					break;

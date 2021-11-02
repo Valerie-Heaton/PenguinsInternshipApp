@@ -8,10 +8,20 @@ public class UserList {
     private static User user;
     private static UserList users;
     private ArrayList<User> userList;
-    //private ArrayList<Employer> employerList;
+    private ArrayList<Admin> adminList;
+    private ArrayList<Student> studentList;
+    private ArrayList<Employer> employerList;
 
     private UserList() {
-        userList = DataLoader.getUserList();
+        for(int i = 0; i < DataLoader.getStudents().size(); i++) {
+            userList.add(DataLoader.getStudents().get(i));
+        }
+        for(int i = 0; i < DataLoader.getEmployers().size(); i++) {
+            userList.add(DataLoader.getEmployers().get(i));
+        }
+        for(int i = 0; i < DataLoader.getAdmins().size(); i++) {
+            userList.add(DataLoader.getAdmins().get(i));
+        }
         // probably will actually load in admin, student, employer
     }
 
@@ -28,9 +38,9 @@ public class UserList {
     /**
      * The public array list method containing the instance of 'User' fetches the user's profile
      */
-    public User getUser(String userName) {
+    public User getUser(String userName, String password) {
         for(User user : userList) {
-            if(user.getUserName().equals(userName)) {
+            if(user.getUserName().equals(userName) && user.getPassword().equals(password)) {
                 return user;
             }
         }
@@ -47,15 +57,6 @@ public class UserList {
 
 		return false;
 	}
-
-    // public boolean haveEmployer(String userName) {
-	// 	for(Employer employer : employerList) {
-	// 		if(employer.getUserName().equals(userName)) {
-	// 			return true;
-	// 		}
-	// 	}
-	// 	return false;
-	// }
     
     public boolean addUser(String firstName, String lastName, String userName, String email) {
         if(haveUser(userName)) {
@@ -66,14 +67,6 @@ public class UserList {
         userList.add(user.User(firstName, lastName, userName, email));
         return true;
     }
-
-    // public boolean addEmployerUser(String userName, String firstName, String lastName, String email) {
-    //     if(haveEmployer(userName)) {
-    //         return false;
-    //     }
-    //     employerList.add(new Employer(userName, firstName, lastName, email));
-    //     return true;
-    // }
 
     public void saveUsers() {
         DataWriter.saveStudent();

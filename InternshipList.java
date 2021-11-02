@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class InternshipList {
+    
     /**
      * Variables for the InternshipList class
      */
@@ -8,10 +9,12 @@ public class InternshipList {
     private ArrayList<Internships> internships;
 
     public String job;
+    
     /**
      * The private method for the InternshipList class
      */
     private InternshipList() {}
+    
     /**
      * The public getInstance method fetches the instance of 'Internship'
      */
@@ -22,6 +25,7 @@ public class InternshipList {
     public ArrayList<Internships> getInternships() {
         return internships;
     }
+
     /**
      * The public array list method containing the 'internship' instance that fetches internship entries
      * named 'jobs.'

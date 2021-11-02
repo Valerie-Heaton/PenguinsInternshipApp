@@ -14,10 +14,10 @@ public class InternshipDriver {
         /**
          * UUID generator section
          */
-        UUID uuid = UUID.randomUUID();
-        String uuidString = uuid.toString();
+        //UUID uuid = UUID.randomUUID();
+        //String uuidString = uuid.toString();
 
-        System.out.print(uuidString); //this will be removed later
+        //System.out.print(uuidString); //this will be removed later
         /**
          * End UUID generator section
          */

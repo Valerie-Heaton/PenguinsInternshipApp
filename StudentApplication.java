@@ -38,6 +38,7 @@ public class StudentApplication {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public User createAccount(String firstName, String lastName, String userName) { 
         this.firstName = firstName;
         this.lastName = lastName;
@@ -50,13 +51,17 @@ public class StudentApplication {
 >>>>>>> c899116b0d027c33a4632475532a682fe9d6a098
 
     public boolean loginUser(String userName) { // was not originally boolean
+=======
+    public boolean login(String userName, String password) { // was not originally boolean
+>>>>>>> f26c3c0ff177c45b228cd11e9894cf87473a8eb6
         if(!userList.haveUser(userName)) {
             return false;
         }
-        user = userList.getUser(userName);
+        user = userList.getUser(userName, password);
         return true;
     }
 
+<<<<<<< HEAD
 
     // public ArrayList<Internships> getMyInternships() {
     //     return internshipList;
@@ -68,10 +73,11 @@ public class StudentApplication {
         this.lastName = rating;
         this.userName = comment;
 =======
+=======
+>>>>>>> f26c3c0ff177c45b228cd11e9894cf87473a8eb6
     public void logout() {
         userList.saveUsers();
 >>>>>>> c899116b0d027c33a4632475532a682fe9d6a098
     }
 
-    // add review internship
 }

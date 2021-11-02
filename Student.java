@@ -47,7 +47,7 @@ public class Student extends User {
 
     //instance of Student WITH the random ID
     public Student(UUID id, String firstName, String lastName, String userName, String email, String password) {
-      //super(id, firstName, lastName, userName, email, password);
+      super(firstName, lastName, userName, email, password);
       this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;
@@ -98,11 +98,11 @@ public class Student extends User {
   }
 
   public String getFirstName() {
-    return null;
+    return this.firstName;
   }
 
 public String getEmail() {
-    return null;
+    return this.email;
 }
 
 //Out for now. What does this connect to?
@@ -115,11 +115,11 @@ public ArrayList<String> getCourses() {
 }
 
 public ArrayList<Experience> getExperiences() {
-    return null;
+    return this.experience;
 }
 
 public String getLastName() {
-    return null;
+    return this.lastName;
 }
    }
     
