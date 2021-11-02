@@ -16,6 +16,7 @@ private String description;
 private String location;
 private boolean inPerson;
 private boolean remote;
+private String keyword;
 
 private Resume resume;
 private StudentApplication studentApplication;
@@ -94,53 +95,53 @@ else if(userInput.equalsIgnoreCase("employer")) {
    sc.nextLine();
    this.studentApplication.loginEmployer(userName, password);
 }
-
 break;
+
 case(1):
-System.out.println("Printing your resume to a .txt file");
-DataWriter.toTextFile();
-//printsOutResume();
-//TODO find prints out resume method - CALL FROM RESUME
-break;
+	System.out.println("Printing your resume to a .txt file");
+	DataWriter.toTextFile();
+	//printsOutResume();
+	//TODO find prints out resume method - CALL FROM RESUME
+	break;
+
 case(2):
-internship.getSkillsRequired();
-studentApplication.findInternships();
+	internship.getSkillsRequired();
+	internship.contains(keyword);
+	studentApplication.findInternships();
+	break;
 
-
-//how do i find jobs that require java knowledge
-//TODO go back to internship class and find the internships
-//TODO we have to make a method for picking and selecting a job
-break;
 case(3):
-System.out.println("Are you a student, employer, or admin? Type in student, employer, or admin"); 
-String userInput = sc.nextLine();
-if(userInput.equalsIgnoreCase("student")) {
-   System.out.println("Enter username:");
-   sc.nextLine();
-   System.out.println("Enter password:");
-   sc.nextLine();
-   this.studentApplication.loginStudent(userName, password);
-   student.insertResume();
-   internship.getSkillsRequired();
-   resume.getEducation();//not a method yet
-   resume.getExperience();
+		System.out.println("Are you a student, employer, or admin? Type in student, employer, or admin"); 
+		String userLog = sc.nextLine();
+	if(userLog.equalsIgnoreCase("student")) {
+   		System.out.println("Enter username:");
+   		sc.nextLine();
+   		System.out.println("Enter password:");
+   		sc.nextLine();
+   		this.studentApplication.loginStudent(userName, password);
+   		student.insertResume();
+   		internship.getSkillsRequired();
+   		resume.getEducation();//not a method yet
+   		resume.getExperience();
+	}
+	else if(userLog.equalsIgnoreCase("admin")) {
+   		System.out.println("Enter username:");
+   		sc.nextLine();
+   		System.out.println("Enter password:");
+   		sc.nextLine();
+   		this.studentApplication.loginAdmin(userName, password);
 }
-else if(userInput.equalsIgnoreCase("admin")) {
-   System.out.println("Enter username:");
-   sc.nextLine();
-   System.out.println("Enter password:");
-   sc.nextLine();
-   this.studentApplication.loginAdmin(userName, password);
+	else if(userLog.equalsIgnoreCase("employer")) {
+   		System.out.println("Enter username:");
+   		sc.nextLine();
+   		System.out.println("Enter password:");
+   		sc.nextLine();
+   		this.studentApplication.loginEmployer(userName, password);
+		
+		studentApplication.findInternships();
+		Student.getInstance();
 }
-else if(userInput.equalsIgnoreCase("employer")) {
-   System.out.println("Enter username:");
-   sc.nextLine();
-   System.out.println("Enter password:");
-   sc.nextLine();
-   this.studentApplication.loginEmployer(userName, password);
-}
-studentApplication.findInternships();
-Student.getInstance();
+
 
 
 //studentApplication.reviewInternships();
