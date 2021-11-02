@@ -52,15 +52,46 @@ public class Employer extends User  {
    /**
    * this method will enable the employer to add an internship
    */
-   public Internships addInternshipsOffered(Internships internships) {
-     return internships;  
+   public ArrayList<Internships> getInternshipsOffered() {
+     return this.internshipsOffered;  
    }
-   public User addInternshipRating(User rater, int rating, String comment) {
-    return rater;
-  }
+
    /**
    *this method will add the employers rating on the internship program
    */
+   public User addInternshipRating(User rater, int rating, String comment) {
+    return rater;
+   }
+   
+
+    @Override
+    public String getFirstName() {
+      return this.firstName;
+    }
+
+    @Override
+    public String getLastName() {
+      return this.lastName;
+    }
+
+    @Override
+    public String getUserName() {
+      return this.userName;
+    }
+
+    @Override
+    public String getPassword() {
+      return this.password;
+    }
+
+    @Override
+    public String getEmail() {
+      return this.email;
+    }
+
+    public static Employer getInstance() {
+      return null;
+    }
 
    
    }
