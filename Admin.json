@@ -4,13 +4,15 @@
         "firstName": "John",
         "lastName": "Smith",
         "userName": "jsmith22",
-  	    "email": "jsmith@gmail.com"
+  	    "email": "jsmith@gmail.com",
+        "password":"password"
     },
     {
         "id":"13afa7ac-2933-4781-85b3-6b3995c4fdf6",
         "firstName": "Erin",
         "lastName":"Upham",
         "userName": "erinupham7",
-        "email": "eupham@gmail.com"
+        "email": "eupham@gmail.com",
+        "password":"password"
     }
 ]
