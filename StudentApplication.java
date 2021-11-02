@@ -24,26 +24,16 @@ public class StudentApplication {
         return userList.addUser(userName, firstName, lastName, email); // will maybe need to add more to parameters
     }
 
-    // public boolean createEmployerAccount(String userName, String firstName, String lastName, String email) { 
-    //     return userList.addEmployerUser(userName, firstName, lastName, email); // will maybe need to add more to parameters
-    // }
-
-    public boolean loginUser(String userName) { // was not originally boolean
+    public boolean login(String userName, String password) { // was not originally boolean
         if(!userList.haveUser(userName)) {
             return false;
         }
-        user = userList.getUser(userName);
+        user = userList.getUser(userName, password);
         return true;
     }
-
-
-    // public ArrayList<Internships> getMyInternships() {
-    //     return internshipList;
-    // }
 
     public void logout() {
         userList.saveUsers();
     }
 
-    // add review internship
 }

@@ -18,17 +18,11 @@ public class Admin extends User {
     private String title;
     private String description;
     private String location;
-    private String password;
     private Internships internship;
 
 
-<<<<<<< HEAD
     public Admin(String firstName, String lastName, String userName, String password, String email) {
         super(firstName, lastName, userName, password, email);
-=======
-    public Admin(String firstName, String lastName, String userName, String email, String password) {
-        super(firstName, lastName, userName, email, password);
->>>>>>> 1f4ed89fe61d3344ad7dcfef5abae0f94572aa04
         this.id = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -37,13 +31,8 @@ public class Admin extends User {
         this.password = password;
     }
 
-<<<<<<< HEAD
-    public Admin(UUID id, String firstName, String lastName, String userName, String password, String email) {
-        super(firstName, lastName, userName, password, email);
-=======
     public Admin(UUID id, String firstName, String lastName, String userName, String email, String password) {
-        //super(id, firstName, lastName, userName, email, password);
->>>>>>> 1f4ed89fe61d3344ad7dcfef5abae0f94572aa04
+        super(firstName, lastName, userName, email, password);
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

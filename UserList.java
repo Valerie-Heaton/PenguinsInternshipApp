@@ -57,15 +57,6 @@ public class UserList {
 
 		return false;
 	}
-
-    // public boolean haveEmployer(String userName) {
-	// 	for(Employer employer : employerList) {
-	// 		if(employer.getUserName().equals(userName)) {
-	// 			return true;
-	// 		}
-	// 	}
-	// 	return false;
-	// }
     
     public boolean addUser(String firstName, String lastName, String userName, String email) {
         if(haveUser(userName)) {
@@ -76,14 +67,6 @@ public class UserList {
         userList.add(user.User(firstName, lastName, userName, email));
         return true;
     }
-
-    // public boolean addEmployerUser(String userName, String firstName, String lastName, String email) {
-    //     if(haveEmployer(userName)) {
-    //         return false;
-    //     }
-    //     employerList.add(new Employer(userName, firstName, lastName, email));
-    //     return true;
-    // }
 
     public void saveUsers() {
         DataWriter.saveStudent();
