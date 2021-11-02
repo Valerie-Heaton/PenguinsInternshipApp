@@ -155,7 +155,7 @@ public class DataWriter extends DataConstants {
 		employerDetails.put(USER_LAST_NAME, employer.getLastName());
         employerDetails.put(USER_USER_NAME, employer.getUserName());
         employerDetails.put(USER_EMAIL, employer.getEmail());
-        ArrayList<String> internshipsOffered = employer.getInternshipsOffered();
+        ArrayList<Internships> internshipsOffered = employer.getInternshipsOffered();
         JSONArray jsonInternshipsOffered = new JSONArray();
         for (int i = 0; i < internshipsOffered.size(); i++) {
             jsonInternshipsOffered.add(internshipsOffered.get(i));
