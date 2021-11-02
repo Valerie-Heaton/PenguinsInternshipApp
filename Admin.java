@@ -5,7 +5,7 @@
 */
 import java.util.UUID;
 
-public class Admin {
+public class Admin extends User{
     /**
     * The admin class private variable(s) for the 'admin' class
     */
@@ -18,6 +18,7 @@ public class Admin {
     private String description;
     private String location;
     private Internships internship;
+    private UUID id;
     /**
      * The constructor for the admin class 
      * @param firstName is the appropriate String and is assigned to the this.firstName.
@@ -26,15 +27,17 @@ public class Admin {
      * @param password is the appropriate String and is assigned to the this.password.
      * @param email is the appropriate String and is assigned to the this.email.
      */
+
     public Admin(String firstName, String lastName, String userName, String password, String email) {
-        super(firstName, lastName, userName, password, email);
-        this.id = UUID.randomUUID();
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.userName = userName;
-        this.email = email;
-        this.password = password;
-    }
+     super(firstName, lastName, userName, email, password);
+     this.id = UUID.randomUUID();
+     this.firstName = firstName;
+     this.lastName = lastName;
+     this.userName = userName;
+     this.email = email;
+     this.password = password;
+   }
+
     /**
     * This method initializes each of that are necessary for Admin and intializes the String description for admin.
     * @param id is the appropriate UUID and is assigned to the this.id.
@@ -44,8 +47,8 @@ public class Admin {
     * @param email is the appropriate String and is assigned to the this.email.
     * @param password is the approrpriate String and is assigned to the this.password.
     */
-    public Admin(UUID id, String firstName, String lastName, String userName, String email, String password) {
-        super(firstName, lastName, userName, email, password);
+    public Admin(UUID id, String firstName, String lastName, String userName, String password, String email) {
+        super(firstName, lastName, userName, password, email);
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

@@ -10,6 +10,8 @@ public class Experience {
     /**
     * These are the private variables for the Experience class.
     */
+    private String title;
+    private String company;
     private ArrayList<String> volunteerExperience;
     private ArrayList<String> workExperience;
     private ArrayList<String> pastPositions;
@@ -21,7 +23,9 @@ public class Experience {
      * @param workExperience is an ArrayList of Work Experience
      * @param pastEmployers is an ArrayList of the Past Employers
      */
-    public Experience(ArrayList<String> volunteerExperience, ArrayList<String> workExperience, ArrayList<String> pastEmployers) {
+    public Experience(String title, String company) {
+        this.title = title;
+        this.company = company;
         this.volunteerExperience = new ArrayList<String>();
         this.workExperience = new ArrayList<String>();
         this.pastPositions = new ArrayList<String>();
@@ -50,6 +54,12 @@ public class Experience {
      */
     public String getExperienceDescription() {
         return this.experienceDescription;
+    }
+    public String getTitle() {
+        return title;
+    }
+    public String getCompany() {
+        return company;
     }
 
 }

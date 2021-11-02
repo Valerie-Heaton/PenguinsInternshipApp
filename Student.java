@@ -30,8 +30,8 @@ public class Student extends User {
    @email will construct the users email
    */
 
-    public Student(String firstName, String lastName, String userName, String email, String password) {
-     super(firstName, lastName, userName, email, password);
+    public Student(String firstName, String lastName, String userName, String password, String email) {
+     super(firstName, lastName, userName, password, email);
      this.id = UUID.randomUUID();
      this.firstName = firstName;
      this.lastName = lastName;
@@ -46,8 +46,8 @@ public class Student extends User {
    }
 
     //instance of Student WITH the random ID
-    public Student(UUID id, String firstName, String lastName, String userName, String email, String password) {
-      super(firstName, lastName, userName, email, password);
+    public Student(UUID id, String firstName, String lastName, String userName, String password, String email) {
+      super(firstName, lastName, userName, password, email);
       this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;
@@ -77,17 +77,13 @@ public class Student extends User {
    *this method will add the students rating on the internship program
  * @return 
    */
-   public User addInternshipRating(User rater, int rating, String comment) {
+   public User addInternshipRating(User rater, Rating rating, String comment) {
        return rater;
    }
    /**
    *this method will allow the user to insert their Resume
    */
-   public void insertResume() {
-<<<<<<< HEAD
    public static void insertResume() {
-=======
->>>>>>> c899116b0d027c33a4632475532a682fe9d6a098
       Resume insertResume = new Resume();
    }
 
@@ -101,25 +97,37 @@ public class Student extends User {
     return this.firstName;
   }
 
-public String getEmail() {
-    return this.email;
-}
+  public String getEmail() {
+      return this.email;
+  }
 
 //Out for now. What does this connect to?
 //public ArrayList<Student> getStudentUsers() {
     //return null;
 //}
 
-public ArrayList<String> getCourses() {
-  return this.courses;
-}
+  public ArrayList<String> getCourses() {
+    return this.courses;
+  }
 
-public ArrayList<Experience> getExperiences() {
-    return this.experience;
-}
+  public ArrayList<Experience> getExperiences() {
+      return this.experience;
+  }
 
-public String getLastName() {
-    return this.lastName;
-}
+  public String getLastName() {
+      return this.lastName;
+  }
+
+  @Override
+  public String getUserName() {
+    // TODO Auto-generated method stub
+    return this.userName;
+  }
+
+  @Override
+  public String getPassword() {
+    // TODO Auto-generated method stub
+    return this.password;
+  }
    }
     
