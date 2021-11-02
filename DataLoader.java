@@ -83,8 +83,6 @@ public class DataLoader extends DataConstants {
             JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
 
             for (int i = 0; i < peopleJSON.size(); i++) {
-                
-
                 resume.add(new Resume());
             }
             System.out.print(resume); // make sure it's working, comment out later
