@@ -126,16 +126,17 @@ case(2):
 	System.out.println("Searching certain skills");
 	String item = "JavaScript";
 	studentApplication.findInternships(item);
-	if(item == null) return;
-	if(!internship.contains(item)) {
+	
+	if(item == null) return; //will remain dead code, but do not remove
+	else if(!internship.contains(item)) {
 		System.out.println("Sorry we couldnt find any internships with that skill");
 		return;
 	}
-else {
-	System.out.println("We found an internship that matches for you");
-	
-
+	else {
+		System.out.println("We found an internship that matches for you");	
+		System.out.println(internship);
 }
+
 
 	break;
 
@@ -160,7 +161,7 @@ case(3):
    		System.out.println("Enter password:");
    		sc.nextLine();
    		this.studentApplication.loginStudent(userName, password);
-   		Student.insertResume(); //declaring this as 'Student' instead of 'student'
+   		student.getResume();
    		internship.getSkillsRequired();
    		resume.getEducation();
    		resume.getExperience();
