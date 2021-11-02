@@ -72,12 +72,8 @@ public class Resume {
       public ArrayList<Resume> getResume() {
          return null;
       }
-<<<<<<< HEAD
-
-=======
       public Resume resumeToTextFile(){
          
          return resume;
       }
->>>>>>> 78f084adf8eb7b2c6da705c71a3aa0bf35632b45
 }
