@@ -10,6 +10,7 @@ public class Experience {
     /**
     * These are the private variables for the Experience class.
     */
+    //maddie
     private String title;
     private String company;
     private ArrayList<String> volunteerExperience;
