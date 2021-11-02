@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class Employer extends User  {
-
+    private UUID id;
     private String firstName;
     private String lastName;
     private String userName;
@@ -21,13 +21,24 @@ public class Employer extends User  {
    @email will construct the users email
    @internshipsOffered will construct the internships being offered
    */
-    public Employer(UUID id, String firstName, String lastName, String userName, String email) {
-        id = UUID.randomUUID();
+    public Employer(String firstName, String lastName, String userName, String email) {
+        super(firstName, lastName, userName, email);
+        this.id = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.email = email;
         this.internshipsOffered = internshipsOffered;
+    }
+
+    public Employer(UUID id, String firstName, String lastName, String userName, String email) {
+      //super(id, firstName, lastName, userName, email);
+      this.id = id;
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.userName = userName;
+      this.email = email;
+      this.internshipsOffered = internshipsOffered;
     }
 
   

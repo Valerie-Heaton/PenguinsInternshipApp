@@ -89,7 +89,7 @@ private int getUserCommand(int numCommands) {
 				break;
 			}
     }
-	return numCommands;
+		return numCommands;
 		}
 	}
 
