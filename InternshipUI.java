@@ -99,7 +99,33 @@ studentApplication.findInternships();
 //TODO we have to make a method for picking and selecting a job
 break;
 case(3):
-studentApplication.login(userName, password);
+System.out.println("Are you a student, employer, or admin? Type in student, employer, or admin"); 
+String userInput = sc.nextLine();
+if(userInput.equalsIgnoreCase("student")) {
+   System.out.println("Enter username:");
+   sc.nextLine();
+   System.out.println("Enter password:");
+   sc.nextLine();
+   this.studentApplication.loginStudent(userName, password);
+   student.insertResume();
+   internship.getSkillsRequired();
+   resume.getEducation();//not a method yet
+   resume.getExperience();
+}
+else if(userInput.equalsIgnoreCase("admin")) {
+   System.out.println("Enter username:");
+   sc.nextLine();
+   System.out.println("Enter password:");
+   sc.nextLine();
+   this.studentApplication.loginAdmin(userName, password);
+}
+else if(userInput.equalsIgnoreCase("employer")) {
+   System.out.println("Enter username:");
+   sc.nextLine();
+   System.out.println("Enter password:");
+   sc.nextLine();
+   this.studentApplication.loginEmployer(userName, password);
+}
 studentApplication.findInternships();
 Student.getInstance();
 

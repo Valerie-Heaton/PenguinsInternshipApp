@@ -11,7 +11,7 @@ public class UserList {
     private ArrayList<Student> studentList;
     private ArrayList<Employer> employerList;
 
-    private UserList() {
+    public UserList() {
         adminList = DataLoader.getAdmins();
         studentList = DataLoader.getStudents();
         employerList = DataLoader.getEmployers();
@@ -21,7 +21,7 @@ public class UserList {
     /**
      * The public getInstance method fetches the instance of 'User'
      */
-    public UserList getInstance() {
+    public static UserList getInstance() {
         if (users == null) {
             users = new UserList();
         }
@@ -132,6 +132,10 @@ public class UserList {
         DataWriter.saveStudent();
         DataWriter.saveEmployer();
         DataWriter.saveAdmin();
+    }
+
+    public ArrayList<Student> getStudents() {
+        return this.studentList;
     }
     
 }

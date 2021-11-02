@@ -5,21 +5,27 @@ public class InternshipList {
     /**
      * Variables for the InternshipList class
      */
-    private InternshipList internshipList;
-    private ArrayList<Internships> internships;
+    private static InternshipList internships;
+    private ArrayList<Internships> internshipList;
 
     public String job;
     
     /**
      * The private method for the InternshipList class
      */
-    private InternshipList() {}
+    private InternshipList() {
+        internshipList = DataLoader.getInternships();
+    }
     
     /**
      * The public getInstance method fetches the instance of 'Internship'
      */
-    public Internships getInstance() {
-        return null;
+    public static InternshipList getInstance() {
+        if(internships == null) {
+            internships = new InternshipList();
+        }
+
+        return internships;
     }
 
     public ArrayList<Internships> getInternships() {
