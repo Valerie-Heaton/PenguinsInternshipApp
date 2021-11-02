@@ -140,6 +140,7 @@ case(3):
 		
 		studentApplication.findInternships();
 		Student.getInstance();
+		//maddie
 }
 
 
