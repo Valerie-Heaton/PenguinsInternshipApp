@@ -18,4 +18,6 @@ public class DataConstants {
     protected static final String USER_LOCATION = "location";
     protected static final String USER_IN_PERSON = "in person";
     protected static final String USER_REMOTE = "remote";
+    protected static final String USER_COMPANY = "company";
+
 }
