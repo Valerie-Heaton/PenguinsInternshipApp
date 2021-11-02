@@ -1,5 +1,5 @@
 /**
-* This is the stub for the admin program.
+* This is the Admin class we will use to implement the User program.
 * 
 * @author Siri, Maddie, Valerie, Ali
 */

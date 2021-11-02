@@ -1,3 +1,9 @@
+/**
+* The DataWriter class that inherits from the data constants program.
+* 
+* @author Siri, Maddie, Valerie, Ali
+*/
+
 import java.util.ArrayList;
 import java.util.*;
 import java.io.FileWriter;
@@ -5,6 +11,9 @@ import java.io.IOException;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+/**
+ * 
+ */
 public class DataWriter extends DataConstants {
     
     public static void saveStudent() {
@@ -72,7 +81,11 @@ public class DataWriter extends DataConstants {
             e.printStackTrace();
         }
 	}
-	
+	/**
+     * This private static method gets our resume JSON and is used in the save resume method.
+     * @param resume is the appropriate resume and assigned to resumeDetails.
+     * @return returns 
+     */
 	private static JSONObject getResumeJSON(Resume resume) {
         JSONObject resumeDetails = new JSONObject();
 		// NOT NEEDED resumeDetails.put(USER_STUDENT_INFO, resume.getStudentInfo());

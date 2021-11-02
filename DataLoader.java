@@ -1,3 +1,9 @@
+/**
+* The DataLoader class that inherits from the data constants program.
+* 
+* @author Siri, Maddie, Valerie, Ali
+*/
+
 import java.util.ArrayList;
 import java.io.FileReader;
 import java.util.UUID;
