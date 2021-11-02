@@ -57,7 +57,7 @@ public class InternshipUI {
 					//TODO we have to make a method for picking and selecting a job
 					break;
 				case(3):
-				studentApplication.loginUser(userName);
+				studentApplication.login(userName);
 				studentApplication.findInternships();
 				Student.getInstance();
 					
