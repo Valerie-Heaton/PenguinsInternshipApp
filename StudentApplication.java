@@ -66,17 +66,8 @@ public class StudentApplication {
     //     return internshipList;
     // }
 
-<<<<<<< HEAD
-    public reviewInternship(User rater, int rating, String comment) {
-        this.firstName = rater;
-        this.lastName = rating;
-        this.userName = comment;
-=======
-=======
->>>>>>> f26c3c0ff177c45b228cd11e9894cf87473a8eb6
     public void logout() {
         userList.saveUsers();
->>>>>>> c899116b0d027c33a4632475532a682fe9d6a098
     }
 
 }

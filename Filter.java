@@ -20,16 +20,21 @@
         this.internshipFilters = internshipFilters;
      }
     
-     //get Student, Employer, and Internship filters
-
+      /**
+      * This gets the employerFilters method from the children classes
+      */   
      public EmployerFilters getEmployerFilters() {
          return this.employerFilters;
      } 
-
+      /**
+      * This gets the studenFilters method from the children classes
+      */   
      public StudentFilters getStudentFilters() {
          return this.studentFilters;
      }
-
+      /**
+      * This gets the internshipFilters method from the children classes
+      */   
      public InternshipFilters getInternshipFilters() {
          return this.internshipFilters;
      }
