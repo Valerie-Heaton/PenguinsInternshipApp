@@ -255,7 +255,11 @@ public class DataWriter extends DataConstants {
         Resume resume = Resume.getInstance();
         ArrayList<Resume> resumes = resume.getResume();
         JSONArray jsonResumes = new JSONArray();
+<<<<<<< HEAD
          Scanner sc = new Scanner(System.in);
+=======
+        Scanner sc = new Scanner(System.in);
+>>>>>>> 0313da9815b1e29830d9c0ae88381a9144ca39d7
         for(int i = 0; i < resumes.size(); i++) {
         //https://stackoverflow.com/questions/26165386/producing-some-text-file-using-a-for-loop-in-java
         try {

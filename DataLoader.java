@@ -37,12 +37,12 @@ public class DataLoader extends DataConstants {
              */
             for (int i = 0; i < peopleJSON.size(); i++) {
                 JSONObject personJSON = (JSONObject) peopleJSON.get(i);
-                UUID id = UUID.fromString((String) personJSON.get("Admin.json"));
-                String firstName = (String) personJSON.get("Admin.json");
-                String lastName = (String) personJSON.get("Admin.json");
-                String userName = (String) personJSON.get("Admin.json");
-                String email = (String) personJSON.get("Admin.json");
-                String password = (String) personJSON.get("Admin.json");
+                UUID id = UUID.fromString((String) personJSON.get(USER_ID));
+                String firstName = (String) personJSON.get(USER_FIRST_NAME);
+                String lastName = (String) personJSON.get(USER_LAST_NAME);
+                String userName = (String) personJSON.get(USER_USER_NAME);
+                String email = (String) personJSON.get(USER_EMAIL);
+                String password = (String) personJSON.get(USER_PASSWORD);
 
                 admins.add(new Admin(id, firstName, lastName, userName, email, password));
             }
@@ -78,7 +78,7 @@ public class DataLoader extends DataConstants {
                 String firstName = (String) personJSON.get(USER_FIRST_NAME);
                 String lastName = (String) personJSON.get(USER_LAST_NAME);
                 String email = (String) personJSON.get(USER_EMAIL);
-                String password = (String) personJSON.get("student.json");
+                String password = (String) personJSON.get(USER_PASSWORD);
                 
                 
                 //work without throwing an error
@@ -133,12 +133,12 @@ public class DataLoader extends DataConstants {
 
             for (int i = 0; i < peopleJSON.size(); i++) {
                 JSONObject personJSON = (JSONObject) peopleJSON.get(i);
-                UUID id = UUID.fromString((String) personJSON.get("Internships.json"));
-                String title = (String) personJSON.get("Internships.json");
-                String description = (String) personJSON.get("Internships.json");
-                String location = (String) personJSON.get("Internships.json");
-                boolean inPerson = (boolean) personJSON.get("Internships.json");
-                boolean remote = (boolean) personJSON.get("Internships.json");
+                UUID id = UUID.fromString((String) personJSON.get(USER_ID));
+                String title = (String) personJSON.get(USER_TITLE);
+                String description = (String) personJSON.get(USER_DESCRIPTION);
+                String location = (String) personJSON.get(USER_LOCATION);
+                boolean inPerson = (boolean) personJSON.get(USER_IN_PERSON);
+                boolean remote = (boolean) personJSON.get(USER_REMOTE);
 
                 internships.add(new Internships(id, title, description, location, inPerson, remote));
             }
@@ -167,12 +167,12 @@ public class DataLoader extends DataConstants {
              */
             for (int i = 0; i < peopleJSON.size(); i++) {
                 JSONObject personJSON = (JSONObject) peopleJSON.get(i);
-                UUID id = UUID.fromString((String) personJSON.get("Employer.json"));
-                String firstName = (String) personJSON.get("Employer.json");
-                String lastName = (String) personJSON.get("Employer.json");
-                String userName = (String) personJSON.get("Employer.json");
-                String email = (String) personJSON.get("Employer.json");
-                String password = (String) personJSON.get("Employer.json");
+                UUID id = UUID.fromString((String) personJSON.get(USER_ID));
+                String firstName = (String) personJSON.get(USER_FIRST_NAME);
+                String lastName = (String) personJSON.get(USER_LAST_NAME);
+                String userName = (String) personJSON.get(USER_USER_NAME);
+                String email = (String) personJSON.get(USER_EMAIL);
+                String password = (String) personJSON.get(USER_PASSWORD);
 
                 employers.add(new Employer(id, firstName, lastName, userName, email, password));
             }

@@ -1,17 +1,30 @@
 import java.net.PasswordAuthentication;
 import java.util.Scanner;
+import java.util.UUID;
+
 public class InternshipUI {
 
 
 private final String WELCOME_MESSAGE = "Welcome to the inernship app";
 private String[] mainMenuOptions = {"Login,", "Prints out resume to a text file", "filter", "Login with a job listing"};
-private Scanner scanner;
 
 
 private Internships internship;
+private UUID id;
+private String title;
+private String description;
+private String location;
+private boolean inPerson;
+private boolean remote;
+
 private Resume resume;
 private StudentApplication studentApplication;
+
 private Student student;
+private String firstName;
+private String lastName;
+private String email;
+
 private String userName;
 private String password;
 private DataWriter dataWriter;
@@ -19,18 +32,12 @@ private Scanner sc = new Scanner(System.in);
 
 
   
-  public InternshipUI(Internships internship, Resume resume, StudentApplication studentApplication, Student student, String username, String password, Employer employer, DataWriter dataWriter) {
-      internship = new Internships(null, WELCOME_MESSAGE, WELCOME_MESSAGE, WELCOME_MESSAGE, false, false);
+  public InternshipUI() {
+      internship = new Internships(id, title, description, location, inPerson, remote);
       resume = new Resume();
       this.studentApplication = new StudentApplication();
-      student = new Student(WELCOME_MESSAGE, WELCOME_MESSAGE, WELCOME_MESSAGE, WELCOME_MESSAGE, WELCOME_MESSAGE);
-      this.userName = userName;
-      this.password = password;
+      student = new Student(firstName, lastName, userName, password, email);
       dataWriter = new DataWriter();
-}
-InternshipUI() {
-
-
 }
   
 public void run() {
@@ -59,19 +66,35 @@ if(userCommand == mainMenuOptions.length -1) break;
 
 switch(userCommand) {
 case(0):
-System.out.println("Enter username:");
-sc.nextLine();
-System.out.println("Enter password:");
-sc.nextLine();
 
+System.out.println("Are you a student, employer, or admin? Type in student, employer, or admin"); 
+String userInput = sc.nextLine();
+if(userInput.equalsIgnoreCase("student")) {
+   System.out.println("Enter username:");
+   sc.nextLine();
+   System.out.println("Enter password:");
+   sc.nextLine();
+   this.studentApplication.loginStudent(userName, password);
+   student.insertResume();
+   internship.getSkillsRequired();
+   resume.getEducation();//not a method yet
+   resume.getExperience();
+}
+else if(userInput.equalsIgnoreCase("admin")) {
+   System.out.println("Enter username:");
+   sc.nextLine();
+   System.out.println("Enter password:");
+   sc.nextLine();
+   this.studentApplication.loginAdmin(userName, password);
+}
+else if(userInput.equalsIgnoreCase("employer")) {
+   System.out.println("Enter username:");
+   sc.nextLine();
+   System.out.println("Enter password:");
+   sc.nextLine();
+   this.studentApplication.loginEmployer(userName, password);
+}
 
-
-
-this.studentApplication.login(userName, password);
-student.insertResume();
-internship.getSkillsRequired();
-resume.getEducation();//not a method yet
-resume.getExperience();
 break;
 case(1):
 System.out.println("Printing your resume to a .txt file");
@@ -89,7 +112,33 @@ studentApplication.findInternships();
 //TODO we have to make a method for picking and selecting a job
 break;
 case(3):
-studentApplication.login(userName, password);
+System.out.println("Are you a student, employer, or admin? Type in student, employer, or admin"); 
+String userInput = sc.nextLine();
+if(userInput.equalsIgnoreCase("student")) {
+   System.out.println("Enter username:");
+   sc.nextLine();
+   System.out.println("Enter password:");
+   sc.nextLine();
+   this.studentApplication.loginStudent(userName, password);
+   student.insertResume();
+   internship.getSkillsRequired();
+   resume.getEducation();//not a method yet
+   resume.getExperience();
+}
+else if(userInput.equalsIgnoreCase("admin")) {
+   System.out.println("Enter username:");
+   sc.nextLine();
+   System.out.println("Enter password:");
+   sc.nextLine();
+   this.studentApplication.loginAdmin(userName, password);
+}
+else if(userInput.equalsIgnoreCase("employer")) {
+   System.out.println("Enter username:");
+   sc.nextLine();
+   System.out.println("Enter password:");
+   sc.nextLine();
+   this.studentApplication.loginEmployer(userName, password);
+}
 studentApplication.findInternships();
 Student.getInstance();
 
