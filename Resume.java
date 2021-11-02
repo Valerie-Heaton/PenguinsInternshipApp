@@ -35,6 +35,7 @@ public class Resume {
         this.experience = new ArrayList<Experience>();
         this.skills = new ArrayList<String>();
         this.education = new ArrayList<Education>();
+        
         this.resume = new Resume();
       }
       /**
