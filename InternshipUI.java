@@ -19,18 +19,12 @@ private Scanner sc = new Scanner(System.in);
 
 
   
-  public InternshipUI(Internships internship, Resume resume, StudentApplication studentApplication, Student student, String username, String password, Employer employer, DataWriter dataWriter) {
+  public InternshipUI() {
       internship = new Internships(null, WELCOME_MESSAGE, WELCOME_MESSAGE, WELCOME_MESSAGE, false, false);
       resume = new Resume();
       this.studentApplication = new StudentApplication();
       student = new Student(WELCOME_MESSAGE, WELCOME_MESSAGE, WELCOME_MESSAGE, WELCOME_MESSAGE, WELCOME_MESSAGE);
-      this.userName = userName;
-      this.password = password;
       dataWriter = new DataWriter();
-}
-InternshipUI() {
-
-
 }
   
 public void run() {

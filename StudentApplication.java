@@ -7,9 +7,8 @@ public class StudentApplication {
     private User user;
 
     public StudentApplication() {
-        this.internshipList = internshipList; // should it be get instance
-        this.userList = userList;
-        this.user = user;
+        this.internshipList = internshipList.getInstance(); // should it be get instance
+        this.userList = userList.getInstance();
     }
 
     public ArrayList<Internships> findInternships() {
@@ -24,13 +23,27 @@ public class StudentApplication {
         return userList.addStudent(userName, firstName, lastName, password, email); // will maybe need to add more to parameters
     }
 
-    // method
-
-    public boolean login(String userName, String password) { // was not originally boolean
-        if (!userList.haveAdmin(userName) || !userList.haveEmployer(userName) || !userList.haveStudent(userName)) {
+    public boolean loginStudent(String userName, String password) { // was not originally boolean
+        if (!userList.haveStudent(userName)) {
             return false;
         }
-        user = userList.getUser(userName, password);
+        user = userList.getStudent(userName, password);
+        return true;
+    }
+
+    public boolean loginEmployer(String userName, String password) { // was not originally boolean
+        if (!userList.haveEmployer(userName)) {
+            return false;
+        }
+        user = userList.getEmployer(userName, password);
+        return true;
+    }
+
+    public boolean loginAdmin(String userName, String password) { // was not originally boolean
+        if (!userList.haveAdmin(userName)) {
+            return false;
+        }
+        user = userList.getAdmin(userName, password);
         return true;
     }
 

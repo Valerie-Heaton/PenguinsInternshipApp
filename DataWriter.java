@@ -249,19 +249,13 @@ public class DataWriter extends DataConstants {
         adminDetails.put(USER_USER_NAME, admin.getUserName());
         adminDetails.put(USER_EMAIL, admin.getEmail());
         return adminDetails;
-<<<<<<< HEAD
 	}
     
-=======
-    }
-
->>>>>>> 0c4e0c3ddc42e10db863cb5084d11c47acf01c79
     public static void toTextFile() {
         Resume resume = Resume.getInstance();
         ArrayList<Resume> resumes = resume.getResume();
         JSONArray jsonResumes = new JSONArray();
-<<<<<<< HEAD
-         Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         for(int i = 0; i < resumes.size(); i++) {
         //https://stackoverflow.com/questions/26165386/producing-some-text-file-using-a-for-loop-in-java
         try {
@@ -273,18 +267,3 @@ public class DataWriter extends DataConstants {
        }
    }
 }
-=======
-        Scanner sc = new Scanner(System.in);
-        for (int i = 0; i < resumes.size(); i++) {
-            // https://stackoverflow.com/questions/26165386/producing-some-text-file-using-a-for-loop-in-java
-            try {
-                FileWriter f = new FileWriter("textfile.txt");
-                f.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-}
->>>>>>> 0c4e0c3ddc42e10db863cb5084d11c47acf01c79

@@ -114,31 +114,26 @@ public class Admin extends User{
 
     @Override
     public String getFirstName() {
-        // TODO Auto-generated method stub
         return this.firstName;
     }
 
     @Override
     public String getLastName() {
-        // TODO Auto-generated method stub
         return this.lastName;
     }
 
     @Override
     public String getUserName() {
-        // TODO Auto-generated method stub
         return this.userName;
     }
 
     @Override
     public String getPassword() {
-        // TODO Auto-generated method stub
         return this.password;
     }
 
     @Override
     public String getEmail() {
-        // TODO Auto-generated method stub
         return this.email;
     }
     
