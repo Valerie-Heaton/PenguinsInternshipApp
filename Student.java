@@ -15,8 +15,6 @@ public class Student extends User {
     private String userName;
     private String email;
     private String password;
-    private Resume resume;
-    //added
     private ArrayList<Internships> internshipsApplied;
     private String major;
     private ArrayList<String> courses;
@@ -62,11 +60,7 @@ public class Student extends User {
       this.experience = experience;
       this.education = education;
       this.password = password;
-<<<<<<< HEAD
       this.resume = resume;
-=======
-      this.resume = new Resume();
->>>>>>> ee612fce570860247697e4d902989fa4113afa3e
     }
 
     //maddie

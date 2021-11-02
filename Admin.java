@@ -135,5 +135,9 @@ public class Admin extends User {
     public String getEmail() {
         return this.email;
     }
+
+    public UUID getID() {
+        return this.id;
+    }
     
 }

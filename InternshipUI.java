@@ -5,7 +5,7 @@ public class InternshipUI {
 
 
 private final String WELCOME_MESSAGE = "Welcome to the inernship app";
-private String[] mainMenuOptions = {"Login,", "Prints out resume to a text file", "filter", "Login with a job listing"};
+private String[] mainMenuOptions = {"Login,", "Prints out resume to a text file", "Filter", "Login with a job listing"};
 
 
 private Internships internship;
@@ -15,20 +15,15 @@ private String description;
 private String location;
 private boolean inPerson;
 private boolean remote;
-private String keyword;
 private Resume resume;
 private StudentApplication studentApplication;
-<<<<<<< HEAD
-=======
-private Student student;
-
->>>>>>> ee612fce570860247697e4d902989fa4113afa3e
 private String firstName;
 private String lastName;
 private String email;
 private String userName;
 private String password;
 private Scanner sc = new Scanner(System.in);
+private Student student;
 
   
   public InternshipUI() {
@@ -86,6 +81,7 @@ if(userCommand == mainMenuOptions.length -1) break;
    				System.out.println("Enter password:");
    				sc.nextLine();
    				this.studentApplication.loginStudent(userName, password);
+				System.out.println("Logged in..");
    				student.getResume();// siri is working on this 
    				internship.getSkillsRequired();
    				resume.getEducation();//not a method yet
@@ -113,7 +109,7 @@ if(userCommand == mainMenuOptions.length -1) break;
 
 case(1):
 	System.out.println("Printing your resume to a .txt file");
-	DataWriter.toTextFile();
+	//DataWriter.toTextFile();
 	break;
 
 
@@ -127,8 +123,11 @@ case(2):
 	String item = "JavaScript";
 	studentApplication.findInternships(item);
 	
-	if(item == null) return; //will remain dead code, but do not remove
-	else if(!internship.contains(item)) {
+	if(item == null) {
+		System.out.println("Sorry, you did not enter in a valid skill");
+	}
+
+	if(!internship.contains(item)) {
 		System.out.println("Sorry we couldnt find any internships with that skill");
 		return;
 	}
@@ -179,9 +178,7 @@ case(3):
    		System.out.println("Enter password:");
    		sc.nextLine();
    		this.studentApplication.loginEmployer(userName, password);
-		
 		studentApplication.findInternships();
-		Student.getInstance();
 		}
 		break;
 		}
