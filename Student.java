@@ -15,6 +15,7 @@ public class Student extends User {
     private String userName;
     private String email;
     private String password;
+    private Resume resume;
     //added
     private ArrayList<Internships> internshipsApplied;
     private String major;
@@ -59,7 +60,9 @@ public class Student extends User {
       this.experience = experience;
       this.education = education;
       this.password = password;
+      this.resume = new Resume();
     }
+
     
     //get the ID
     public UUID getId() {
@@ -83,8 +86,8 @@ public class Student extends User {
    /**
    *this method will allow the user to insert their Resume
    */
-   public static void insertResume() {
-      new Resume(); //makes a new Resume
+   public Resume getResume() {
+      return this.resume;
    }
 
    // ADDED IN THIS METHOD BC OF DATA WRITER
@@ -127,5 +130,6 @@ public class Student extends User {
   public String getPassword() {
     return this.password;
   }
-   }
+  
+}
     
