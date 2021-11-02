@@ -85,14 +85,8 @@ public class Resume {
       /**
       * This calls the getResume method from the children classes
       */   
-<<<<<<< HEAD
-      // public Resume getResume() {
-      //    return Resume.resume;
-      // }
+      public Resume getResume() {
+         return Resume.resume;
+      }
      
-=======
-      public ArrayList<Resume> getResume() {
-         return null;
-      }  
->>>>>>> e64293f5c2b861867338a0e61f2d583c2fb3938e
 }
