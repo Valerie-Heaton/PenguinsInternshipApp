@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class Employer extends User  {
-
+    private UUID id;
     private String firstName;
     private String lastName;
     private String userName;
@@ -29,6 +29,16 @@ public class Employer extends User  {
         this.userName = userName;
         this.email = email;
         this.internshipsOffered = internshipsOffered;
+    }
+
+    public Employer(UUID id, String firstName, String lastName, String userName, String email) {
+      //super(id, firstName, lastName, userName, email);
+      this.id = id;
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.userName = userName;
+      this.email = email;
+      this.internshipsOffered = internshipsOffered;
     }
 
   

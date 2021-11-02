@@ -9,6 +9,7 @@ public class Admin extends User {
 /**
 * The admin class private variable(s) for the 'admin' stub
 */
+    private UUID id;
     private String firstName;
     private String lastName;
     private String userName;
@@ -17,8 +18,23 @@ public class Admin extends User {
     private String description;
     private String location;
 
+
+    public Admin(String firstName, String lastName, String userName, String email) {
+        super(firstName, lastName, userName, email);
+        this.id = UUID.randomUUID();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.email = email;
+    }
+
     public Admin(UUID id, String firstName, String lastName, String userName, String email) {
-        id = UUID.randomUUID();
+        //super(id, firstName, lastName, userName, email);
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.email = email;
     }
     
     /**
