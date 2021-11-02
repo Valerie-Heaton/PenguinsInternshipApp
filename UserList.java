@@ -7,13 +7,14 @@ public class UserList {
      * Variables for the UserList class
      */
     private static UserList users;
-    private ArrayList<Student> studentList;
-    private ArrayList<Employer> employerList;
+    private ArrayList<User> userList;
+    //private ArrayList<Employer> employerList;
 
     private UserList() {
-        studentList = DataLoader.getStudents();
-        employerList = DataLoader.getEmployers();
+        userList = DataLoader.getUserList();
+        // probably will actually load in admin student employer
     }
+
     /**
      * The public getInstance method fetches the instance of 'User'
      */
@@ -23,6 +24,7 @@ public class UserList {
         }
         return users;
     }
+
     /**
      * The public array list method containing the instance of 'User' fetches the user's profile
      */
@@ -52,25 +54,22 @@ public class UserList {
         if(haveStudent(userName)) {
             return false;
         }
-
         studentList.add(new Student(userName, firstName, lastName, email, major));
         return true;
-
     }
 
     public boolean addEmployerUser(String userName, String firstName, String lastName, String email) {
         if(haveEmployer(userName)) {
             return false;
         }
-
         employerList.add(new Employer(userName, firstName, lastName, email));
         return true;
-
     }
 
     public void saveUsers() {
         DataWriter.saveStudent();
         DataWriter.saveEmployer();
+        DataWriter.saveAdmin();
     }
     
 }

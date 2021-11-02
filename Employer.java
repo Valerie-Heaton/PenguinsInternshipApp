@@ -21,9 +21,15 @@ public class Employer extends User  {
    @email will construct the users email
    @internshipsOffered will construct the internships being offered
    */
+<<<<<<< HEAD
     public Employer(String firstName, String lastName, String userName, String email) {
         super(firstName, lastName, userName, email);
         this.id = UUID.randomUUID();
+=======
+    public Employer(UUID id, String firstName, String lastName, String userName, String email) {
+        super(id, firstName, lastName, userName, email);
+        id = UUID.randomUUID();
+>>>>>>> 4bcdbf09316dd688522e90506a009c1e9d436282
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;

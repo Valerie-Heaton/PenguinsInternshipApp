@@ -21,7 +21,7 @@ public class Rating {
    /**
    *this method will get the rater
    */
-   public User rater() {
+   public User getRater() {
       return this.rater;
    }
    
