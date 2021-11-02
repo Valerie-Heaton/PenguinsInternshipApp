@@ -37,23 +37,17 @@ public class StudentApplication {
         return userList.addUser(userName, firstName, lastName, email); // will maybe need to add more to parameters
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public User createAccount(String firstName, String lastName, String userName) { 
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
-        return user;// will maybe need to add more to parameters
-=======
+        return user;
+        // will maybe need to add more to parameters
     // public boolean createEmployerAccount(String userName, String firstName, String lastName, String email) { 
     //     return userList.addEmployerUser(userName, firstName, lastName, email); // will maybe need to add more to parameters
-    // }
->>>>>>> c899116b0d027c33a4632475532a682fe9d6a098
+}
 
-    public boolean loginUser(String userName) { // was not originally boolean
-=======
-    public boolean login(String userName, String password) { // was not originally boolean
->>>>>>> f26c3c0ff177c45b228cd11e9894cf87473a8eb6
+    public boolean login(String userName) { // was not originally boolean
         if(!userList.haveUser(userName)) {
             return false;
         }
@@ -61,23 +55,13 @@ public class StudentApplication {
         return true;
     }
 
-<<<<<<< HEAD
 
     // public ArrayList<Internships> getMyInternships() {
     //     return internshipList;
     // }
 
-<<<<<<< HEAD
-    public reviewInternship(User rater, int rating, String comment) {
-        this.firstName = rater;
-        this.lastName = rating;
-        this.userName = comment;
-=======
-=======
->>>>>>> f26c3c0ff177c45b228cd11e9894cf87473a8eb6
     public void logout() {
         userList.saveUsers();
->>>>>>> c899116b0d027c33a4632475532a682fe9d6a098
     }
 
 }
