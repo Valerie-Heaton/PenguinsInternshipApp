@@ -8,10 +8,20 @@ public class UserList {
     private static User user;
     private static UserList users;
     private ArrayList<User> userList;
-    //private ArrayList<Employer> employerList;
+    private ArrayList<Admin> adminList;
+    private ArrayList<Student> studentList;
+    private ArrayList<Employer> employerList;
 
     private UserList() {
-        userList = DataLoader.getUserList();
+        for(int i = 0; i < DataLoader.getStudents().size(); i++) {
+            userList.add(DataLoader.getStudents().get(i));
+        }
+        for(int i = 0; i < DataLoader.getEmployers().size(); i++) {
+            userList.add(DataLoader.getEmployers().get(i));
+        }
+        for(int i = 0; i < DataLoader.getAdmins().size(); i++) {
+            userList.add(DataLoader.getAdmins().get(i));
+        }
         // probably will actually load in admin, student, employer
     }
 
@@ -28,9 +38,9 @@ public class UserList {
     /**
      * The public array list method containing the instance of 'User' fetches the user's profile
      */
-    public User getUser(String userName) {
+    public User getUser(String userName, String password) {
         for(User user : userList) {
-            if(user.getUserName().equals(userName)) {
+            if(user.getUserName().equals(userName) && user.getPassword().equals(password)) {
                 return user;
             }
         }
