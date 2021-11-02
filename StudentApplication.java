@@ -17,6 +17,16 @@ public class StudentApplication {
 
     public ArrayList<Internships> findInternships(String keyword) {
         return internshipList.getInternships(keyword);
+<<<<<<< HEAD
+    }
+
+    public boolean createAccount(String userName, String firstName, String lastName, String email) {
+        return userList.addUser(userName, firstName, lastName, email); // will maybe need to add more to parameters
+    }
+
+    public boolean login(String userName, String password) { // was not originally boolean
+        if (!userList.haveUser(userName)) {
+=======
     }
 
     public boolean createStudentAccount(String userName, String firstName, String lastName, String password, String email) {
@@ -39,8 +49,14 @@ public class StudentApplication {
         return true;
     }
 
+<<<<<<< HEAD
     public boolean loginAdmin(String userName, String password) { // was not originally boolean
         if (!userList.haveAdmin(userName)) {
+=======
+    public boolean login(String userName, String password) { // was not originally boolean
+        if (!userList.haveAdmin(userName) || !userList.haveEmployer(userName) || !userList.haveStudent(userName)) {
+>>>>>>> 31137904d2cc6e8751214ad311be7280a638bfb2
+>>>>>>> b769436c15bb71a643a659c3cfaabc14835f06a3
             return false;
         }
         user = userList.getAdmin(userName, password);
