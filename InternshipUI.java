@@ -1,4 +1,4 @@
-import java.net.PasswordAuthentication;
+//import java.net.PasswordAuthentication; not used
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -88,7 +88,7 @@ if(userCommand == mainMenuOptions.length -1) break;
    				System.out.println("Enter password:");
    				sc.nextLine();
    				this.studentApplication.loginStudent(userName, password);
-   				student.insertResume();
+   				Student.insertResume();
    				internship.getSkillsRequired();
    				resume.getEducation();//not a method yet
    				resume.getExperience();
@@ -149,9 +149,9 @@ case(3):
    		System.out.println("Enter password:");
    		sc.nextLine();
    		this.studentApplication.loginStudent(userName, password);
-   		student.insertResume();
+   		Student.insertResume(); //declaring this as 'Student' instead of 'student'
    		internship.getSkillsRequired();
-   		resume.getEducation();//not a method yet
+   		resume.getEducation();
    		resume.getExperience();
 	}
 	else if(userLog.equalsIgnoreCase("admin")) {
