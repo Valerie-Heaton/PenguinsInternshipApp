@@ -53,19 +53,35 @@ if(userCommand == mainMenuOptions.length -1) break;
 
 switch(userCommand) {
 case(0):
-System.out.println("Enter username:");
-sc.nextLine();
-System.out.println("Enter password:");
-sc.nextLine();
 
+System.out.println("Are you a student, employer, or admin? Type in student, employer, or admin"); 
+String userInput = sc.nextLine();
+if(userInput.equalsIgnoreCase("student")) {
+   System.out.println("Enter username:");
+   sc.nextLine();
+   System.out.println("Enter password:");
+   sc.nextLine();
+   this.studentApplication.loginStudent(userName, password);
+   student.insertResume();
+   internship.getSkillsRequired();
+   resume.getEducation();//not a method yet
+   resume.getExperience();
+}
+else if(userInput.equalsIgnoreCase("admin")) {
+   System.out.println("Enter username:");
+   sc.nextLine();
+   System.out.println("Enter password:");
+   sc.nextLine();
+   this.studentApplication.loginAdmin(userName, password);
+}
+else if(userInput.equalsIgnoreCase("employer")) {
+   System.out.println("Enter username:");
+   sc.nextLine();
+   System.out.println("Enter password:");
+   sc.nextLine();
+   this.studentApplication.loginEmployer(userName, password);
+}
 
-
-
-this.studentApplication.login(userName, password);
-student.insertResume();
-internship.getSkillsRequired();
-resume.getEducation();//not a method yet
-resume.getExperience();
 break;
 case(1):
 System.out.println("Printing your resume to a .txt file");
