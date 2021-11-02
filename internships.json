@@ -5,7 +5,7 @@
         "description": "Create technical documents such as manuals for systems.",
   	    "rating": "5",
         "location": "Columbia, SC",
-        "skillsRequired":["Python","Java","COBOL"],
+        "skillsRequired":["JavaScript"],
         "inPerson": true,
         "remote": false
     },
@@ -15,7 +15,7 @@
         "description": "Gather, organize, and keep data for business use.",
         "rating": "3",
         "location": "Columbia, SC",
-        "skillsRequired": ["JavaScript"],
+        "skillsRequired": ["Python","Java","COBOL"],
         "inPerson": true,
         "remote": true
     }
