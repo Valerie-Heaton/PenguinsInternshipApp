@@ -17,24 +17,32 @@ public class Admin extends User {
     private String title;
     private String description;
     private String location;
+    private String password;
 
 
-    public Admin(String firstName, String lastName, String userName, String email) {
+    public Admin(String firstName, String lastName, String userName, String email, String password) {
         super(firstName, lastName, userName, email);
         this.id = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.email = email;
+        this.password = password;
     }
 
-    public Admin(UUID id, String firstName, String lastName, String userName, String email) {
+    public Admin(UUID id, String firstName, String lastName, String userName, String email, String password) {
         //super(id, firstName, lastName, userName, email);
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.email = email;
+        this.password = password;
+    }
+
+    // get the ID
+    public UUID getId() {
+        return id;
     }
     
     /**

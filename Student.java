@@ -14,6 +14,7 @@ public class Student extends User {
     private String lastName;
     private String userName;
     private String email;
+    private String password;
     //added
     private ArrayList<Internships> internshipsApplied;
     private String major;
@@ -29,8 +30,8 @@ public class Student extends User {
    @email will construct the users email
    */
 
-    public Student(UUID id, String firstName, String lastName, String userName, String email) {
-     super(firstName, lastName, userName, email);
+    public Student(String firstName, String lastName, String userName, String email, String password) {
+     super(firstName, lastName, userName, email, password);
      this.id = UUID.randomUUID();
      this.firstName = firstName;
      this.lastName = lastName;
@@ -41,11 +42,12 @@ public class Student extends User {
      this.courses = courses;
      this.experience = experience;
      this.education = education;
+     this.password = password;
    }
 
     //instance of Student WITH the random ID
-    public Student(UUID id, String firstName, String lastName, String userName, String email) {
-      //super(id, firstName, lastName, userName, email);
+    public Student(UUID id, String firstName, String lastName, String userName, String email, String password) {
+      //super(id, firstName, lastName, userName, email, password);
       this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;
@@ -56,6 +58,7 @@ public class Student extends User {
       this.courses = courses;
       this.experience = experience;
       this.education = education;
+      this.password = password;
     }
     
     //get the ID
