@@ -4,7 +4,7 @@
  * @author Siri, Maddie, Valerie, Ali
  */
 
-import javax.net.ssl.TrustManager;
+//import javax.net.ssl.TrustManager;
 
 //needs json?
 
