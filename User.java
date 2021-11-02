@@ -3,7 +3,6 @@
 * 
 * @author Siri, Maddie, Valerie, Ali
 */
-import java.util.*;
 import java.util.UUID;
 
 public abstract class User {

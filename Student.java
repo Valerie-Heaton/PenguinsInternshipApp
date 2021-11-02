@@ -47,7 +47,7 @@ public class Student extends User {
 
     //instance of Student WITH the random ID
     public Student(UUID id, String firstName, String lastName, String userName, String email, String password) {
-      //super(id, firstName, lastName, userName, email, password);
+      super(firstName, lastName, userName, email, password);
       this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;

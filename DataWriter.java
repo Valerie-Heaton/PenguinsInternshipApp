@@ -9,7 +9,7 @@ public class DataWriter extends DataConstants {
     
     public static void saveStudent() {
 		Student student = Student.getInstance();
-		ArrayList<Student> students = student.getStudentUsers();
+		ArrayList<Student> students = student.getUsers();
 		JSONArray jsonStudents = new JSONArray();
 		
 		//creating all the json objects
@@ -45,7 +45,7 @@ public class DataWriter extends DataConstants {
         for (int i = 0; i < experiences.size(); i++) {
             JSONObject jsonExperience = new JSONObject();
             jsonExperience.put(USER_TITLE, experiences.get(i).getTitle());
-            jsonExperience.put(USER_COMPANY, experience.get(i).getCompany());
+            jsonExperience.put(USER_COMPANY, experiences.get(i).getCompany());
             jsonExperiences.add(jsonExperience);
         }
         studentDetails.put(USER_EXPERIENCE, jsonExperiences);
