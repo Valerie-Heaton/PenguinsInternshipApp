@@ -94,11 +94,11 @@ public class Student extends User {
   }
 
   public String getFirstName() {
-    return null;
+    return this.firstName;
   }
 
 public String getEmail() {
-    return null;
+    return this.email;
 }
 
 //Out for now. What does this connect to?
@@ -111,11 +111,11 @@ public ArrayList<String> getCourses() {
 }
 
 public ArrayList<Experience> getExperiences() {
-    return null;
+    return this.experience;
 }
 
 public String getLastName() {
-    return null;
+    return this.lastName;
 }
    }
     
