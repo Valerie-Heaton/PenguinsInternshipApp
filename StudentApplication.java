@@ -28,9 +28,13 @@ public class StudentApplication {
     }
 
     public ArrayList<Internships> findInternships(String keyword) {
+<<<<<<< HEAD
         this.keyword = keyword;
         if(internshipList.contains(keyword))
         return internshipList;
+=======
+        return internshipList.getInternships(keyword);
+>>>>>>> 452e2d4105a7b8a319f2fb0d3f2ffa21706644a2
     }
 
     public User createAccount(String firstName, String lastName, String userName) { 

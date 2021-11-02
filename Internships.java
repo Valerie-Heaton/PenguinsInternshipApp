@@ -94,5 +94,20 @@ public class Internships {
     }
 
 
+    public boolean contains(String keyword) {
+        for (int i = 0; i < skillsRequired.size(); i++) {
+            if (skillsRequired.get(i).equalsIgnoreCase(keyword)) {
+                return true;
+            }
+        }
+
+        if (title.contains(keyword)) {
+            return true;
+        }
+
+        else {
+            return false;
+        }
+    }
     // maybe we need a String toString method
 }

@@ -44,7 +44,8 @@ public class DataWriter extends DataConstants {
         JSONArray jsonExperiences = new JSONArray();
         for (int i = 0; i < experiences.size(); i++) {
             JSONObject jsonExperience = new JSONObject();
-            //jsonExperience.put();
+            jsonExperience.put(USER_TITLE, experiences.get(i).getTitle());
+            jsonExperience.put(USER_COMPANY, experience.get(i).getCompany());
             jsonExperiences.add(jsonExperience);
         }
         studentDetails.put(USER_EXPERIENCE, jsonExperiences);

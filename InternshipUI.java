@@ -1,13 +1,21 @@
 import java.util.Scanner;
 public class InternshipUI {
-    private static final String WELCOME_MESSAGE = "Welcome to the inernship app";
+    private final String WELCOME_MESSAGE = "Welcome to the inernship app";
     private String[] mainMenuOptions = {"Login,", "Prints out resume to a text file", "filter", "Login with a job listing"};
     private Scanner scanner; 
-   private Internships internship;
+   private static Internships internship;
+   private static Resume resume;
+   private Student student;
+
     
     InternshipUI() {
         scanner = new Scanner(System.in);
-        internship = new Internships(null, null, null, false, false);
+<<<<<<< HEAD
+        //internship = new Internships(null, null, null, false, false);
+=======
+		//Internships internship = new Internships(title);
+		
+>>>>>>> b99d3726a0c37dd2f4d8c74afffb1d241d844250
     }
     public void run() {
         System.out.println(WELCOME_MESSAGE);
@@ -18,27 +26,28 @@ public class InternshipUI {
 			displayMainMenu();
 			int userCommand = getUserCommand(mainMenuOptions.length);
 			
+			
 			if(userCommand == -1) {
 				System.out.println("Not a valid command");
 				continue;
 			}
-			
 			//if they picked the last option then log them out
 			if(userCommand == mainMenuOptions.length -1) break;
 		
 			switch(userCommand) {
 				case(0):
+			
 					login(userName, password);
 					Student.insertResume();
-					Internships.getSkillsRequired();
-					getEducation();
-					getExperience();
+					internship.getSkillsRequired();
+					resume.getEducation();//not a method yet
+					resume.getExperience();
 					break;
 				case(1):
 				printsOutResume();//TODO find prints out resume method
 					break;
 				case(2):
-					getSkillsRequired();
+					internship.getSkillsRequired();
 					Internships(internship);
 					//how do i find jobs that require java knowledge
 					//TODO go back to internship class and find the internships 
@@ -61,7 +70,9 @@ public class InternshipUI {
 			System.out.println((i+1) + ". " + mainMenuOptions[i]);
 		}
 		System.out.println("\n");
-    }
+	}
+}
+
 
 private int getUserCommand(int numCommands) {
 	System.out.print("What would you like to do?: ");
@@ -82,6 +93,6 @@ private int getUserCommand(int numCommands) {
 		//System.out.println("\n");
 	//}
 	
-    
+		}
 
 

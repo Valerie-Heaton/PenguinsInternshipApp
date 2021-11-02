@@ -80,7 +80,11 @@ public class Student {
    /**
    *this method will allow the user to insert their Resume
    */
+<<<<<<< HEAD
    public void insertResume() {
+=======
+   public static void insertResume() {
+>>>>>>> b99d3726a0c37dd2f4d8c74afffb1d241d844250
       Resume insertResume = new Resume();
    }
 
