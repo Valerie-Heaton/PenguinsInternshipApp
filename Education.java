@@ -4,7 +4,7 @@
  * @author Siri, Maddie, Valerie, Ali
  */
 
-import javax.net.ssl.TrustManager;
+//import javax.net.ssl.TrustManager;
 
 //needs json?
 
@@ -23,7 +23,7 @@ public class Education {
      * @param yearGraduated is the appropriate integer to this.yearGraduated.
      */
     public Education(String schoolEducationReserved, String major, int yearGraduated) {
-        this.schoolEducationReceived = schoolEducationReceived; //what does this do?
+        //this.schoolEducationReceived = schoolEducationReceived; //what does this do?
         this.yearGraduated = yearGraduated;
         this.major = major;
     }

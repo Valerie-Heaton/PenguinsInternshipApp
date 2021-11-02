@@ -20,9 +20,6 @@ public class InternshipDriver {
          * End UUID generator section
          */
 
-         //Call the user interface
-
-
         
         InternshipUI internshipInterface = new InternshipUI();
         internshipInterface.run();

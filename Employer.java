@@ -30,7 +30,7 @@ public class Employer extends User  {
         this.userName = userName;
         this.email = email;
         this.password = password;
-        this.internshipsOffered = internshipsOffered;
+        //this.internshipsOffered = internshipsOffered;
     }
 
     public Employer(UUID id, String firstName, String lastName, String userName, String email, String password) {
@@ -41,7 +41,7 @@ public class Employer extends User  {
       this.userName = userName;
       this.email = email;
       this.password = password;
-      this.internshipsOffered = internshipsOffered;
+      //this.internshipsOffered = internshipsOffered;
     }
     
     // get the ID

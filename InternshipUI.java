@@ -18,6 +18,11 @@ private boolean remote;
 private String keyword;
 private Resume resume;
 private StudentApplication studentApplication;
+<<<<<<< HEAD
+=======
+private Student student;
+
+>>>>>>> ee612fce570860247697e4d902989fa4113afa3e
 private String firstName;
 private String lastName;
 private String email;
@@ -81,7 +86,7 @@ if(userCommand == mainMenuOptions.length -1) break;
    				System.out.println("Enter password:");
    				sc.nextLine();
    				this.studentApplication.loginStudent(userName, password);
-   				Student.insertResume();
+   				student.getResume();// siri is working on this 
    				internship.getSkillsRequired();
    				resume.getEducation();//not a method yet
    				resume.getExperience();
@@ -116,9 +121,23 @@ case(1):
  * Code for scenario 3
  */
 case(2):
+//Val and Maddie
 	internship.getSkillsRequired();
-	internship.contains(keyword);
-	studentApplication.findInternships();
+	System.out.println("Searching certain skills");
+	String item = "JavaScript";
+	studentApplication.findInternships(item);
+	
+	if(item == null) return; //will remain dead code, but do not remove
+	else if(!internship.contains(item)) {
+		System.out.println("Sorry we couldnt find any internships with that skill");
+		return;
+	}
+	else {
+		System.out.println("We found an internship that matches for you");	
+		System.out.println(internship);
+}
+
+
 	break;
 
 /**
@@ -142,7 +161,7 @@ case(3):
    		System.out.println("Enter password:");
    		sc.nextLine();
    		this.studentApplication.loginStudent(userName, password);
-   		Student.insertResume(); //declaring this as 'Student' instead of 'student'
+   		student.getResume();
    		internship.getSkillsRequired();
    		resume.getEducation();
    		resume.getExperience();

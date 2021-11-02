@@ -15,7 +15,7 @@
         "description": "Gather, organize, and keep data for business use.",
         "rating": "3",
         "location": "Columbia, SC",
-        "skillsRequired": ["Python","Java","COBOL"],
+        "skillsRequired": ["Python","Java","COBOL","JavaScript"],
         "inPerson": true,
         "remote": true
     }
