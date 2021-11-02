@@ -9,6 +9,7 @@ public class Internships {
     /**
      * These are all instance variables used within this class.
      */
+    private UUID id;
     private String title; 
     private ArrayList<Rating> employerRating;
     private String description;
@@ -110,4 +111,12 @@ public class Internships {
         }
     }
     // maybe we need a String toString method
+
+    public UUID getID() {
+        return this.id;
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
 }

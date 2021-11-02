@@ -35,6 +35,7 @@ public class Resume {
         this.experience = new ArrayList<Experience>();
         this.skills = new ArrayList<String>();
         this.education = new ArrayList<Education>();
+        this.resume = new Resume();
       }
       /**
       * This calls the getStudentInfo method from the children classes
@@ -84,11 +85,8 @@ public class Resume {
       /**
       * This calls the getResume method from the children classes
       */   
-      public ArrayList<Resume> getResume() {
-         return null;
-      }
-      public static Resume resumeToText() {
-         
-      }
+      // public Resume getResume() {
+      //    return Resume.resume;
+      // }
      
 }
