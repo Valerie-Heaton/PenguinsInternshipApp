@@ -1,17 +1,30 @@
 import java.net.PasswordAuthentication;
 import java.util.Scanner;
+import java.util.UUID;
+
 public class InternshipUI {
 
 
 private final String WELCOME_MESSAGE = "Welcome to the inernship app";
 private String[] mainMenuOptions = {"Login,", "Prints out resume to a text file", "filter", "Login with a job listing"};
-private Scanner scanner;
 
 
 private Internships internship;
+private UUID id;
+private String title;
+private String description;
+private String location;
+private boolean inPerson;
+private boolean remote;
+
 private Resume resume;
 private StudentApplication studentApplication;
+
 private Student student;
+private String firstName;
+private String lastName;
+private String email;
+
 private String userName;
 private String password;
 private DataWriter dataWriter;
@@ -20,10 +33,10 @@ private Scanner sc = new Scanner(System.in);
 
   
   public InternshipUI() {
-      internship = new Internships(null, WELCOME_MESSAGE, WELCOME_MESSAGE, WELCOME_MESSAGE, false, false);
+      internship = new Internships(id, title, description, location, inPerson, remote);
       resume = new Resume();
       this.studentApplication = new StudentApplication();
-      student = new Student(WELCOME_MESSAGE, WELCOME_MESSAGE, WELCOME_MESSAGE, WELCOME_MESSAGE, WELCOME_MESSAGE);
+      student = new Student(firstName, lastName, userName, password, email);
       dataWriter = new DataWriter();
 }
   
