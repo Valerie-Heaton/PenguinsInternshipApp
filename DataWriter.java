@@ -16,9 +16,10 @@ import org.json.simple.JSONObject;
  * The DataWriter class that extends into the DataConstants class.
  */
 public class DataWriter extends DataConstants {
-    public static void saveStudent() {
-        Student student = Student.getInstance();
-        ArrayList<Student> students = student.getUsers();
+    public static void saveStudents() {
+        //UserList userList = new UserList();
+        UserList student = UserList.getInstance();
+        ArrayList<Student> students = student.getStudents();
         JSONArray jsonStudents = new JSONArray();
 
         // creating all the json objects
@@ -129,8 +130,8 @@ public class DataWriter extends DataConstants {
      * This public static method saves our employer JSON and is used in jsonResumes.
      */
     public static void saveEmployer() {
-        Employer employer = Employer.getInstance();
-        ArrayList<Employer> employers = employer.getEmployerUsers();
+        UserList employer = UserList.getInstance();
+        ArrayList<Employer> employers = employer.getEmployers();
         JSONArray jsonEmployers = new JSONArray();
 
         // creating all the json objects
@@ -175,7 +176,7 @@ public class DataWriter extends DataConstants {
      * jsonResumes.
      */
     public static void saveInternships() {
-        Internships internship = Internships.getInstance();
+        InternshipList internship = InternshipList.getInstance();
         ArrayList<Internships> internships = internship.getInternships();
         JSONArray jsonInternships = new JSONArray();
 
@@ -216,8 +217,9 @@ public class DataWriter extends DataConstants {
      * This public static method saves the admin JSON and is used in jsonResumes.
      */
     public static void saveAdmin() {
-        Admin admin = Admin.getInstance();
-        ArrayList<Admin> admins = admin.getAdmin();
+
+        UserList admin = UserList.getInstance();
+        ArrayList<Admin> admins = admin.getAdmins();
         JSONArray jsonAdmins = new JSONArray();
 
         // creating all the json objects

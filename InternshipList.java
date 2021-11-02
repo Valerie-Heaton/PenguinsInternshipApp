@@ -7,8 +7,6 @@ public class InternshipList {
      */
     private static InternshipList internships;
     private ArrayList<Internships> internshipList;
-
-    public String job;
     
     /**
      * The private method for the InternshipList class
@@ -29,7 +27,7 @@ public class InternshipList {
     }
 
     public ArrayList<Internships> getInternships() {
-        return internships;
+        return this.internshipList;
     }
 
     /**

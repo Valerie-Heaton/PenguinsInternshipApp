@@ -129,13 +129,21 @@ public class UserList {
     }
 
     public void saveUsers() {
-        DataWriter.saveStudent();
+        DataWriter.saveStudents();
         DataWriter.saveEmployer();
         DataWriter.saveAdmin();
     }
 
     public ArrayList<Student> getStudents() {
         return this.studentList;
+    }
+
+    public ArrayList<Employer> getEmployers() {
+        return this.employerList;
+    }
+
+    public ArrayList<Admin> getAdmins() {
+        return this.adminList;
     }
     
 }
