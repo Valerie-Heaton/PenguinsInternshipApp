@@ -243,4 +243,19 @@ public class DataWriter extends DataConstants {
         return adminDetails;
 	}
     
+    public static void toTextFile() {
+        Resume resume = Resume.getInstance();
+        ArrayList<Resume> resumes = resume.getResume();
+        JSONArray jsonResumes = new JSONArray();
+         Scanner sc = new Scanner(System.in);
+        for(int i = 0; i < resumes.size(); i++) {
+        //https://stackoverflow.com/questions/26165386/producing-some-text-file-using-a-for-loop-in-java
+        try {
+        FileWriter f = new FileWriter("textfile.txt");
+        f.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+       }
+   }
 }
