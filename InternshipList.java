@@ -36,9 +36,9 @@ public class InternshipList {
      */
     public ArrayList<Internships> getInternships(String job) {
         ArrayList<Internships> foundInternships = new ArrayList<>();
-        for (int i = 0; i < internships.size(); i++) {
-            if (internships.get(i).contains(job)) {
-                foundInternships.add(internships.get(i));
+        for (int i = 0; i < internshipList.size(); i++) {
+            if (internshipList.get(i).contains(job)) {
+                foundInternships.add(internshipList.get(i));
             }
         }
         return foundInternships;
