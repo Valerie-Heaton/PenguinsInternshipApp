@@ -24,19 +24,15 @@ public class Resume {
    private ArrayList<String> skills;
    private ArrayList<Education> education;
 
-   // create instances
-
-     //create instances
-
-     public Resume() {
-        this.studentInfo = studentInfo;
-        this.major = major;
-        this.courses = new ArrayList<String>();
-        this.experience = new ArrayList<Experience>();
-        this.skills = new ArrayList<String>();
-        this.education = new ArrayList<Education>();
-        this.resume = new Resume();
-      }
+   public Resume() {
+      this.studentInfo = studentInfo;
+      this.major = major;
+      this.courses = new ArrayList<String>();
+      this.experience = new ArrayList<Experience>();
+      this.skills = new ArrayList<String>();
+      this.education = new ArrayList<Education>();
+      this.resume = new Resume();
+   }
       /**
       * This calls the getStudentInfo method from the children classes
       */   
@@ -85,14 +81,15 @@ public class Resume {
       /**
       * This calls the getResume method from the children classes
       */   
-<<<<<<< HEAD
       // public Resume getResume() {
       //    return Resume.resume;
       // }
-     
-=======
-      public ArrayList<Resume> getResume() {
+      // public Resume getResume() {
+      //    return this.resume;
+      // }
+
+      public ArrayList<Resume> getResumes() {
          return null;
-      }  
->>>>>>> e64293f5c2b861867338a0e61f2d583c2fb3938e
+      }
+     
 }

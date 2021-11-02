@@ -21,6 +21,7 @@ public class Student extends User {
     private ArrayList<String> courses;
     private ArrayList<Experience> experience;
     private ArrayList<String> education;
+    private Resume resume;
    /**
    *this is an constructor that will initialize all of our variables 
    *
@@ -43,6 +44,7 @@ public class Student extends User {
      this.experience = experience;
      this.education = education;
      this.password = password;
+     this.resume = resume;
    }
 
     //instance of Student WITH the random ID
@@ -59,6 +61,7 @@ public class Student extends User {
       this.experience = experience;
       this.education = education;
       this.password = password;
+      this.resume = resume;
     }
     
     //get the ID
@@ -73,25 +76,23 @@ public class Student extends User {
    public Internships internshipsOffered(Internships internships) {
      return internships;  
    }
+   
    /**
    *this method will add the students rating on the internship program
- * @return 
+   * @return 
    */
    public User addInternshipRating(User rater, Rating rating, String comment) {
        return rater;
    }
+
    /**
-   *this method will allow the user to insert their Resume
+   *this method will allow the user to get their Resume
    */
-   public static void insertResume() {
-      new Resume(); //makes a new Resume
+   public Resume getResume() {
+      return this.resume;
    }
 
    // ADDED IN THIS METHOD BC OF DATA WRITER
-  public static Student getInstance() {
-      //Siri
-      return null;
-  }
 
   public String getFirstName() {
     return this.firstName;

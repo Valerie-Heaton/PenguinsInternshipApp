@@ -1,4 +1,3 @@
-import java.net.PasswordAuthentication;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -17,18 +16,14 @@ private String location;
 private boolean inPerson;
 private boolean remote;
 private String keyword;
-
 private Resume resume;
 private StudentApplication studentApplication;
-
 private String firstName;
 private String lastName;
 private String email;
-
 private String userName;
 private String password;
 private Scanner sc = new Scanner(System.in);
-
 
   
   public InternshipUI() {

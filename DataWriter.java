@@ -71,7 +71,7 @@ public class DataWriter extends DataConstants {
      */
     public static void saveResume() {
         Resume resume = Resume.getInstance();
-        ArrayList<Resume> resumes = resume.getResume();
+        ArrayList<Resume> resumes = resume.getResumes();
         JSONArray jsonResumes = new JSONArray();
 
         // creating all the json objects
