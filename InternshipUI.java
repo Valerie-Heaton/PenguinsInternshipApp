@@ -38,7 +38,7 @@ public class InternshipUI {
 		
 			switch(userCommand) {
 				case(0):
-					studentApplication.loginUser(userName);
+					studentApplication.login(userName);
 					student.insertResume();
 					internship.getSkillsRequired();
 					resume.getEducation();//not a method yet
@@ -91,7 +91,7 @@ private int getUserCommand(int numCommands) {
             System.out.println("not a valid command");
         }
 		if(userCommand == mainMenuOptions.length -1) {
-				//internship.logout();
+				studentApplication.logout();
 				break;
 			}
     }
