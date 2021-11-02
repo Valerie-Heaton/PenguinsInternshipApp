@@ -7,6 +7,7 @@
         "email": "ndrake@email.sc.edu",
         "internshipsApplied":[1,3],
         "major": "Computer Information Systems",
+        "password": "password",
         "courses": ["CSCE 205", "CSCE 247", "ECON 224", "MGSC 290", "MATH 374"],
         "experience":[{"title":"Technical Writer","company":"Motorola Solutions"}],
         "education": [{"title":"High School Diploma"}]
@@ -17,6 +18,7 @@
         "lastName": "Walker",
         "userName":"awalker",
         "email": "awalker@email.sc.edu",
+        "password": "password",
         "internshipsApplied":[1,2],
         "major": "Computer Science",
         "courses": ["CSCE 146","CSCE 212","CSCE 215", "MATH 241", "CHEM 112"],
