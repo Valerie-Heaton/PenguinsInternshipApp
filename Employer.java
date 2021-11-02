@@ -89,10 +89,6 @@ public class Employer extends User  {
       return this.email;
     }
 
-    public static Employer getInstance() {
-      return null;
-    }
-
    
    }
     
