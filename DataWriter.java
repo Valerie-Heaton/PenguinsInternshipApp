@@ -1,5 +1,5 @@
 /**
-* The DataWriter class that inherits from the data constants program.
+* The DataWriter class that extends to the data constants program.
 * 
 * @author Siri, Maddie, Valerie, Ali
 */
@@ -12,7 +12,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 /**
- * 
+ * The DataWriter class that extends into the DataConstants class.
  */
 public class DataWriter extends DataConstants {
     
@@ -37,6 +37,10 @@ public class DataWriter extends DataConstants {
         }
 	}
 	
+    /**
+     * This public static method gets our resume JSON and is used in the save resume method.
+     * @param student is the appropriate student and assigned to studentDetails.
+     */
 	public static JSONObject getStudentJSON(Student student) {
 		JSONObject studentDetails = new JSONObject();
 		studentDetails.put(USER_FIRST_NAME, student.getFirstName());
@@ -48,7 +52,7 @@ public class DataWriter extends DataConstants {
             jsonCourses.add(courses.get(i));
         }
         studentDetails.put(USER_COURSES, jsonCourses);
-        
+    
         ArrayList<Experience> experiences = student.getExperiences();
         JSONArray jsonExperiences = new JSONArray();
         for (int i = 0; i < experiences.size(); i++) {
@@ -60,12 +64,15 @@ public class DataWriter extends DataConstants {
         studentDetails.put(USER_EXPERIENCE, jsonExperiences);
         return studentDetails;
 	}
-    
+
+ 	/**
+     * This public static method saves our resume JSON and is used in jsonResumes.
+     */   
     public static void saveResume() {
 		Resume resume = Resume.getInstance();
 		ArrayList<Resume> resumes = resume.getResume();
 		JSONArray jsonResumes = new JSONArray();
-		
+
 		//creating all the json objects
 		for(int i=0; i< resumes.size(); i++) {
 			jsonResumes.add(getResumeJSON(resumes.get(i)));
@@ -84,7 +91,6 @@ public class DataWriter extends DataConstants {
 	/**
      * This private static method gets our resume JSON and is used in the save resume method.
      * @param resume is the appropriate resume and assigned to resumeDetails.
-     * @return returns 
      */
 	private static JSONObject getResumeJSON(Resume resume) {
         JSONObject resumeDetails = new JSONObject();
@@ -116,7 +122,9 @@ public class DataWriter extends DataConstants {
         resumeDetails.put(USER_EDUCATION, jsonEducations);
         return resumeDetails;
     }
-
+ 	/**
+     * This public static method saves our employer JSON and is used in jsonResumes.
+     */   
     public static void saveEmployer() {
 		Employer employer = Employer.getInstance();
 		ArrayList<Employer> employers = employer.getEmployerUsers();
@@ -137,7 +145,10 @@ public class DataWriter extends DataConstants {
             e.printStackTrace();
         }
 	}
-
+	/**
+     * This private static method gets our resume JSON and is used in the save employer method.
+     * @param employer is the appropriate employer and assigned to employerDetails.
+     */
     public static JSONObject getEmployerJSON(Employer employer) {
 		JSONObject employerDetails = new JSONObject();
 		employerDetails.put(USER_FIRST_NAME, employer.getFirstName());
@@ -154,7 +165,9 @@ public class DataWriter extends DataConstants {
         return employerDetails;
 	}
 
-
+ 	/**
+     * This public static method saves our internships JSON and is used in jsonResumes.
+     */   
     public static void saveInternships() {
 		Internships internship = Internships.getInstance();
 		ArrayList<Internships> internships = internship.getInternships();
@@ -193,7 +206,9 @@ public class DataWriter extends DataConstants {
         internshipDetails.put(USER_REMOTE, internship.getRemote());
         return internshipDetails;
 	}
-
+ 	/**
+     * This public static method saves the admin JSON and is used in jsonResumes.
+     */   
     public static void saveAdmin() {
 		Admin admin = Admin.getInstance();
 		ArrayList<Admin> admins = admin.getAdmin();
@@ -214,7 +229,10 @@ public class DataWriter extends DataConstants {
             e.printStackTrace();
         }
 	}
-
+	/**
+     * This private static method gets our admin JSON and is used in the save admin method.
+     * @param admin is the appropriate admin and assigned to adminDetails.
+     */
     public static JSONObject getAdminsJSON(Admin admin) {
 		JSONObject adminDetails = new JSONObject();
         adminDetails.put(USER_ID, admin.getID());
@@ -224,52 +242,5 @@ public class DataWriter extends DataConstants {
         adminDetails.put(USER_EMAIL, admin.getEmail());
         return adminDetails;
 	}
-
-
-
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /**
-     * Creates the array list that will fetch the list of ALL users and load it as metadata
-     */
-    public ArrayList<User> getUsers() {
-        return null;
-
-    }
-    /**
-     * Creates the array list that will fetch the list of STUDENT users and load it as metadata
-     */
-    public ArrayList<Student> getStudentUsers() {
-        return null;
-
-    }
-    /**
-     * Creates the array list that will fetch the list of EMPLOYER users and load it as metadata
-     */
-    public ArrayList<Employer> getEmployerUsers() {
-        return null;
-
-    }
-    /**
-     * Creates the array list that will fetch the list of ALL internship entries
-     */
-    public ArrayList<Internships> getInternships() {
-        return null;
-        
-    }
     
 }

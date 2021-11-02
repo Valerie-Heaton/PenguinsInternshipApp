@@ -1,5 +1,5 @@
 /**
- * This is the education class we will use to run the internship program.
+ * This is the Education class we will use to run the internship program.
  * 
  * @author Siri, Maddie, Valerie, Ali
  */
@@ -27,19 +27,29 @@ public class Education {
         this.yearGraduated = yearGraduated;
         this.major = major;
     }
-
+    /**
+     * This calls the schoolEducationReceived method from the children classes
+     */
     public String getSchoolEducationReceived() {
         return this.schoolEducationReceived;
     }
-
+    /**
+     * This calls the yearGraduated method from the children classes
+     */
     public int getYearGraduated() {
         return this.yearGraduated;
     }
-
+    /**
+     * This calls the major method from the children classes
+     */
     public String getMajor() {
         return this.major;
     }
 
+    /**
+     * This checks if the school education received is a valid index and executes the corresponding command.
+     * @return returns a boolean value based on whether or not the index is valid
+     */
     public boolean checkSchoolEducationReceived() {
         if (this.schoolEducationReceived.equalsIgnoreCase("UofSC") || this.schoolEducationReceived.equalsIgnoreCase("The University of South Carolina") || this.schoolEducationReceived.equalsIgnoreCase("University of South Carolina") || this.schoolEducationReceived.equalsIgnoreCase("USC")) {
             return true;

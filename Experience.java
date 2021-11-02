@@ -1,7 +1,5 @@
 /**
- * EXPERIENCE LIST 
- * make another object with experience (title, etc)
- * This is the experience stub we will use to run the internship program.
+ * The Experience class that will be used to run the internship program.
  * 
  * @author Siri, Maddie, Valerie, Ali
  */
@@ -9,7 +7,9 @@
 import java.util.*;
 
 public class Experience {
-
+    /**
+    * These are the private variables for the Experience class.
+    */
     private ArrayList<String> volunteerExperience;
     private ArrayList<String> workExperience;
     private ArrayList<String> pastPositions;
@@ -27,19 +27,27 @@ public class Experience {
         this.pastPositions = new ArrayList<String>();
         this.experienceDescription = experienceDescription;
     }
-
+    /**
+     * This calls the getVolunteerExperience method from the children classes
+     */
     public ArrayList<String> getVolunteerExperience() {
         return this.volunteerExperience;
     }
-    
+    /**
+     * This calls the getWorkExperience method from the children classes
+     */    
     public ArrayList<String> getWorkExperience() {
         return this.workExperience;
     }
-
+    /**
+     * This calls the getPastPositions method from the children classes
+     */
     public ArrayList<String> getPastPositions() {
         return this.pastPositions;
     }
-
+    /**
+     * This calls the getExperienceDescription method from the children classes
+     */
     public String getExperienceDescription() {
         return this.experienceDescription;
     }

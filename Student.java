@@ -6,7 +6,7 @@
 import java.util.ArrayList;
 import java.util.UUID;
 
-public class Student {
+public class Student extends User {
     //adding UUID
     private UUID id;
     //add UUID
@@ -14,6 +14,7 @@ public class Student {
     private String lastName;
     private String userName;
     private String email;
+    private String password;
     //added
     private ArrayList<Internships> internshipsApplied;
     private String major;
@@ -29,23 +30,24 @@ public class Student {
    @email will construct the users email
    */
 
-    //instance setting up random ID
-    public Student(UUID id, String firstName, String lastName, String userName, String email, ArrayList<Internships> internshipsApplied, String major, ArrayList<String> courses, ArrayList<String> experience, ArrayList<String> education) {
-        this.id = UUID.randomUUID();
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.userName = userName;
-        this.email = email;
-        this.internshipsApplied = internshipsApplied;
-        this.major = major;
-        this.courses = courses;
-        this.experience = new ArrayList<Experience>(); // check 
-        this.education = education;
-    }
+    public Student(String firstName, String lastName, String userName, String email, String password) {
+     super(firstName, lastName, userName, email, password);
+     this.id = UUID.randomUUID();
+     this.firstName = firstName;
+     this.lastName = lastName;
+     this.userName = userName;
+     this.email = email;
+     this.internshipsApplied = internshipsApplied;
+     this.major = major;
+     this.courses = courses;
+     this.experience = experience;
+     this.education = education;
+     this.password = password;
+   }
 
     //instance of Student WITH the random ID
-
-    public Student(UUID id, String firstName, String lastName, String userName, String email, String major) {
+    public Student(UUID id, String firstName, String lastName, String userName, String email, String password) {
+      //super(id, firstName, lastName, userName, email, password);
       this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;
@@ -56,6 +58,7 @@ public class Student {
       this.courses = courses;
       this.experience = experience;
       this.education = education;
+      this.password = password;
     }
     
     //get the ID
@@ -81,36 +84,41 @@ public class Student {
    *this method will allow the user to insert their Resume
    */
    public void insertResume() {
+<<<<<<< HEAD
    public static void insertResume() {
+=======
+>>>>>>> c899116b0d027c33a4632475532a682fe9d6a098
       Resume insertResume = new Resume();
    }
 
    // ADDED IN THIS METHOD BC OF DATA WRITER
   public static Student getInstance() {
+      //Siri
       return null;
   }
 
-  public Object getFirstName() {
+  public String getFirstName() {
     return null;
   }
 
-public Object getEmail() {
+public String getEmail() {
     return null;
 }
 
-public ArrayList<Student> getStudentUsers() {
-    return null;
-}
+//Out for now. What does this connect to?
+//public ArrayList<Student> getStudentUsers() {
+    //return null;
+//}
 
 public ArrayList<String> getCourses() {
-  return null;
+  return this.courses;
 }
 
 public ArrayList<Experience> getExperiences() {
-  return null;
+    return null;
 }
 
-public Object getLastName() {
+public String getLastName() {
     return null;
 }
    }
