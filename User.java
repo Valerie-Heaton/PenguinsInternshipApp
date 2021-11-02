@@ -3,13 +3,11 @@
 * 
 * @author Siri, Maddie, Valerie, Ali
 */
-import java.util.UUID;
 
 public abstract class User {
 
     public User(String firstName, String lastName, String userName, String password, String email) {}
     
-    // public void getInternships();
     // /**
     //  * Runs the array list containing internships that soon returns back an internship entry to the user
     //  */
