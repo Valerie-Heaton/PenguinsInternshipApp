@@ -9,7 +9,9 @@ public class InternshipUI {
    	private static Internships internship;
    	private static Resume resume;
    	private static StudentApplication studentApplication;
-   	private Student student;
+	   private Student student;
+	   private String userName;
+	   private Employer employer;
 
     
     InternshipUI() {
@@ -36,7 +38,7 @@ public class InternshipUI {
 		
 			switch(userCommand) {
 				case(0):
-					//login(userName, password);
+					studentApplication.loginUser(userName);
 					student.insertResume();
 					internship.getSkillsRequired();
 					resume.getEducation();//not a method yet
@@ -55,7 +57,10 @@ public class InternshipUI {
 					//TODO we have to make a method for picking and selecting a job
 					break;
 				case(3):
-					//login(userName, password);//login as an employer
+				studentApplication.loginUser(userName);
+				studentApplication.findInternships();
+				Student.getInstance();
+					
 					//studentApplication.reviewInternships();
 					//student.getStudentUsers();
 					
