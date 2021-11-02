@@ -24,6 +24,8 @@ public class StudentApplication {
         return userList.addUser(userName, firstName, lastName, email); // will maybe need to add more to parameters
     }
 
+    // method
+
     public boolean login(String userName, String password) { // was not originally boolean
         if (!userList.haveUser(userName)) {
             return false;
