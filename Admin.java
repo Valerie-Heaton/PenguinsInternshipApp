@@ -18,24 +18,43 @@ public class Admin extends User {
     private String title;
     private String description;
     private String location;
+    private String password;
+    private Internships internship;
 
 
+<<<<<<< HEAD
     public Admin(String firstName, String lastName, String userName, String password, String email) {
         super(firstName, lastName, userName, password, email);
+=======
+    public Admin(String firstName, String lastName, String userName, String email, String password) {
+        super(firstName, lastName, userName, email, password);
+>>>>>>> 1f4ed89fe61d3344ad7dcfef5abae0f94572aa04
         this.id = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.email = email;
+        this.password = password;
     }
 
+<<<<<<< HEAD
     public Admin(UUID id, String firstName, String lastName, String userName, String password, String email) {
         super(firstName, lastName, userName, password, email);
+=======
+    public Admin(UUID id, String firstName, String lastName, String userName, String email, String password) {
+        //super(id, firstName, lastName, userName, email, password);
+>>>>>>> 1f4ed89fe61d3344ad7dcfef5abae0f94572aa04
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.email = email;
+        this.password = password;
+    }
+
+    // get the ID
+    public UUID getId() {
+        return id;
     }
     
     /**
@@ -57,36 +76,32 @@ public class Admin extends User {
     */
     public void editFirstName(int UserID, String firstName) {
         this.firstName.replace(this.firstName, firstName);
-        // empty, for now
     }
     /**
     * Returns nothing, though utilizes the UserID to 'edit' a user's last name
     */
     public void editLastName(int UserID, String lastName) {
         this.lastName.replace(this.lastName, lastName);
-        // empty, for now
     }
     /**
     * Returns nothing, though utilizes the UserID to 'edit' a user's username
     */
     public void editUserName(int UserID, String userName) {
         this.userName.replace(this.userName, userName);
-        // empty, for now
     }
     /**
     * Returns nothing, though utilizes the UserID to 'edit' a user's email
     */
     public void editEmail(int UserID, String email) {
         this.email.replace(this.email, email);
-        // empty, for now
     }
     /**
     * Returns nothing, though utilizes the UserID to delete an internship entry
     */
     
-    public void deleteInternship(int UserID) {
-       
+    public void deleteInternship(int UserID, Internships internship) {     
         // empty, for now
+        this.internship.equals(null);
     }
 
     @Override

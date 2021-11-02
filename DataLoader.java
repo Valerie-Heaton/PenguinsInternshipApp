@@ -28,8 +28,9 @@ public class DataLoader extends DataConstants {
                 String lastName = (String) personJSON.get("Admin.json");
                 String userName = (String) personJSON.get("Admin.json");
                 String email = (String) personJSON.get("Admin.json");
+                String password = (String) personJSON.get("Admin.json");
 
-                admins.add(new Admin(id, firstName, lastName, userName, email));
+                admins.add(new Admin(id, firstName, lastName, userName, email, password));
             }
             System.out.print(admins); //make sure it's working, comment out later
             return admins;
@@ -59,11 +60,11 @@ public class DataLoader extends DataConstants {
                 String firstName = (String) personJSON.get(USER_FIRST_NAME);
                 String lastName = (String) personJSON.get(USER_LAST_NAME);
                 String email = (String) personJSON.get(USER_EMAIL);
-                //ArrayLists - get these to work?
+                String password = (String) personJSON.get("student.json");
                 
                 
                 //work without throwing an error
-                students.add(new Student(id, firstName, lastName, userName, email));
+                students.add(new Student(id, firstName, lastName, userName, email, password));
             }
             System.out.print(students); // make sure it's working
             return students;
@@ -137,8 +138,9 @@ public class DataLoader extends DataConstants {
                 String lastName = (String) personJSON.get("Employer.json");
                 String userName = (String) personJSON.get("Employer.json");
                 String email = (String) personJSON.get("Employer.json");
+                String password = (String) personJSON.get("Employer.json");
 
-                employers.add(new Employer(id, firstName, lastName, userName, email));
+                employers.add(new Employer(id, firstName, lastName, userName, email, password));
             }
             System.out.print(employers); // make sure it's working, comment out later
             return employers;

@@ -12,6 +12,7 @@ public class Employer extends User  {
     private String lastName;
     private String userName;
     private String email;
+    private String password;
     private ArrayList<Internships> internshipsOffered;
    /**
    *this is an constructor that will initialize all of our variables 
@@ -21,26 +22,32 @@ public class Employer extends User  {
    @email will construct the users email
    @internshipsOffered will construct the internships being offered
    */
-    public Employer(UUID id, String firstName, String lastName, String userName, String email) {
-        super(id, firstName, lastName, userName, email);
+    public Employer(String firstName, String lastName, String userName, String email, String password) {
+        super(firstName, lastName, userName, email, password);
         id = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.email = email;
+        this.password = password;
         this.internshipsOffered = internshipsOffered;
     }
 
-    public Employer(UUID id, String firstName, String lastName, String userName, String email) {
-      //super(id, firstName, lastName, userName, email);
+    public Employer(UUID id, String firstName, String lastName, String userName, String email, String password) {
+      //super(id, firstName, lastName, userName, email, password);
       this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;
       this.userName = userName;
       this.email = email;
+      this.password = password;
       this.internshipsOffered = internshipsOffered;
     }
-
+    
+    // get the ID
+    public UUID getId() {
+      return id;
+    }
   
    /**
    * this method will enable the employer to add an internship
