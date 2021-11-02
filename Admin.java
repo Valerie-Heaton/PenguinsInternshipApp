@@ -14,13 +14,14 @@ public class Admin extends User {
     private String lastName;
     private String userName;
     private String email;
+    private String password;
     private String title;
     private String description;
     private String location;
 
 
-    public Admin(String firstName, String lastName, String userName, String email) {
-        super(firstName, lastName, userName, email);
+    public Admin(String firstName, String lastName, String userName, String password, String email) {
+        super(firstName, lastName, userName, password, email);
         this.id = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -28,8 +29,8 @@ public class Admin extends User {
         this.email = email;
     }
 
-    public Admin(UUID id, String firstName, String lastName, String userName, String email) {
-        //super(id, firstName, lastName, userName, email);
+    public Admin(UUID id, String firstName, String lastName, String userName, String password, String email) {
+        super(firstName, lastName, userName, password, email);
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -86,6 +87,36 @@ public class Admin extends User {
     public void deleteInternship(int UserID) {
        
         // empty, for now
+    }
+
+    @Override
+    public String getFirstName() {
+        // TODO Auto-generated method stub
+        return this.firstName;
+    }
+
+    @Override
+    public String getLastName() {
+        // TODO Auto-generated method stub
+        return this.lastName;
+    }
+
+    @Override
+    public String getUserName() {
+        // TODO Auto-generated method stub
+        return this.userName;
+    }
+
+    @Override
+    public String getPassword() {
+        // TODO Auto-generated method stub
+        return this.password;
+    }
+
+    @Override
+    public String getEmail() {
+        // TODO Auto-generated method stub
+        return this.email;
     }
     
 }
