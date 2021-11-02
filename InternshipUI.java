@@ -189,6 +189,12 @@ case(3):
 			System.out.println("\n");
 		}
 
+		/**
+		 * @param numCommands is the integer that corresponds with the switch case.
+		 * If logic allows user to type in the integer of choice, starting the 
+		 * matching scenario.
+		 */
+
 
 	private int getUserCommand(int numCommands) {
 		System.out.print("What would you like to do?: ");
