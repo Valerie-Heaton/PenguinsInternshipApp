@@ -3,44 +3,25 @@
 * 
 * @author Siri, Maddie, Valerie, Ali
 */
-import java.util.ArrayList;
+import java.util.*;
 import java.util.UUID;
 
-public class User {
+public abstract class User {
 
-    
     public User(UUID id, String firstName, String lastName, String userName, String email) {}
+    // public void getInternships();
+    // /**
+    //  * Runs the array list containing internships that soon returns back an internship entry to the user
+    //  */
+    // public Internships getInternships(Internships internship) {
+    //     return internship;
+    // }
+    public abstract void getFirstName();
+    public abstract void getLastName();
+    public abstract void getUserName();
+    public abstract void getPassword();
+    public abstract void getEmail();
 
-    public ArrayList<Internships> getInternships() {
-        return null;
-    }
+    // MAKE IT ALL ITALICIZED IN UML BC ABSTRACT 
 
-    /**
-     * Runs the array list containing internships that soon returns back an internship entry to the user
-     */
-    public Internships getInternships(Internships internship) {
-        return internship;
-    }
-
-    public String getFirstName() {
-        return null;
-    }
-
-    public String getLastName() {
-        return null;
-    }
-
-    public String getUserName() {
-        return null;
-    }
-
-    public String getPassword() {
-        return null;
-    }
-
-    public String getEmail() {
-        return null;
-    }
-
-    
 }
