@@ -84,7 +84,7 @@ public class Student extends User {
    *this method will allow the user to insert their Resume
    */
    public static void insertResume() {
-      Resume insertResume = new Resume();
+      new Resume(); //makes a new Resume
    }
 
    // ADDED IN THIS METHOD BC OF DATA WRITER
@@ -120,13 +120,11 @@ public class Student extends User {
 
   @Override
   public String getUserName() {
-    // TODO Auto-generated method stub
     return this.userName;
   }
 
   @Override
   public String getPassword() {
-    // TODO Auto-generated method stub
     return this.password;
   }
    }

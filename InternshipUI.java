@@ -21,14 +21,12 @@ private String keyword;
 private Resume resume;
 private StudentApplication studentApplication;
 
-private Student student;
 private String firstName;
 private String lastName;
 private String email;
 
 private String userName;
 private String password;
-private DataWriter dataWriter;
 private Scanner sc = new Scanner(System.in);
 
 
@@ -37,8 +35,8 @@ private Scanner sc = new Scanner(System.in);
       internship = new Internships(id, title, description, location, inPerson, remote);
       resume = new Resume();
       this.studentApplication = new StudentApplication();
-      student = new Student(firstName, lastName, userName, password, email);
-      dataWriter = new DataWriter();
+      new Student(firstName, lastName, userName, password, email);
+      new DataWriter();
 }
   
 public void run() {
@@ -88,7 +86,7 @@ if(userCommand == mainMenuOptions.length -1) break;
    				System.out.println("Enter password:");
    				sc.nextLine();
    				this.studentApplication.loginStudent(userName, password);
-   				student.insertResume();
+   				Student.insertResume();
    				internship.getSkillsRequired();
    				resume.getEducation();//not a method yet
    				resume.getExperience();
@@ -149,9 +147,9 @@ case(3):
    		System.out.println("Enter password:");
    		sc.nextLine();
    		this.studentApplication.loginStudent(userName, password);
-   		student.insertResume();
+   		Student.insertResume(); //declaring this as 'Student' instead of 'student'
    		internship.getSkillsRequired();
-   		resume.getEducation();//not a method yet
+   		resume.getEducation();
    		resume.getExperience();
 	}
 	else if(userLog.equalsIgnoreCase("admin")) {
