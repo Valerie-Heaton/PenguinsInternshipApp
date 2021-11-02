@@ -5,7 +5,6 @@
  */
 
 //import random UUID tool
-import java.util.UUID;
 import java.util.Scanner;
 
 public class InternshipDriver {
