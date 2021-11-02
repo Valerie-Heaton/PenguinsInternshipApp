@@ -1,4 +1,4 @@
-//import java.net.PasswordAuthentication; not used
+import java.net.PasswordAuthentication;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -21,14 +21,12 @@ private String keyword;
 private Resume resume;
 private StudentApplication studentApplication;
 
-private Student student;
 private String firstName;
 private String lastName;
 private String email;
 
 private String userName;
 private String password;
-private DataWriter dataWriter;
 private Scanner sc = new Scanner(System.in);
 
 
@@ -37,8 +35,8 @@ private Scanner sc = new Scanner(System.in);
       internship = new Internships(id, title, description, location, inPerson, remote);
       resume = new Resume();
       this.studentApplication = new StudentApplication();
-      student = new Student(firstName, lastName, userName, password, email);
-      dataWriter = new DataWriter();
+      new Student(firstName, lastName, userName, password, email);
+      new DataWriter();
 }
   
 public void run() {
