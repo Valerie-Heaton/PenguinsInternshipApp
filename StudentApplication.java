@@ -27,12 +27,12 @@ public class StudentApplication {
         return internshipList.getInternships(keyword);
     }
 
-    public boolean createAccount(String userName, String firstName, String lastName, String email) {
-        return userList.addUser(userName, firstName, lastName, email); // will maybe need to add more to parameters
+    public boolean createStudentAccount(String userName, String firstName, String lastName, String password, String email) {
+        return userList.addStudent(userName, firstName, lastName, password, email); // will maybe need to add more to parameters
     }
 
     public boolean login(String userName, String password) { // was not originally boolean
-        if (!userList.haveUser(userName)) {
+        if (!userList.haveAdmin(userName) || !userList.haveEmployer(userName) || !userList.haveStudent(userName)) {
             return false;
         }
         user = userList.getUser(userName, password);
