@@ -1,10 +1,3 @@
-/**
- * The Student Application class holds all of the data needed for the student to input
- * regarding a specific internship. The data will include the students login, password,
- * as well as finding internships, and rating them as well as providing comments.
- * This is the main interface.
- */
-
 import java.util.*;
 
 public class StudentApplication {
@@ -30,6 +23,8 @@ public class StudentApplication {
     public boolean createStudentAccount(String userName, String firstName, String lastName, String password, String email) {
         return userList.addStudent(userName, firstName, lastName, password, email); // will maybe need to add more to parameters
     }
+
+    // method
 
     public boolean login(String userName, String password) { // was not originally boolean
         if (!userList.haveAdmin(userName) || !userList.haveEmployer(userName) || !userList.haveStudent(userName)) {
