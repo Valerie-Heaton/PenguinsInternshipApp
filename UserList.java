@@ -12,17 +12,6 @@ public class UserList {
     private ArrayList<Employer> employerList;
 
     private UserList() {
-        // for(int i = 0; i < DataLoader.getStudents().size(); i++) {
-        //     userList.add(DataLoader.getStudents().get(i));
-        // }
-        // for(int i = 0; i < DataLoader.getEmployers().size(); i++) {
-        //     userList.add(DataLoader.getEmployers().get(i));
-        // }
-        // for(int i = 0; i < DataLoader.getAdmins().size(); i++) {
-        //     userList.add(DataLoader.getAdmins().get(i));
-        // }
-        // probably will actually load in admin, student, employer
-
         adminList = DataLoader.getAdmins();
         studentList = DataLoader.getStudents();
         employerList = DataLoader.getEmployers();
