@@ -18,6 +18,7 @@ public class Admin extends User {
     private String description;
     private String location;
     private String password;
+    private Internships internship;
 
 
     public Admin(String firstName, String lastName, String userName, String email, String password) {
@@ -87,8 +88,9 @@ public class Admin extends User {
     * Returns nothing, though utilizes the UserID to delete an internship entry
     */
     
-    public void deleteInternship(int UserID) {     
+    public void deleteInternship(int UserID, Internships internship) {     
         // empty, for now
+        this.internship.equals(null);
     }
     
 }
