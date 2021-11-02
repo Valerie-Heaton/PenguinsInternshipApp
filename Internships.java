@@ -98,6 +98,7 @@ public class Internships {
     public boolean contains(String keyword) {
         for (int i = 0; i < skillsRequired.size(); i++) {
             if (skillsRequired.get(i).equalsIgnoreCase(keyword)) {
+                System.out.println(skillsRequired);
                 return true;
             }
         }
