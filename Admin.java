@@ -21,7 +21,7 @@ public class Admin extends User {
 
 
     public Admin(String firstName, String lastName, String userName, String email, String password) {
-        super(firstName, lastName, userName, email);
+        super(firstName, lastName, userName, email, password);
         this.id = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -31,7 +31,7 @@ public class Admin extends User {
     }
 
     public Admin(UUID id, String firstName, String lastName, String userName, String email, String password) {
-        //super(id, firstName, lastName, userName, email);
+        //super(id, firstName, lastName, userName, email, password);
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -64,35 +64,30 @@ public class Admin extends User {
     */
     public void editFirstName(int UserID, String firstName) {
         this.firstName.replace(this.firstName, firstName);
-        // empty, for now
     }
     /**
     * Returns nothing, though utilizes the UserID to 'edit' a user's last name
     */
     public void editLastName(int UserID, String lastName) {
         this.lastName.replace(this.lastName, lastName);
-        // empty, for now
     }
     /**
     * Returns nothing, though utilizes the UserID to 'edit' a user's username
     */
     public void editUserName(int UserID, String userName) {
         this.userName.replace(this.userName, userName);
-        // empty, for now
     }
     /**
     * Returns nothing, though utilizes the UserID to 'edit' a user's email
     */
     public void editEmail(int UserID, String email) {
         this.email.replace(this.email, email);
-        // empty, for now
     }
     /**
     * Returns nothing, though utilizes the UserID to delete an internship entry
     */
     
-    public void deleteInternship(int UserID) {
-       
+    public void deleteInternship(int UserID) {     
         // empty, for now
     }
     
