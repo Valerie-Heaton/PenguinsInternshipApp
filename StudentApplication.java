@@ -19,32 +19,30 @@ public class StudentApplication {
     public ArrayList<Internships> findInternships(String keyword) {
         return internshipList.getInternships(keyword);
     }
-
-    // good
-
     
     public boolean createAccount(String userName, String firstName, String lastName, String email) { 
         return userList.addUser(userName, firstName, lastName, email); // will maybe need to add more to parameters
     }
 
-    public boolean loginStudent(String userName) { // was not originally boolean
-        if(!this.user.haveStudent(userName)) {
+    // public boolean createEmployerAccount(String userName, String firstName, String lastName, String email) { 
+    //     return userList.addEmployerUser(userName, firstName, lastName, email); // will maybe need to add more to parameters
+    // }
+
+    public boolean loginUser(String userName) { // was not originally boolean
+        if(!userList.haveUser(userName)) {
             return false;
         }
-        this.user = userList.getUser(userName);
+        user = userList.getUser(userName);
         return true;
     }
 
-    public boolean loginEmployer(String userName) { // was not originally boolean
-        if(!this.user.haveEmployer(userName)) {
-            return false;
-        }
-        this.user = userList.getUser(userName);
-        return true;
-    }
 
-    public ArrayList<Internships> getMyInternships() {
-        return internshipList;
+    // public ArrayList<Internships> getMyInternships() {
+    //     return internshipList;
+    // }
+
+    public void logout() {
+        userList.saveUsers();
     }
 
     // add review internship
