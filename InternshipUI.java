@@ -19,6 +19,7 @@ private String keyword;
 
 private Resume resume;
 private StudentApplication studentApplication;
+private Student student;
 
 private String firstName;
 private String lastName;
@@ -85,7 +86,7 @@ if(userCommand == mainMenuOptions.length -1) break;
    				System.out.println("Enter password:");
    				sc.nextLine();
    				this.studentApplication.loginStudent(userName, password);
-   				Student.insertResume();
+   				student.getResume();// siri is working on this 
    				internship.getSkillsRequired();
    				resume.getEducation();//not a method yet
    				resume.getExperience();
@@ -120,9 +121,22 @@ case(1):
  * Code for scenario 3
  */
 case(2):
+//Val and Maddie
 	internship.getSkillsRequired();
-	internship.contains(keyword);
-	studentApplication.findInternships();
+	System.out.println("Searching certain skills");
+	String item = "JavaScript";
+	studentApplication.findInternships(item);
+	if(item == null) return;
+	if(!internship.contains(item)) {
+		System.out.println("Sorry we couldnt find any internships with that skill");
+		return;
+	}
+else {
+	System.out.println("We found an internship that matches for you");
+	
+
+}
+
 	break;
 
 /**
