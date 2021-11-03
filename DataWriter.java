@@ -6,7 +6,6 @@
 */
 
 import java.util.ArrayList;
-import java.util.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import org.json.simple.JSONArray;
@@ -74,7 +73,7 @@ public class DataWriter extends DataConstants {
      */
     public static void saveResume() {
         Resume resume = Resume.getInstance();
-        //ArrayList<Resume> resumes = resume.getResumes();
+        ArrayList<Resume> resumes = resume.getResumes();
         JSONArray jsonResumes = new JSONArray();
 
         /**
