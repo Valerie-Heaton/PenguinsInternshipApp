@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class Employer extends User  {
+  /**
+   * These are the private variables for the Employer class
+   */
     private UUID id;
     private String firstName;
     private String lastName;
@@ -14,13 +17,14 @@ public class Employer extends User  {
     private String email;
     private String password;
     private ArrayList<Internships> internshipsOffered;
-   /**
-   *this is an constructor that will initialize all of our variables 
-   @firstName will construct the users fist first name
-   @lastName will construct the users last name
-   @username will construct the users username
-   @email will construct the users email
-   @internshipsOffered will construct the internships being offered
+    
+  /**
+   * this is a constructor that will initialize all of our variables 
+   * @param firstName will construct the users fist first name
+   * @param lastName will construct the users last name
+   * @param userName will construct the users username
+   * @param email will construct the users email
+   * @param password will construct the password
    */
     public Employer(String firstName, String lastName, String userName, String email, String password) {
         super(firstName, lastName, userName, email, password);
@@ -33,6 +37,15 @@ public class Employer extends User  {
         //this.internshipsOffered = internshipsOffered;
     }
 
+  /**
+   * This is a constructor that will initialize all of our variables 
+   * @param id will construct the users id
+   * @param firstName will construct the users fist first name
+   * @param lastName will construct the users last name
+   * @param userName will construct the users username
+   * @param email will construct the users email
+   * @param password will construct the password
+   */
     public Employer(UUID id, String firstName, String lastName, String userName, String email, String password) {
       super(firstName, lastName, userName, email, password);
       this.id = id;
@@ -44,50 +57,71 @@ public class Employer extends User  {
       //this.internshipsOffered = internshipsOffered;
     }
     
-    // get the ID
+    /**
+     * This gets the ID.
+     * @return returns the id.
+     */
     public UUID getId() {
       return id;
     }
   
    /**
-   * this method will enable the employer to add an internship
+   * This method will allow the employer to add an internship entry.
    */
    public ArrayList<Internships> getInternshipsOffered() {
      return this.internshipsOffered;  
    }
 
    /**
-   *this method will add the employers rating on the internship program
+   * This method will add the employer's rating to the internship program.
    */
    public User addInternshipRating(User rater, int rating, String comment) {
     return rater;
    }
    
-
+    /**
+     * @Override indicates this child class is overwriting the employer base class.
+     * @return returns the firstName self-identifier to fetch the firstName variable
+     */
     @Override
     public String getFirstName() {
       return this.firstName;
     }
 
+    /**
+     * @Override indicates this child class is overwriting the employer base class.
+     * @return returns the lastName self-identifier to fetch the lastName variable
+     */
     @Override
     public String getLastName() {
       return this.lastName;
     }
 
+    /**
+     * @Override indicates this child class is overwriting the employer base class.
+     * @return returns the userName self-identifier to fetch the userName variable
+     */
     @Override
     public String getUserName() {
       return this.userName;
     }
 
+    /**
+     * @Override indicates this child class is overwriting the employer base class.
+     * @return returns the password self-identifier to fetch the password variable
+     */
     @Override
     public String getPassword() {
       return this.password;
     }
 
+    /**
+     * @Override indicates this child class is overwriting the employer base class.
+     * @return returns the email self-identifier to fetch the email variable
+     */
     @Override
     public String getEmail() {
       return this.email;
     }
 
-   
 }
