@@ -19,15 +19,6 @@ public class StudentApplication {
         return internshipList.getInternships(keyword);
     }
 
-
-    public boolean createStudentAccount(String userName, String firstName, String lastName, String password, String email) {
-        return userList.addStudent(userName, firstName, lastName, password, email); // will maybe need to add more to parameters
-    }
-
-    public boolean createEmployerAccount(String userName, String firstName, String lastName, String password, String email) {
-        return userList.addAdmin(userName, firstName, lastName, password, email); // will maybe need to add more to parameters
-    }
-
     public boolean createAdminAccount(String userName, String firstName, String lastName, String password, String email) {
         return userList.addAdmin(userName, firstName, lastName, password, email); // will maybe need to add more to parameters
     }
