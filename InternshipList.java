@@ -1,22 +1,29 @@
+/**
+ * The InternshipList class that will work with the internship program.
+ * This provides the user with a list of available internships.
+ * 
+ * @author Siri, Maddie, Valerie, Ali
+ */
 import java.util.ArrayList;
 
 public class InternshipList {
     
     /**
-     * Variables for the InternshipList class
+     * Private variables for the InternshipList class
      */
     private static InternshipList internships;
     private ArrayList<Internships> internshipList;
     
     /**
-     * The private method for the InternshipList class
+     * The constructor method for the InternshipList class
      */
     private InternshipList() {
         internshipList = DataLoader.getInternships();
     }
     
     /**
-     * The public getInstance method fetches the instance of 'Internship'
+     * This calls the instance method from the children classes.
+     * @return returns the internship entries back to the user.
      */
     public static InternshipList getInstance() {
         if(internships == null) {
@@ -26,6 +33,10 @@ public class InternshipList {
         return internships;
     }
 
+    /**
+     * This calls the internship method from the children classes.
+     * @return returns the internship list entries back to the user.
+     */    
     public ArrayList<Internships> getInternships() {
         return this.internshipList;
     }
