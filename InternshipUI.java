@@ -24,6 +24,7 @@ private String userName;
 private String password;
 private Scanner sc = new Scanner(System.in);
 private Student student;
+private InternshipList internshipList;
 
   
   public InternshipUI() {
@@ -120,23 +121,42 @@ case(2):
 //Val and Maddie
 	internship.getSkillsRequired();
 	System.out.println("Searching certain skills");
-	String item = "JavaScript";
+	String item = sc.nextLine();
+
 	studentApplication.findInternships(item);
 	
-	if(item == null) {
-		System.out.println("Sorry, you did not enter in a valid skill");
-	}
+	if(item == null) {System.out.println("Sorry, you did not enter in a valid skill");}
 
 	if(!internship.contains(item)) {
 		System.out.println("Sorry we couldnt find any internships with that skill");
 		return;
 	}
-	else {
-		System.out.println("We found an internship that matches for you");	
+	else if(internship.contains(item)) {
+		System.out.println("We found the internship(s) that match for you");	
 		System.out.println(internship);
-}
 
+		System.out.println("Would you like to apply for an internship? Enter 'Y' / 'N'");
 
+		String yesNo = sc.nextLine();
+		if(yesNo == "Y") {
+			System.out.println("Which internship would you like to apply for? Enter 'first' / 'second'");
+			
+			String firstSecond = sc.nextLine();
+			if(firstSecond == "first") {
+				//maybe a method to add the userName to applicants	
+				System.out.println(userName + " applied for the first internship!");
+			}
+			else if(firstSecond == "second") {
+				//maybe a method to add the userName to applicants
+				System.out.println(userName + " applied for the second internship!");
+			}
+		
+		}
+		else if(yesNo == "N") {
+			System.out.println("Stopping.");
+			break;
+		}
+	}
 	break;
 
 /**
@@ -177,8 +197,18 @@ case(3):
    		sc.nextLine();
    		System.out.println("Enter password:");
    		sc.nextLine();
-   		this.studentApplication.loginEmployer(userName, password);
-		studentApplication.findInternships();
+
+   			this.studentApplication.loginEmployer(userName, password);
+			studentApplication.findInternships();
+			
+			//show internships again
+			System.out.println(internship);
+
+			//give the list of students, (or applicants, if applicable)
+			System.out.println(student);
+
+			//show internships applied for each student
+			System.out.println(student.internshipsApplied());
 		}
 		break;
 		}

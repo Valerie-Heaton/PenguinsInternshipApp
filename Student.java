@@ -128,6 +128,11 @@ public class Student extends User {
   public String getPassword() {
     return this.password;
   }
+
+  public ArrayList<Internships> internshipsApplied() {
+     return this.internshipsApplied;
+     System.out.println(internshipsApplied);
+  }
   
 }
     
