@@ -33,32 +33,49 @@ public class Experience {
         //this.experienceDescription = experienceDescription;
     }
     /**
-     * This calls the getVolunteerExperience method from the children classes
+     * This calls volunteerExperience from the children classes
+     * @return returns the volunteerExperience variable.
      */
     public ArrayList<String> getVolunteerExperience() {
         return this.volunteerExperience;
     }
+
     /**
-     * This calls the getWorkExperience method from the children classes
-     */    
+     * This calls workExperience from the children classes
+     * @return returns the workExperience variable.
+     */
     public ArrayList<String> getWorkExperience() {
         return this.workExperience;
     }
+
     /**
-     * This calls the getPastPositions method from the children classes
+     * This calls pastPositions from the children classes
+     * @return returns the pastPositions variable.
      */
     public ArrayList<String> getPastPositions() {
         return this.pastPositions;
     }
+
     /**
-     * This calls the getExperienceDescription method from the children classes
+     * This calls experienceDescription from the children classes
+     * @return returns the experienceDescription variable.
      */
     public String getExperienceDescription() {
         return this.experienceDescription;
     }
+
+    /**
+     * This calls title from the children classes
+     * @return returns the title variable.
+     */
     public String getTitle() {
         return title;
     }
+
+    /**
+     * This calls company from the children classes
+     * @return returns the company variable.
+     */
     public String getCompany() {
         return company;
     }
