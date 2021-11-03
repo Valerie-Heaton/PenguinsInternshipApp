@@ -16,7 +16,6 @@ public class Internships {
     private String location;
     private boolean inPerson;
     private boolean remote; 
-    private Search search = new Search(null, null, null); //temporary null
     private ArrayList<String> skillsRequired;
 
 
