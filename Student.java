@@ -173,7 +173,6 @@ public class Student extends User {
    */
   public ArrayList<Internships> internshipsApplied() {
      return this.internshipsApplied;
-     System.out.println(internshipsApplied);
   }
   
   

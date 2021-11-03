@@ -93,17 +93,11 @@ public class StudentApplication {
         return true;
     }
 
-<<<<<<< HEAD
     // CREATE RESUME METHOD
     // public boolean createResume(ArrayList<String> skills, ArrayList<Experience> experience, ArrayList<education>) {
     //     return addResume(skills, education, experience); // will maybe need to add more to parameters
     // }
 
-=======
-    /**
-     * Logs out the respective account from the system, albeit student, employer or admin.
-     */
->>>>>>> f293c9d8885817a97c1956817075dbdd6209614b
     public void logout() {
         userList.saveUsers();
     }

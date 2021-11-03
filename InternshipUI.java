@@ -15,39 +15,7 @@ public class InternshipUI {
 		studentApplication = new StudentApplication();
 	}
 
-<<<<<<< HEAD
 	public void run() {
-=======
-private Internships internship;
-private UUID id;
-private String title;
-private String description;
-private String location;
-private boolean inPerson;
-private boolean remote;
-private Resume resume;
-private StudentApplication studentApplication;
-private String firstName;
-private String lastName;
-private String email;
-private String userName;
-private String password;
-private Scanner sc = new Scanner(System.in);
-private Student student;
-private InternshipList internshipList;
-
-  
-  public InternshipUI() {
-      internship = new Internships(id, title, description, location, inPerson, remote);
-      resume = new Resume();
-      this.studentApplication = new StudentApplication();
-      new Student(firstName, lastName, userName, password, email);
-      new DataWriter();
-}
-  
-public void run() {
-       System.out.println(WELCOME_MESSAGE);
->>>>>>> f293c9d8885817a97c1956817075dbdd6209614b
 
 		System.out.println(WELCOME_MESSAGE);
 		
@@ -70,7 +38,7 @@ public void run() {
 				case(0): 
 					login();
 					//addResume();
-					break;
+					//break;
 				case(1):
 
 					break;
@@ -116,7 +84,7 @@ public void run() {
    			System.out.println("Enter password:");
 			String password = scanner.nextLine();
 			this.studentApplication.loginStudent(userName, password);
-		 	System.out.println("Logged in..");
+		 	//System.out.println("Logged in..");
 			//addResume();
 	 	}
 		else if(userInput.equalsIgnoreCase("admin")) {
@@ -125,7 +93,7 @@ public void run() {
    			System.out.println("Enter password:");
 			String password = scanner.nextLine();
 			this.studentApplication.loginAdmin(userName, password);
-			System.out.println("Logged in..");
+			//System.out.println("Logged in..");
 	 	}
 	 	else if(userInput.equalsIgnoreCase("employer")) {
 			System.out.println("Enter username:");
@@ -133,7 +101,7 @@ public void run() {
    			System.out.println("Enter password:");
 			String password = scanner.nextLine();
 			this.studentApplication.loginEmployer(userName, password);
-			System.out.println("Logged in..");
+			//System.out.println("Logged in..");
 	 	}
 		 
 	}
