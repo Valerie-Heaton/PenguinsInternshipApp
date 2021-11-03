@@ -71,7 +71,7 @@ public class DataWriter extends DataConstants {
      */
     public static void saveResume() {
         Resume resume = Resume.getInstance();
-        ArrayList<Resume> resumes = resume.getResumes();
+        //ArrayList<Resume> resumes = resume.getResumes();
         JSONArray jsonResumes = new JSONArray();
 
         // creating all the json objects
@@ -161,7 +161,7 @@ public class DataWriter extends DataConstants {
         employerDetails.put(USER_LAST_NAME, employer.getLastName());
         employerDetails.put(USER_USER_NAME, employer.getUserName());
         employerDetails.put(USER_EMAIL, employer.getEmail());
-        ArrayList<String> internshipsOffered = employer.getInternshipsOffered();
+        ArrayList<Internships> internshipsOffered = employer.getInternshipsOffered();
         JSONArray jsonInternshipsOffered = new JSONArray();
         for (int i = 0; i < internshipsOffered.size(); i++) {
             jsonInternshipsOffered.add(internshipsOffered.get(i));
@@ -252,32 +252,20 @@ public class DataWriter extends DataConstants {
         adminDetails.put(USER_EMAIL, admin.getEmail());
         return adminDetails;
 	}
-   
-    public static void toTextFile() {
-<<<<<<< HEAD
-        Resume resume = Resume.getInstance();
-        ArrayList<Resume> resumes = resume.getResume();
-        JSONArray jsonResumes = new JSONArray();
-<<<<<<< HEAD
-         Scanner sc = new Scanner(System.in);
-=======
-        Scanner sc = new Scanner(System.in);
->>>>>>> 0313da9815b1e29830d9c0ae88381a9144ca39d7
-        for(int i = 0; i < resumes.size(); i++) {
-=======
-        // Resume resume = Resume.getInstance();
-        Student student = Student.getInstance();
-        Resume resume = student.getResume();
-        for(int i = 0; i < resume.size(); i++) {
->>>>>>> 565c5dbbe3230b23ee9510dfe50cd5cccbf1e095
-        //https://stackoverflow.com/questions/26165386/producing-some-text-file-using-a-for-loop-in-java
-        try {
-        FileWriter f = new FileWriter("textfile.txt");
-        f.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-       }
-   }
-   
+    
+//     public static void toTextFile() {
+//         // Resume resume = Resume.getInstance();
+//         // ArrayList<Resume> resumes = resume.getResume();
+//         JSONArray jsonResumes = new JSONArray();
+//         Scanner sc = new Scanner(System.in);
+//         for(int i = 0; i < resumes.size(); i++) {
+//         //https://stackoverflow.com/questions/26165386/producing-some-text-file-using-a-for-loop-in-java
+//         try {
+//         FileWriter f = new FileWriter("textfile.txt");
+//         f.close();
+//         } catch (IOException e) {
+//             e.printStackTrace();
+//         }
+//        }
+//    }
 }
