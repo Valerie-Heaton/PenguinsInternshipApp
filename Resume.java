@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Resume {
 
-   // 'implements Application' will be added later
+   // implements Application' will be added later
    // Application will throw an error until the Application interface is made
 
    // private variables
@@ -17,7 +17,6 @@ public class Resume {
    private Student studentInfo;
    public static Resume resume;
    // Student and studentInfo will throw an error until the Student class is made
-
    private String major;
    private ArrayList<String> courses;
    private ArrayList<Experience> experience;
@@ -35,6 +34,8 @@ public class Resume {
         this.experience = new ArrayList<Experience>();
         this.skills = new ArrayList<String>();
         this.education = new ArrayList<Education>();
+        
+        this.resume = new Resume();
       }
       /**
       * This calls the getStudentInfo method from the children classes
@@ -84,7 +85,8 @@ public class Resume {
       /**
       * This calls the getResume method from the children classes
       */   
-      public ArrayList<Resume> getResume() {
-         return null;
-      }  
+      public Resume getResume() {
+         return Resume.resume;
+      }
+     
 }

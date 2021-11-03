@@ -5,7 +5,7 @@
 */
 import java.util.UUID;
 
-public class Admin extends User{
+public class Admin extends User {
     /**
     * The admin class private variable(s) for the 'admin' class
     */
@@ -14,11 +14,12 @@ public class Admin extends User{
     private String userName;
     private String email;
     private String password;
-    private String title;
     private String description;
-    private String location;
     private Internships internship;
     private UUID id;
+    //private String title;
+    //private String location;
+    
     /**
      * The constructor for the admin class 
      * @param firstName is the appropriate String and is assigned to the this.firstName.
@@ -69,9 +70,7 @@ public class Admin extends User{
     * @param location is the appropriate String and is assigned to the this.location.
     */
     public void addInternship(String title, String description, String location) {
-        this.title = title;
         this.description = description;
-        this.location = location;
 
     }
 

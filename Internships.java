@@ -9,11 +9,12 @@ public class Internships {
     /**
      * These are all instance variables used within this class.
      */
+    private UUID id;
     private String title; 
     private ArrayList<Rating> employerRating;
     private String description;
     private String location;
-    private boolean online;
+    private boolean inPerson;
     private boolean remote; 
     private Search search = new Search(null, null, null); //temporary null
     private ArrayList<String> skillsRequired;
@@ -31,10 +32,10 @@ public class Internships {
         this.employerRating = new ArrayList<Rating>();
         this.description = description;
         this.location = location;
-        this.online = online;
+        this.inPerson = inPerson;
         this.remote = remote;
-        this.skillsRequired = skillsRequired;
-        this.search= search;
+        //this.skillsRequired = skillsRequired;
+        //this.search = search; 
     }
 
     /**
@@ -66,7 +67,7 @@ public class Internships {
      * @return true for in person and false if not in person
      */
     public boolean getInPerson() {
-        return this.online;
+        return this.inPerson;
     }
 
     /**
@@ -111,4 +112,12 @@ public class Internships {
         }
     }
     // maybe we need a String toString method
+
+    public UUID getID() {
+        return this.id;
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
 }

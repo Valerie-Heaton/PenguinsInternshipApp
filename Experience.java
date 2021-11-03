@@ -30,7 +30,7 @@ public class Experience {
         this.volunteerExperience = new ArrayList<String>();
         this.workExperience = new ArrayList<String>();
         this.pastPositions = new ArrayList<String>();
-        this.experienceDescription = experienceDescription;
+        //this.experienceDescription = experienceDescription;
     }
     /**
      * This calls the getVolunteerExperience method from the children classes
