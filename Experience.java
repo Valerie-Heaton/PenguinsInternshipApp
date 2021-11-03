@@ -19,7 +19,10 @@ public class Experience {
     private String experienceDescription;
 
     /**
-     * This method initializes each of the ArrayLists that are necessary for Experience and intializes the String description for experience.
+     * This method initializes each of the objects that are necessary 
+     * for Experience and intializes the String description for experience.
+     * @param title is a title of the Entry Title.
+     * @param company is a company of the employer's business.
      * @param volunteerExperience is an ArrayList of Volunteer Experience
      * @param workExperience is an ArrayList of Work Experience
      * @param pastEmployers is an ArrayList of the Past Employers
