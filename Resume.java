@@ -12,6 +12,7 @@ public class Resume {
    public static Resume resume;
    // Student and studentInfo will throw an error until the Student class is made
    private String major;
+   private ArrayList<Resume> resumes;
    private ArrayList<String> courses;
    private ArrayList<Experience> experience;
    private ArrayList<String> skills;
@@ -24,7 +25,7 @@ public class Resume {
       this.experience = new ArrayList<Experience>();
       this.skills = new ArrayList<String>();
       this.education = new ArrayList<Education>();
-      //this.resume = new Resume();
+      this.resumes = new ArrayList<Resume>();
    }
 
     public Resume() {}
@@ -74,5 +75,10 @@ public class Resume {
          }
          return resume;
       }
+
+    public ArrayList<Resume> getResumes() {
+        return this.resumes;
+    }
+
 
 }
