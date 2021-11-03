@@ -1,220 +1,157 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.UUID;
 
 public class InternshipUI {
 
+	private static final String WELCOME_MESSAGE = "Welcome to our Internship App!";
+	private String[] mainMenuOptions = {"Scenario 1: Login to Account & Add Resume", "Scenario 2: Print Resume", "Scenario 3: Find Jobs with Specific Skill", "Scenario 4: View Job Listing and Applicants as Employee"};
 
-private final String WELCOME_MESSAGE = "Welcome to the inernship app";
-private String[] mainMenuOptions = {"Login,", "Prints out resume to a text file", "Filter", "Login with a job listing"};
+	private Scanner scanner;
+	private StudentApplication studentApplication;
 
+	public InternshipUI() {
+		scanner = new Scanner(System.in);
+		studentApplication = new StudentApplication();
+	}
 
-private Internships internship;
-private UUID id;
-private String title;
-private String description;
-private String location;
-private boolean inPerson;
-private boolean remote;
-private Resume resume;
-private StudentApplication studentApplication;
-private String firstName;
-private String lastName;
-private String email;
-private String userName;
-private String password;
-private Scanner sc = new Scanner(System.in);
-private Student student;
+	public void run() {
 
-  
-  public InternshipUI() {
-      internship = new Internships(id, title, description, location, inPerson, remote);
-      resume = new Resume();
-      this.studentApplication = new StudentApplication();
-      new Student(firstName, lastName, userName, password, email);
-      new DataWriter();
-}
-  
-public void run() {
-       System.out.println(WELCOME_MESSAGE);
+		System.out.println(WELCOME_MESSAGE);
 
+		while(true) {
+			displayMainMenu();
 
-//Loop as long as we want to keep interacting with the internships
+			int userCommand = getUserCommand(mainMenuOptions.length);
 
-
-while(true) {
-
-
-displayMainMenu();
-int userCommand = getUserCommand(mainMenuOptions.length);
-
-
-if(userCommand == -1) {
-System.out.println("Not a valid command");
-continue;
-}
-//if they picked the last option then log them out
-if(userCommand == mainMenuOptions.length -1) break;
-
-/**
- *  Using switch statements for scenarios
- * */ 
-
-
-	switch(userCommand) {
-
-	/**
-	 * Code for scenario 1
-	 */
-		case(0):
-
-	/**
-	 * Prompt user to login as student, employer, or admin, chosen using Scanner
-	 * input
-	 */
-
-		System.out.println("Are you a student, employer, or admin? Type in student, employer, or admin"); 
-		String userInput = sc.nextLine();
-
-			if(userInput.equalsIgnoreCase("student")) {
-   				System.out.println("Enter username:");
-   				sc.nextLine();
-   				System.out.println("Enter password:");
-   				sc.nextLine();
-   				this.studentApplication.loginStudent(userName, password);
-				System.out.println("Logged in..");
-   				student.getResume();// siri is working on this 
-   				internship.getSkillsRequired();
-   				resume.getEducation();//not a method yet
-   				resume.getExperience();
+			if(userCommand == -1) {
+				System.out.println("Not a valid command");
+				continue;
 			}
-			else if(userInput.equalsIgnoreCase("admin")) {
-   				System.out.println("Enter username:");
-   				sc.nextLine();
-   				System.out.println("Enter password:");
-   				sc.nextLine();
-   				this.studentApplication.loginAdmin(userName, password);
+
+			if(userCommand == mainMenuOptions.length - 1) {
+				studentApplication.logout(); 
+				break;
 			}
-			else if(userInput.equalsIgnoreCase("employer")) {
-   				System.out.println("Enter username:");
-   				sc.nextLine();
-   				System.out.println("Enter password:");
-   				sc.nextLine();
-   				this.studentApplication.loginEmployer(userName, password);
+
+			switch(userCommand) {
+				case(0): 
+					login();
+					//addResume();
+					break;
+				case(1):
+
+					break;
+				case(2):
+
+					break;
+				case(3):
+					
+					break;
 			}
-		break;
-
-/**
- * Code for scenario 2
- */
-
-case(1):
-	System.out.println("Printing your resume to a .txt file");
-	//DataWriter.toTextFile();
-	break;
-
-
-/**
- * Code for scenario 3
- */
-case(2):
-//Val and Maddie
-	internship.getSkillsRequired();
-	System.out.println("Searching certain skills");
-	String item = "JavaScript";
-	studentApplication.findInternships(item);
-	
-	if(item == null) {
-		System.out.println("Sorry, you did not enter in a valid skill");
-	}
-
-	if(!internship.contains(item)) {
-		System.out.println("Sorry we couldnt find any internships with that skill");
-		return;
-	}
-	else {
-		System.out.println("We found an internship that matches for you");	
-		System.out.println(internship);
-}
-
-
-	break;
-
-/**
- * Code for scenario 4
- */
-case(3):
-
-/**
- * Prompt user to login as student, employer, or admin, chosen using Scanner input, again
- */
-		System.out.println("Are you a student, employer, or admin? Type in student, employer, or admin"); 
-		String userLog = sc.nextLine();
-
-		/**
-		 * Utilize if statements in order to show scenario data
-		 */
-
-	if(userLog.equalsIgnoreCase("student")) {
-   		System.out.println("Enter username:");
-   		sc.nextLine();
-   		System.out.println("Enter password:");
-   		sc.nextLine();
-   		this.studentApplication.loginStudent(userName, password);
-   		student.getResume();
-   		internship.getSkillsRequired();
-   		resume.getEducation();
-   		resume.getExperience();
-	}
-	else if(userLog.equalsIgnoreCase("admin")) {
-   		System.out.println("Enter username:");
-   		sc.nextLine();
-   		System.out.println("Enter password:");
-   		sc.nextLine();
-   		this.studentApplication.loginAdmin(userName, password);
-	}
-	else if(userLog.equalsIgnoreCase("employer")) {
-   		System.out.println("Enter username:");
-   		sc.nextLine();
-   		System.out.println("Enter password:");
-   		sc.nextLine();
-   		this.studentApplication.loginEmployer(userName, password);
-		studentApplication.findInternships();
 		}
-		break;
-		}
-	}
-}
 
-/**
- * End of switch statements for scenarios.
- * Method to display the menu.
- */
-      
-   private void displayMainMenu() {
+
+	}
+
+	private void displayMainMenu() {
 		System.out.println("\n************ Main Menu *************");
-		for(int i=0; i< mainMenuOptions.length; i++) {
+		for(int i=0; i < mainMenuOptions.length; i++) {
 			System.out.println((i+1) + ". " + mainMenuOptions[i]);
-}
 			System.out.println("\n");
 		}
-
-		/**
-		 * @param numCommands is the integer that corresponds with the switch case.
-		 * If logic allows user to type in the integer of choice, starting the 
-		 * matching scenario.
-		 */
-
+		System.out.println("\n");
+	}
 
 	private int getUserCommand(int numCommands) {
-		System.out.print("What would you like to do?: ");
+		System.out.print("What would you like to do?:");
 
-
-		String input = sc.nextLine();
+		String input = scanner.next();
 		int command = Integer.parseInt(input) - 1;
 
-
-		if (command >= 0 && command <= numCommands - 1)
-			return command;
+		if(command >= 0 && command <= numCommands - 1) return command;
 		return -1;
 	}
+
+	private void login() {
+		
+		System.out.println("Are you a student, employer, or admin? Type in student, employer, or admin"); 
+		String userInput = scanner.nextLine();
+
+		if(userInput.equalsIgnoreCase("student")) {
+			System.out.println("Enter username:");
+   			String userName = scanner.nextLine();
+   			System.out.println("Enter password:");
+			String password = scanner.nextLine();
+			this.studentApplication.loginStudent(userName, password);
+		 	System.out.println("Logged in..");
+			//addResume();
+	 	}
+		else if(userInput.equalsIgnoreCase("admin")) {
+			System.out.println("Enter username:");
+   			String userName = scanner.nextLine();
+   			System.out.println("Enter password:");
+			String password = scanner.nextLine();
+			this.studentApplication.loginAdmin(userName, password);
+			System.out.println("Logged in..");
+	 	}
+	 	else if(userInput.equalsIgnoreCase("employer")) {
+			System.out.println("Enter username:");
+   			String userName = scanner.nextLine();
+   			System.out.println("Enter password:");
+			String password = scanner.nextLine();
+			this.studentApplication.loginEmployer(userName, password);
+			System.out.println("Logged in..");
+	 	}
+		 
+	}
+
+	private String getField(String prompt) {
+		System.out.print(prompt + ": ");
+		return scanner.nextLine();
+	}
+
+	// private int getIntField(String prompt) {
+	// 	System.out.print(prompt + ": ");
+	// 	return scanner.nextInt();
+	// } 
+
+	// private void addResume() {
+	// 	String skills = getField("Skills");
+		
+	// 	String schoolEducationReceived = getField("School Education Received");
+	// 	String major = getField("Major");
+	// 	int yearGraduated = getIntField("Year of Graduation");
+	// 	Education education = new Education(schoolEducationReceived, major, yearGraduated);
+
+	// 	int numberOfExperiences = getIntField("Number of Experiences You Would Like to Add");
+	// 	ArrayList<Experience> experience = new ArrayList<Experience>();
+	// 	for(int i = 0; i < numberOfExperiences; i++) {
+	// 		System.out.println("Position:");
+	// 		String position = scanner.nextLine();
+
+	// 		System.out.println("Company:");
+	// 		String company = scanner.nextLine();
+
+	// 		String internship = "Internship";
+	// 		System.out.println(internship);
+
+	// 		System.out.println("Date:");
+	// 		String date = scanner.nextLine();
+
+	// 		System.out.println("Description for What You Created During Your Internship");
+	// 		String createdDescription = scanner.nextLine();
+
+	// 		System.out.println("Description for Position During Your Internship");
+	// 		String positionDescription = scanner.nextLine();
+
+	// 		Experience addExperience = new Experience(position, company, internship, date, createdDescription, positionDescription);
+	// 		experience.add(addExperience);
+	// 	}
+
+	// 	Resume resume = new Resume(skills, education, experience);
+	// }
+
+	// for scenario 3, just search the arraylist of their skills required from internships class
+
 }

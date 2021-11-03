@@ -108,7 +108,7 @@ public class DataLoader extends DataConstants {
              * Creating an instance of the JSON object
              */
             for (int i = 0; i < peopleJSON.size(); i++) {
-                resume.add(new Resume());
+            //    resume.add(new Resume());
             }
             System.out.print(resume); // make sure it's working, comment out later
             return resume;

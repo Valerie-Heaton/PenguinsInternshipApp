@@ -23,7 +23,7 @@ public class Resume {
    private ArrayList<String> skills;
    private ArrayList<Education> education;
 
-   public Resume() {
+   public Resume(String skills, Education education, ArrayList<Experience> experience) {
       this.studentInfo = studentInfo;
       this.major = major;
       this.courses = new ArrayList<String>();
@@ -32,7 +32,9 @@ public class Resume {
       this.education = new ArrayList<Education>();
       //this.resume = new Resume();
    }
-      /**
+   
+
+    /**
       * This calls the getStudentInfo method from the children classes
       */   
       public Student getStudentInfo() {

@@ -18,11 +18,11 @@ public class Education {
 
     /**
      * This the constructor for the Education class.
-     * @param schoolEducationReserved is the appropriate String and is assigned to this.schoolEducationReceived.
+     * @param schoolEducationReceived is the appropriate String and is assigned to this.schoolEducationReceived.
      * @param major is the appropriate String and is assigned to this.major.
      * @param yearGraduated is the appropriate integer to this.yearGraduated.
      */
-    public Education(String schoolEducationReserved, String major, int yearGraduated) {
+    public Education(String schoolEducationReceived, String major, int yearGraduated) {
         //this.schoolEducationReceived = schoolEducationReceived; //what does this do?
         this.yearGraduated = yearGraduated;
         this.major = major;

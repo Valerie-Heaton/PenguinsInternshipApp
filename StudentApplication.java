@@ -59,6 +59,11 @@ public class StudentApplication {
         return true;
     }
 
+    // CREATE RESUME METHOD
+    // public boolean createResume(ArrayList<String> skills, ArrayList<Experience> experience, ArrayList<education>) {
+    //     return addResume(skills, education, experience); // will maybe need to add more to parameters
+    // }
+
     public void logout() {
         userList.saveUsers();
     }
