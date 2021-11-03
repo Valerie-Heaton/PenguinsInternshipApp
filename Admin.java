@@ -28,7 +28,6 @@ public class Admin extends User {
      * @param password is the appropriate String and is assigned to the this.password.
      * @param email is the appropriate String and is assigned to the this.email.
      */
-
     public Admin(String firstName, String lastName, String userName, String password, String email) {
      super(firstName, lastName, userName, email, password);
      this.id = UUID.randomUUID();
@@ -58,13 +57,16 @@ public class Admin extends User {
         this.password = password;
     }
 
-    // get the ID
+    /**
+     * Gets the ID
+     * @return the ID variable
+     */
     public UUID getId() {
         return id;
     }
     
     /**
-    * The void that identifies the new variables and adds the title, desc. and location of the job
+    * This void identifies the new variables and adds the title, desc. and location of the job
     * @param title is the appropriate String and is assigned to the this.title.
     * @param description is the appropriate String and is assigned to the this.description.
     * @param location is the appropriate String and is assigned to the this.location.
@@ -74,63 +76,91 @@ public class Admin extends User {
 
     }
 
-    //added toString method
+    /**
+     * Adds the toString method
+     * @return returns a String representation of the description object
+     */
+
     public String toString() {
         return description;
     }
+
     /**
     * Returns nothing, though utilizes the UserID to 'edit' a user's first name
     */
     public void editFirstName(int UserID, String firstName) {
         this.firstName.replace(this.firstName, firstName);
     }
+
     /**
     * Returns nothing, though utilizes the UserID to 'edit' a user's last name
     */
     public void editLastName(int UserID, String lastName) {
         this.lastName.replace(this.lastName, lastName);
     }
+    
     /**
     * Returns nothing, though utilizes the UserID to 'edit' a user's username
     */
     public void editUserName(int UserID, String userName) {
         this.userName.replace(this.userName, userName);
     }
+
     /**
     * Returns nothing, though utilizes the UserID to 'edit' a user's email
     */
     public void editEmail(int UserID, String email) {
         this.email.replace(this.email, email);
     }
+
     /**
     * Returns nothing, though utilizes the UserID to 'delete' an internship entry
     */
-    
     public void deleteInternship(int UserID, Internships internship) {     
         // empty, for now
         this.internship.equals(null);
     }
 
+    /**
+     * @Override indicates this child class is overwriting the admin base class.
+     * @return returns the firstName self-identifier to fetch the firstName variable
+     */
     @Override
     public String getFirstName() {
         return this.firstName;
     }
 
+    /**
+     * @Override indicates this child class is overwriting the admin base class.
+     * @return returns the lastName self-identifier to fetch the lastName variable
+     */
     @Override
     public String getLastName() {
         return this.lastName;
     }
 
+    /**
+     * @Override indicates this child class is overwriting the admin base class.
+     * @return returns the userName self-identifier to fetch the userName variable
+     */
     @Override
     public String getUserName() {
         return this.userName;
     }
 
+    /**
+     * @Override indicates this child class is overwriting the admin base class.
+     * @return returns the password self-identifier to fetch the password variable
+     */
     @Override
     public String getPassword() {
         return this.password;
     }
 
+    /**
+     * @Override indicates this child class is overwriting the admin base class.
+     * @return returns the email self-identifier to fetch the email variable
+     */
     @Override
     public String getEmail() {
         return this.email;

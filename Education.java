@@ -73,7 +73,7 @@ public class Education {
 
     /**
      * This checks if yearGraduated is a valid index and executes the corresponding command.
-     * @param yearGraduated is the index of the ArrayList
+     * @param yearGraduated is the index of the ArrayList.
      * @return returns a boolean value based on whether or not the index is valid.
      */
     public boolean checkMajor() {

@@ -15,7 +15,39 @@ public class InternshipUI {
 		studentApplication = new StudentApplication();
 	}
 
+<<<<<<< HEAD
 	public void run() {
+=======
+private Internships internship;
+private UUID id;
+private String title;
+private String description;
+private String location;
+private boolean inPerson;
+private boolean remote;
+private Resume resume;
+private StudentApplication studentApplication;
+private String firstName;
+private String lastName;
+private String email;
+private String userName;
+private String password;
+private Scanner sc = new Scanner(System.in);
+private Student student;
+private InternshipList internshipList;
+
+  
+  public InternshipUI() {
+      internship = new Internships(id, title, description, location, inPerson, remote);
+      resume = new Resume();
+      this.studentApplication = new StudentApplication();
+      new Student(firstName, lastName, userName, password, email);
+      new DataWriter();
+}
+  
+public void run() {
+       System.out.println(WELCOME_MESSAGE);
+>>>>>>> f293c9d8885817a97c1956817075dbdd6209614b
 
 		System.out.println(WELCOME_MESSAGE);
 		

@@ -1,6 +1,6 @@
 [
     {
-        "StudentInfo":[{"firstName":"Amy", "lastName":"Walker","username":"walkeramy", "email":"awalker@email.sc.edu"}],
+        "StudentInfo":[{"firstName":"Amy", "lastName":"Walker","userName":"walkeramy", "email":"awalker@email.sc.edu"}],
         "major": "Computer Science",
         "courses": ["CSCE 146", "CSCE 212","CSCE 215","MATH 241","CHEM 112"],
         "skills": ["Python", "Java", "JavaScript", "HTML", "CSS"],
@@ -39,12 +39,5 @@
         "university": "UofSC",
         "yearGraduated": "2023"
         }]
-    },
-    {
-        "StudentInfo":[{"firstName":"Nathan", "lastName":"Drake","username":"natedrake", "email":"ndrake@email.sc.edu"}],
-        "major": "Computer Information Systems",
-        "courses": ["CSCE 146", "CSCE 212","CSCE 215","MATH 241","CHEM 112"],
-        "experience": [{"title": "Data Analyst","company": "AvTech"}],
-        "education": [{"title": "Bachelor's Degree in Computer Information Systems", "university":"UofSC","graduation":"2023"}]
     }
 ]

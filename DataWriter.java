@@ -22,12 +22,16 @@ public class DataWriter extends DataConstants {
         ArrayList<Student> students = student.getStudents();
         JSONArray jsonStudents = new JSONArray();
 
-        // creating all the json objects
+        /**
+         * Creates all of the JSON objects regarding the 'student' variable
+         */
         for (int i = 0; i < students.size(); i++) {
             jsonStudents.add(getStudentJSON(students.get(i)));
         }
 
-        // Write JSON file
+        /**
+         * This try command writes out the JSON file
+         */
         try (FileWriter file = new FileWriter(USER_FILE_NAME)) {
             file.write(jsonStudents.toJSONString());
             file.flush();
@@ -39,7 +43,6 @@ public class DataWriter extends DataConstants {
     /**
      * This public static method gets our resume JSON and is used in the save resume
      * method.
-     * 
      * @param student is the appropriate student and assigned to studentDetails.
      */
     public static JSONObject getStudentJSON(Student student) {
@@ -74,12 +77,16 @@ public class DataWriter extends DataConstants {
         //ArrayList<Resume> resumes = resume.getResumes();
         JSONArray jsonResumes = new JSONArray();
 
-        // creating all the json objects
+        /**
+         * Creates all of the JSON objects regarding the 'resume' variable
+         */
         for (int i = 0; i < resumes.size(); i++) {
             jsonResumes.add(getResumeJSON(resumes.get(i)));
         }
 
-        // Write JSON file
+        /**
+         * This try command writes out the JSON file
+         */
         try (FileWriter file = new FileWriter(USER_FILE_NAME)) {
 
             file.write(jsonResumes.toJSONString());
@@ -134,12 +141,16 @@ public class DataWriter extends DataConstants {
         ArrayList<Employer> employers = employer.getEmployers();
         JSONArray jsonEmployers = new JSONArray();
 
-        // creating all the json objects
+        /**
+         * Creates all of the JSON objects regarding the 'employer' variable
+         */
         for (int i = 0; i < employers.size(); i++) {
             jsonEmployers.add(getEmployerJSON(employers.get(i)));
         }
 
-        // Write JSON file
+        /**
+         * This try command writes out the JSON file
+         */
         try (FileWriter file = new FileWriter(USER_FILE_NAME)) {
 
             file.write(jsonEmployers.toJSONString());
@@ -181,11 +192,16 @@ public class DataWriter extends DataConstants {
         JSONArray jsonInternships = new JSONArray();
 
         // creating all the json objects
+        /**
+         * Creates all of the JSON objects regarding the 'internship' variable
+         */
         for (int i = 0; i < internships.size(); i++) {
             jsonInternships.add(getInternshipsJSON(internships.get(i)));
         }
 
-        // Write JSON file
+        /**
+         * Writes out the JSON file
+         */
         try (FileWriter file = new FileWriter(USER_FILE_NAME)) {
 
             file.write(jsonInternships.toJSONString());

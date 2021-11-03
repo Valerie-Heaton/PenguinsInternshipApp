@@ -22,7 +22,10 @@ public class Experience {
     private String internship;
 
     /**
-     * This method initializes each of the ArrayLists that are necessary for Experience and intializes the String description for experience.
+     * This method initializes each of the objects that are necessary 
+     * for Experience and intializes the String description for experience.
+     * @param title is a title of the Entry Title.
+     * @param company is a company of the employer's business.
      * @param volunteerExperience is an ArrayList of Volunteer Experience
      * @param workExperience is an ArrayList of Work Experience
      * @param pastEmployers is an ArrayList of the Past Employers
@@ -40,34 +43,55 @@ public class Experience {
         //this.experienceDescription = experienceDescription;
     }
     /**
-     * This calls the getVolunteerExperience method from the children classes
+     * This calls volunteerExperience from the children classes
+     * @return returns the volunteerExperience variable.
      */
     public ArrayList<String> getVolunteerExperience() {
         return this.volunteerExperience;
     }
+
     /**
-     * This calls the getWorkExperience method from the children classes
-     */    
+     * This calls workExperience from the children classes
+     * @return returns the workExperience variable.
+     */
     public ArrayList<String> getWorkExperience() {
         return this.workExperience;
     }
+
     /**
-     * This calls the getPastPositions method from the children classes
+     * This calls pastPositions from the children classes
+     * @return returns the pastPositions variable.
      */
     public ArrayList<String> getPastPositions() {
         return this.pastPositions;
     }
+
     /**
-     * This calls the getExperienceDescription method from the children classes
+     * This calls experienceDescription from the children classes
+     * @return returns the experienceDescription variable.
      */
     public String getCreatedDescription() {
         return this.createdDescription;
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * This calls title from the children classes
+     * @return returns the title variable.
+     */
+>>>>>>> f293c9d8885817a97c1956817075dbdd6209614b
     public String getTitle() {
         return this.title;
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * This calls company from the children classes
+     * @return returns the company variable.
+     */
+>>>>>>> f293c9d8885817a97c1956817075dbdd6209614b
     public String getCompany() {
         return this.company;
     }

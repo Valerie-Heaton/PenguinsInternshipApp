@@ -1,3 +1,8 @@
+/**
+ * Initializes the COMPLETE list of constants that will be utilized throughout the entirety
+ * of our program. These keywords are of high importance and establish the variables that will 
+ * affect all other methods.
+ */
 public class DataConstants {
     protected static final String USER_FILE_NAME = "student.json";
     protected static final String USER_ID = "id";

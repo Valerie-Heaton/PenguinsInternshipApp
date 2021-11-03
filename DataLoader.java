@@ -12,7 +12,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;;
 
-//will extend DataConstants
 /**
  * The DataLoader class that extends into the DataConstants class.
  */
@@ -23,8 +22,9 @@ public class DataLoader extends DataConstants {
      * Creates the array list that will fetch the list of ALL admins and load it as metadata
      */
     public static ArrayList<Admin> getAdmins() {
-
-        //loading in admin.json
+        /**
+         * This array list loads in the admin.json object
+         */
         ArrayList<Admin> admins = new ArrayList<Admin>();
         /**
         * The try statement catches exception in the new FileReader and JSONArray during execution 
@@ -70,8 +70,9 @@ public class DataLoader extends DataConstants {
             JSONArray peopleJSON = (JSONArray) new JSONParser().parse(reader);
 
             for (int i = 0; i < peopleJSON.size(); i++) {
-
-                //Strings
+                /**
+                 * These are the Strings that are established as a component of the 'personJSON' object
+                 */
                 JSONObject personJSON = (JSONObject) peopleJSON.get(i);
                 UUID id = UUID.fromString((String) personJSON.get(USER_ID));
                 String userName = (String) personJSON.get(USER_USER_NAME);
