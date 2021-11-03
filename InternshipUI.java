@@ -18,7 +18,7 @@ public class InternshipUI {
 	public void run() {
 
 		System.out.println(WELCOME_MESSAGE);
-
+		
 		while(true) {
 			displayMainMenu();
 
