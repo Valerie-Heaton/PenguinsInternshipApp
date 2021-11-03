@@ -19,7 +19,9 @@ public class InternshipUI {
 
 		System.out.println(WELCOME_MESSAGE);
 		
+
 		while(true) {
+
 			displayMainMenu();
 
 			int userCommand = getUserCommand(mainMenuOptions.length);
@@ -37,20 +39,16 @@ public class InternshipUI {
 			switch(userCommand) {
 				case(0): 
 					login();
-					//addResume();
+					addResume();
 					//break;
 				case(1):
-
 					break;
 				case(2):
-
 					break;
 				case(3):
-					
 					break;
 			}
 		}
-
 
 	}
 
@@ -66,7 +64,7 @@ public class InternshipUI {
 	private int getUserCommand(int numCommands) {
 		System.out.print("What would you like to do?:");
 
-		String input = scanner.next();
+		String input = scanner.nextLine();
 		int command = Integer.parseInt(input) - 1;
 
 		if(command >= 0 && command <= numCommands - 1) return command;
@@ -111,46 +109,48 @@ public class InternshipUI {
 		return scanner.nextLine();
 	}
 
-	// private int getIntField(String prompt) {
-	// 	System.out.print(prompt + ": ");
-	// 	return scanner.nextInt();
-	// } 
+	private int getIntField(String prompt) {
+		System.out.print(prompt + ": ");
+		return scanner.nextInt();
+	} 
 
-	// private void addResume() {
-	// 	String skills = getField("Skills");
+	private void addResume() {
+		String skills = getField("Skills");
 		
-	// 	String schoolEducationReceived = getField("School Education Received");
-	// 	String major = getField("Major");
-	// 	int yearGraduated = getIntField("Year of Graduation");
-	// 	Education education = new Education(schoolEducationReceived, major, yearGraduated);
+		String schoolEducationReceived = getField("School Education Received");
+		String major = getField("Major");
+		int yearGraduated = getIntField("Year of Graduation");
+		Education education = new Education(schoolEducationReceived, major, yearGraduated);
 
-	// 	int numberOfExperiences = getIntField("Number of Experiences You Would Like to Add");
-	// 	ArrayList<Experience> experience = new ArrayList<Experience>();
-	// 	for(int i = 0; i < numberOfExperiences; i++) {
-	// 		System.out.println("Position:");
-	// 		String position = scanner.nextLine();
+		int numberOfExperiences = getIntField("Number of Experiences You Would Like to Add");
+		ArrayList<Experience> experience = new ArrayList<Experience>();
+		for(int i = 0; i < numberOfExperiences; i++) {
+			System.out.println("Position:");
+			String position = scanner.nextLine();
 
-	// 		System.out.println("Company:");
-	// 		String company = scanner.nextLine();
+			System.out.println("Company:");
+			String company = scanner.nextLine();
 
-	// 		String internship = "Internship";
-	// 		System.out.println(internship);
+			String internship = "Internship";
+			System.out.println(internship);
 
-	// 		System.out.println("Date:");
-	// 		String date = scanner.nextLine();
+			System.out.println("Date:");
+			String date = scanner.nextLine();
 
-	// 		System.out.println("Description for What You Created During Your Internship");
-	// 		String createdDescription = scanner.nextLine();
+			System.out.println("Description for What You Created During Your Internship");
+			String createdDescription = scanner.nextLine();
 
-	// 		System.out.println("Description for Position During Your Internship");
-	// 		String positionDescription = scanner.nextLine();
+			System.out.println("Description for Position During Your Internship");
+			String positionDescription = scanner.nextLine();
 
-	// 		Experience addExperience = new Experience(position, company, internship, date, createdDescription, positionDescription);
-	// 		experience.add(addExperience);
-	// 	}
+			Experience addExperience = new Experience(position, company, internship, date, createdDescription, positionDescription);
+			experience.add(addExperience);
+		}
 
-	// 	Resume resume = new Resume(skills, education, experience);
-	// }
+		Resume resume = new Resume(skills, education, experience);
+		this.studentApplication.addStudentResume(resume);
+
+	}
 
 	// for scenario 3, just search the arraylist of their skills required from internships class
 

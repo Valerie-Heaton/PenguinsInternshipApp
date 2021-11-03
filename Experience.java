@@ -74,24 +74,18 @@ public class Experience {
         return this.createdDescription;
     }
 
-<<<<<<< HEAD
-=======
     /**
      * This calls title from the children classes
      * @return returns the title variable.
      */
->>>>>>> f293c9d8885817a97c1956817075dbdd6209614b
     public String getTitle() {
         return this.title;
     }
 
-<<<<<<< HEAD
-=======
     /**
      * This calls company from the children classes
      * @return returns the company variable.
      */
->>>>>>> f293c9d8885817a97c1956817075dbdd6209614b
     public String getCompany() {
         return this.company;
     }

@@ -61,6 +61,10 @@ public class StudentApplication {
         return true;
     }
 
+    public void addStudentResume(Resume resume) {
+        ((Student)user).setResume(resume);
+    }
+
     /**
      * This boolean logs in an employer user account.
      * @param userName is a String that registers the employer's user name.

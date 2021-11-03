@@ -108,6 +108,10 @@ public class Student extends User {
       return this.resume;
    }
 
+   public void setResume(Resume resume) {
+    this.resume = resume;
+  }
+
    // ADDED IN THIS METHOD BC OF DATA WRITER
 
   public String getFirstName() {

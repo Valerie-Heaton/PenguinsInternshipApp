@@ -4,15 +4,9 @@
  * experience, and courses. Works with the Application interface.
  */
 
-//need ArrayList for skills and courses
 import java.util.ArrayList;
 
 public class Resume {
-
-   // implements Application' will be added later
-   // Application will throw an error until the Application interface is made
-
-   // private variables
 
    private Student studentInfo;
    public static Resume resume;
@@ -32,9 +26,10 @@ public class Resume {
       this.education = new ArrayList<Education>();
       //this.resume = new Resume();
    }
-   
 
-    /**
+    public Resume() {}
+
+   /**
       * This calls the getStudentInfo method from the children classes
       */   
       public Student getStudentInfo() {
@@ -79,18 +74,5 @@ public class Resume {
          }
          return resume;
       }
-      /**
-      * This calls the getResume method from the children classes
-      */   
-      // public Resume getResume() {
-      //    return Resume.resume;
-      // }
-      // public Resume getResume() {
-      //    return this.resume;
-      // }
 
-      // public ArrayList<Resume> getResumes() {
-      //    return null;
-      // }
-     
 }

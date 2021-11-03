@@ -9,21 +9,8 @@
 public class InternshipDriver {
    
     public static void main(String [] args) {
-       
-        /**
-         * UUID generator section
-         */
-        //UUID uuid = UUID.randomUUID();
-        //String uuidString = uuid.toString();
-        //System.out.print(uuidString); //this will be removed later
-        /**
-         * End UUID generator section
-         */
-
-        
         InternshipUI internshipInterface = new InternshipUI();
         internshipInterface.run();
-
     }
 
 }

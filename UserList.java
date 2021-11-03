@@ -20,7 +20,7 @@ public class UserList {
      */
     public UserList() {
         adminList = DataLoader.getAdmins();
-        studentList = DataLoader.getStudents();
+        this.studentList = DataLoader.getStudents();
         employerList = DataLoader.getEmployers();
         
     }
@@ -101,7 +101,7 @@ public class UserList {
      * @return returns true if the user name that is fetched equals the one inputted.
      */
     public boolean haveStudent(String userName) {
-		for(Student student : studentList) {
+		for(Student student : this.studentList) {
 			if(student.getUserName().equals(userName)) {
 				return true;
 			}
