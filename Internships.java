@@ -94,7 +94,11 @@ public class Internships {
         return this.skillsRequired;
     }
 
-
+    /**
+     * This method defines the necessary skills required for an internship.
+     * @return returns true if the skills the user is capable of applies to the
+     * skills required.
+     */
     public boolean contains(String keyword) {
         for (int i = 0; i < skillsRequired.size(); i++) {
             if (skillsRequired.get(i).equalsIgnoreCase(keyword)) {
@@ -111,13 +115,22 @@ public class Internships {
             return false;
         }
     }
-    // maybe we need a String toString method
 
+    // maybe we need a String toString method
+    /**
+     * Gets the ID.
+     * @return returns the ID variable.
+     */
     public UUID getID() {
         return this.id;
     }
 
+    /**
+     * Gets the title.
+     * @return returns the title variable.
+     */
     public String getTitle() {
         return this.title;
     }
+    
 }
