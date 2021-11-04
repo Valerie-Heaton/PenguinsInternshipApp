@@ -17,8 +17,6 @@ public class Admin extends User {
     private String description;
     private Internships internship;
     private UUID id;
-    //private String title;
-    //private String location;
     
     /**
      * The constructor for the admin class 

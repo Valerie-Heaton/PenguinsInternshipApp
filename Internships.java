@@ -76,14 +76,6 @@ public class Internships {
     public boolean getRemote() {
         return this.remote;
     }
-    
-    /**
-     * This method is the accessor for  our search function.
-     * @return an instance of the object Search
-     */
-    public Search getSearch() {
-        return this.search;
-    }
 
     /**
      * This method is the accessor for the skills required for the internship.

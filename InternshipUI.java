@@ -40,7 +40,6 @@ public class InternshipUI {
 				case(0): 
 					login();
 					addResume();
-					//break;
 				case(1):
 					break;
 				case(2):
@@ -127,12 +126,13 @@ public class InternshipUI {
 		for(int i = 0; i < numberOfExperiences; i++) {
 			System.out.println("Position:");
 			String position = scanner.nextLine();
-
+			scanner.nextLine();
+			
 			System.out.println("Company:");
 			String company = scanner.nextLine();
 
-			String internship = "Internship";
-			System.out.println(internship);
+			System.out.println("Type Internship if it is a Internship, otherwise type the type of job:");
+			String internship = scanner.nextLine();
 
 			System.out.println("Date:");
 			String date = scanner.nextLine();
@@ -149,7 +149,6 @@ public class InternshipUI {
 
 		Resume resume = new Resume(skills, education, experience);
 		this.studentApplication.addStudentResume(resume);
-
 	}
 
 	// for scenario 3, just search the arraylist of their skills required from internships class
