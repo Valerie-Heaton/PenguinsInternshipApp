@@ -1,6 +1,6 @@
 import java.util.*;
 /**
- * This is the class for the actual Internships display.
+ * This is the Internships class.
  * 
  * @author Siri, Maddie, Valerie, Ali
  */

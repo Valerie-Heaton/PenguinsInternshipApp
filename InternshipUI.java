@@ -1,6 +1,11 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.UUID;
+/**
+ * This is the Internship UI for the facade.
+ *
+ * @author Siri, Maddie, Valerie, Ali
+ */
 
 public class InternshipUI {
 
