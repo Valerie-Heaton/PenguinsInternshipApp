@@ -1,4 +1,9 @@
 import java.util.*;
+/**
+ * This is the Student Application for the facade.
+ *
+ * @author Siri, Maddie, Valerie, Ali
+ */
 
 public class StudentApplication {
     /**
