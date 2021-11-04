@@ -166,6 +166,10 @@ public class Admin extends User {
         return this.email;
     }
 
+    /**
+     * Gets the ID
+     * @return the ID variable
+     */
     public UUID getID() {
         return this.id;
     }
