@@ -46,6 +46,32 @@ public class StudentApplication {
     }
 
     /**
+     * This boolean registers once an admin has created an account.
+     * @param userName is a String that registers the admin's user name.
+     * @param firstName is a String that registers the admin's first name.
+     * @param lastName is a String that registers the admin's last name.
+     * @param password is a String that registers the admin's password.
+     * @param email is a String that registers the admin's email.
+     * @return returns a use list that adds the admin and their parameters to the system.
+     */ 
+    public boolean createStudentAccount(String userName, String firstName, String lastName, String password, String email) {
+        return userList.addStudent(userName, firstName, lastName, password, email); // will maybe need to add more to parameters
+    }
+
+    /**
+     * This boolean registers once an admin has created an account.
+     * @param userName is a String that registers the admin's user name.
+     * @param firstName is a String that registers the admin's first name.
+     * @param lastName is a String that registers the admin's last name.
+     * @param password is a String that registers the admin's password.
+     * @param email is a String that registers the admin's email.
+     * @return returns a use list that adds the admin and their parameters to the system.
+     */ 
+    public boolean createEmployerAccount(String userName, String firstName, String lastName, String password, String email) {
+        return userList.addEmployer(userName, firstName, lastName, password, email); // will maybe need to add more to parameters
+    }
+
+    /**
      * This boolean logs in a student user account.
      * @param userName is a String that registers the student's user name.
      * @param password is a String that registers the student's password.

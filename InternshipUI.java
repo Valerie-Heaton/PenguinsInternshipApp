@@ -81,8 +81,8 @@ public class InternshipUI {
    			System.out.println("Enter password:");
 			String password = scanner.nextLine();
 			this.studentApplication.loginStudent(userName, password);
-		 	//System.out.println("Logged in..");
-			//addResume();
+		 	System.out.println("Logged in..");
+			addResume();
 	 	}
 		else if(userInput.equalsIgnoreCase("admin")) {
 			System.out.println("Enter username:");
@@ -90,7 +90,7 @@ public class InternshipUI {
    			System.out.println("Enter password:");
 			String password = scanner.nextLine();
 			this.studentApplication.loginAdmin(userName, password);
-			//System.out.println("Logged in..");
+			System.out.println("Logged in..");
 	 	}
 	 	else if(userInput.equalsIgnoreCase("employer")) {
 			System.out.println("Enter username:");
@@ -98,7 +98,7 @@ public class InternshipUI {
    			System.out.println("Enter password:");
 			String password = scanner.nextLine();
 			this.studentApplication.loginEmployer(userName, password);
-			//System.out.println("Logged in..");
+			System.out.println("Logged in..");
 	 	}
 		 
 	}
@@ -150,7 +150,5 @@ public class InternshipUI {
 		Resume resume = new Resume(skills, education, experience);
 		this.studentApplication.addStudentResume(resume);
 	}
-
-	// for scenario 3, just search the arraylist of their skills required from internships class
 
 }
