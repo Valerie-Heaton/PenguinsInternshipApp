@@ -11,7 +11,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class testResumeClass {
+class ResumeTest {
   private Resume resume = new Resume();
 
   private ArrayList<Resume> resumes = resumes.getInstance();
