@@ -35,21 +35,23 @@ class StudentApplicationTest {
     }
 
     @Test
-    public void testFindInternships() {
+    void testFindInternships() {
         ArrayList<Internships> findInternships1 = studentApplication.findInternships();
         ArrayList<Internships> findInternships2 = new ArrayList<Internships>();
         assertEquals(findInternships1, findInternships2);       
     }
 
-    public void testCreateValidAdminAccount() {
+    @Test
+    void testCreateValidAdminAccount() {
         studentApplication.createAdminAccount("amywalker", "Amy", "Walker", "amyw1234", "amywalker@email.sc.edu");
         studentApplication.loginAdmin("amywalker", "amyw1234");
         Admin admin = studentApplication.getCurrentAdmin();
         assertEquals("amywalker", admin.getUserName());
     }
 
-    public void testCreateSavedAdmin() {
-        studentApplication.createAdminAccount("amywalker", "Amy", "Walker", "amyw1234", "amywalker@email.sc.edu");
+    @Test
+    void testCreateSavedAdmin() {
+        studentApplication.createAdminAccount("Amy", "Walker", "amywalker", "amyw1234", "amywalker@email.sc.edu");
         studentApplication.logout();
         studentApplication = new StudentApplication();
         studentApplication.loginAdmin("amywalker", "amyw1234");
@@ -58,20 +60,20 @@ class StudentApplicationTest {
     }
 
     @Test
-    public void testCreatDuplicateAdminUserName() {
-        studentApplication.createAdminAccount("amywalker", "Amy", "Walker", "amyw1234", "amywalker@email.sc.edu");
-        boolean isCreated = studentApplication.createAdminAccount("amywalker", "Amy", "Walker", "amyw1234", "amywalker@email.sc.edu");
+    void testCreatDuplicateAdminUserName() {
+        studentApplication.createAdminAccount("Amy", "Walker", "amywalker", "amyw1234", "amywalker@email.sc.edu");
+        boolean isCreated = studentApplication.createAdminAccount("Amy", "Walker", "amywalker", "amyw1234", "amywalker@email.sc.edu");
         assertFalse(isCreated);
     }
 
     @Test
-    public void testCreateAdminEmptyUserName() {
+    void testCreateAdminEmptyUserName() {
         boolean isCreated = studentApplication.createAdminAccount("", "", "", "", "");
         assertFalse(isCreated);
     }
 
     @Test 
-    public void testCreateAdminNullUserName() {
+    void testCreateAdminNullUserName() {
         boolean isCreated = studentApplication.createAdminAccount(null, "", "", "", "");
         assertFalse(isCreated);
     }

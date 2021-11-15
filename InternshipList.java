@@ -54,5 +54,9 @@ public class InternshipList {
         }
         return foundInternships;
     }
+
+    public void saveInternships() {
+        DataWriter.saveInternships();
+    }
     
 }

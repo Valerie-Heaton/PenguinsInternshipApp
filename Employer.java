@@ -26,7 +26,7 @@ public class Employer extends User  {
    * @param email will construct the users email
    * @param password will construct the password
    */
-    public Employer(String firstName, String lastName, String userName, String email, String password) {
+    public Employer(String firstName, String lastName, String userName, String password, String email) {
         super(firstName, lastName, userName, email, password);
         id = UUID.randomUUID();
         this.firstName = firstName;
@@ -46,7 +46,7 @@ public class Employer extends User  {
    * @param email will construct the users email
    * @param password will construct the password
    */
-    public Employer(UUID id, String firstName, String lastName, String userName, String email, String password) {
+    public Employer(UUID id, String firstName, String lastName, String userName, String password, String email) {
       super(firstName, lastName, userName, email, password);
       this.id = id;
       this.firstName = firstName;

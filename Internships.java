@@ -19,6 +19,17 @@ public class Internships {
     private ArrayList<String> skillsRequired;
 
 
+    public Internships(String title, String description, String location, boolean inPerson, boolean remote) { // possibly need to add more parameters
+        this.id = UUID.randomUUID();
+        this.title = title;
+        this.employerRating = new ArrayList<Rating>();
+        this.description = description;
+        this.location = location;
+        this.inPerson = inPerson;
+        this.remote = remote;
+        //this.skillsRequired = skillsRequired;
+        //this.search = search; 
+    }
     /**
      * This is the constructor for the internship class
      * @param title the title of the internship
@@ -26,7 +37,7 @@ public class Internships {
      * @param location the loaction of the internship
      */
     public Internships(UUID id, String title, String description, String location, boolean inPerson, boolean remote) { // possibly need to add more parameters
-        id = UUID.randomUUID();
+        this.id = id;
         this.title = title;
         this.employerRating = new ArrayList<Rating>();
         this.description = description;
