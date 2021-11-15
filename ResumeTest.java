@@ -1,5 +1,5 @@
 /**
- * Resume class tested by Ali Tehranie
+ * Resume class tested by Ali Tehranie + Maddie Havranak
  */
 import static org.junit.jupiter.api.Assertions.*;
 /**
