@@ -35,37 +35,42 @@ class EducationTest {
 
     @Test
     void testEducation() {
-        educationList.add(new Education("awalker", "Computer Science", 2023));
-        boolean hasAmy = education.checkSchoolEducationReceived();
+        boolean hasAmy = educationList.add(new Education("UofSC", "Computer Science", 2023));
+        hasAmy = education.checkSchoolEducationReceived();
         assertTrue(hasAmy);
     }
 
     @Test
     void testYear() {
-        boolean hasAmy = educationList.add(new Education("awalker", "Computer Science", 2023));
+        boolean hasAmy = educationList.add(new Education("UofSC", "Computer Science", 2023));
         hasAmy = education.checkYearGraduated();
         assertTrue(hasAmy);
     }
 
     @Test
     void testMajor() {
-        boolean hasAmy = educationList.add(new Education("awalker", "Computer Science", 2023));
+        boolean hasAmy = educationList.add(new Education("UofSC", "Computer Science", 2023));
         hasAmy = education.checkMajor();
         assertTrue(hasAmy);
     }
 
     @Test
     void testMajorNull() {
-        boolean hasNoMajor = educationWrong.add(new Education("ndrake", null, 1999));
+        boolean hasNoMajor = educationWrong.add(new Education("UofSC", null, 1999));
         hasNoMajor = education.checkMajor();
         assertFalse(hasNoMajor);
     }
 
     void testInvalidGrad() {
-        boolean badYear = educationWrong.add(new Education("ndrake", null, 1999));
+        boolean badYear = educationWrong.add(new Education("UofSC", "Computer Information Systems", 1999));
         badYear = education.checkYearGraduated();
         assertFalse(badYear);
 
+    }
+    void testNoSchool() {
+        boolean noSchool = educationWrong.add(new Education(null, "Computer Information Systems", 2023));
+        noSchool = education.checkYearGraduated();
+        assertFalse(noSchool);
     }
 
 }
