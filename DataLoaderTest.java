@@ -15,6 +15,7 @@ class DataLoaderTest {
     @BeforeEach
     public void setup() {
         studentList.clear();
+        
         studentList.add(new Student("Amy", "Walker", "awalker", "password", "awalker@gmail.com"));
         studentList.add(new Student("Nathan", "Drake", "ndradke", "password", "ndrake@gmail.com"));
 
