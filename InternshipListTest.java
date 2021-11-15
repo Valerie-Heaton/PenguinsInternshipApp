@@ -30,7 +30,7 @@ class InternshipListTest {
     }
 
     @Test
-    void testGetEmployer() {
+    void testGetInternshipsJob() {
         ArrayList<Internships> getInternships = internships.getInternships("Technical Writer");
         assertEquals(internshipList.get(0), getInternships);
     }

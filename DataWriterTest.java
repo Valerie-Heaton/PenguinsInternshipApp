@@ -18,7 +18,7 @@ public class DataWriterTest {
     private InternshipList internships = InternshipList.getInstance();
     private ArrayList<Internships> internshipList = internships.getInternships();
 
-
+‹
 	@BeforeEach
     public void setup() {
         UserList.getInstance().getStudents().clear();
@@ -105,7 +105,7 @@ public class DataWriterTest {
 	}
 	
 	@Test
-	void testWritingEmptyAdmin() {
+	void testWritingEmptyStudent() {
 		studentList.add(new Student("", "", "", "", ""));
 		DataWriter.saveStudents();
 		assertEquals("", DataLoader.getStudents().get(0).getUserName());

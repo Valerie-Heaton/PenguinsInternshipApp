@@ -45,6 +45,8 @@ class StudentApplicationTest {
         assertEquals(findInternships1, findInternships2);       
     }
 
+    // admin 
+
     @Test
     void testCreateValidAdminAccount() {
         studentApplication.createAdminAccount("amywalker", "Amy", "Walker", "amyw1234", "amywalker@email.sc.edu");
@@ -82,4 +84,83 @@ class StudentApplicationTest {
         assertFalse(isCreated);
     }
 
+    // student
+
+    @Test
+    void testCreateValidStudentAccount() {
+        studentApplication.createStudentAccount("amywalker", "Amy", "Walker", "amyw1234", "amywalker@email.sc.edu");
+        studentApplication.loginStudent("amywalker", "amyw1234");
+        Student student = studentApplication.getCurrentStudent();
+        assertEquals("amywalker", student.getUserName());
+    }
+
+    @Test
+    void testCreateSavedStudent() {
+        studentApplication.createStudentAccount("Amy", "Walker", "amywalker", "amyw1234", "amywalker@email.sc.edu");
+        studentApplication.logout();
+        studentApplication = new StudentApplication();
+        studentApplication.loginStudent("amywalker", "amyw1234");
+        Student currentStudent = studentApplication.getCurrentStudent();
+        assertEquals("amywalker", currentStudent.getUserName());
+    }
+
+    @Test
+    void testCreatDuplicateStudentUserName() {
+        studentApplication.createStudentAccount("Amy", "Walker", "amywalker", "amyw1234", "amywalker@email.sc.edu");
+        boolean isCreated = studentApplication.createStudentAccount("Amy", "Walker", "amywalker", "amyw1234", "amywalker@email.sc.edu");
+        assertFalse(isCreated);
+    }
+
+    @Test
+    void testCreateStudentEmptyUserName() {
+        boolean isCreated = studentApplication.createStudentAccount("", "", "", "", "");
+        assertFalse(isCreated);
+    }
+
+    @Test 
+    void testCreateStudentNullUserName() {
+        boolean isCreated = studentApplication.createStudentAccount(null, "", "", "", "");
+        assertFalse(isCreated);
+    }
+
+    // employer
+
+    @Test
+    void testCreateValidEmployerAccount() {
+        studentApplication.createEmployerAccount("amywalker", "Amy", "Walker", "amyw1234", "amywalker@email.sc.edu");
+        studentApplication.loginEmployer("amywalker", "amyw1234");
+        Employer employer = studentApplication.getCurrentEmployer();
+        assertEquals("amywalker", employer.getUserName());
+    }
+
+    @Test
+    void testCreateSavedEmployer() {
+        studentApplication.createEmployerAccount("Amy", "Walker", "amywalker", "amyw1234", "amywalker@email.sc.edu");
+        studentApplication.logout();
+        studentApplication = new StudentApplication();
+        studentApplication.loginEmployer("amywalker", "amyw1234");
+        Employer currentEmployer = studentApplication.getCurrentEmployer();
+        assertEquals("amywalker", currentEmployer.getUserName());
+    }
+
+    @Test
+    void testCreatDuplicateEmployerUserName() {
+        studentApplication.createEmployerAccount("Amy", "Walker", "amywalker", "amyw1234", "amywalker@email.sc.edu");
+        boolean isCreated = studentApplication.createEmployerAccount("Amy", "Walker", "amywalker", "amyw1234", "amywalker@email.sc.edu");
+        assertFalse(isCreated);
+    }
+
+    @Test
+    void testCreateEmployerEmptyUserName() {
+        boolean isCreated = studentApplication.createEmployerAccount("", "", "", "", "");
+        assertFalse(isCreated);
+    }
+
+    @Test 
+    void testCreateEmployerNullUserName() {
+        boolean isCreated = studentApplication.createEmployerAccount(null, "", "", "", "");
+        assertFalse(isCreated);
+    }
+
+    
 }
