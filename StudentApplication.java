@@ -12,6 +12,21 @@ public class StudentApplication {
     private InternshipList internshipList;
     private UserList userList;
     private User user;
+    private Student currentStudent;
+    private Employer currentEmployer;
+    private Admin currentAdmin;
+
+    public Student getCurrentStudent() {
+		return currentStudent;
+	}
+
+    public Employer getCurrentEmployer() {
+		return currentEmployer;
+	}
+
+    public Admin getCurrentAdmin() {
+		return currentAdmin;
+	}
 
     /**
      * This is the constructor for the StudentApplication class.
