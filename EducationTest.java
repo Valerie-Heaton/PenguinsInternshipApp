@@ -60,17 +60,27 @@ class EducationTest {
         hasNoMajor = education.checkMajor();
         assertFalse(hasNoMajor);
     }
-
+    
+    @Test
     void testInvalidGrad() {
         boolean badYear = educationWrong.add(new Education("UofSC", "Computer Information Systems", 1999));
         badYear = education.checkYearGraduated();
         assertFalse(badYear);
 
     }
+
+    @Test
     void testNoSchool() {
         boolean noSchool = educationWrong.add(new Education(null, "Computer Information Systems", 2023));
         noSchool = education.checkYearGraduated();
         assertFalse(noSchool);
+    }
+
+    @Test
+    void testSchoolVariation() {
+        boolean varSchool = educationList.add(new Education("U.S.C", "Computer Science", 2023));
+        varSchool = education.checkYearGraduated();
+        assertFalse(varSchool);
     }
 
 }
